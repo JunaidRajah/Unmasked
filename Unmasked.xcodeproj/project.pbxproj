@@ -15,6 +15,8 @@
 		A108898E270731EC002E2FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A108898C270731EC002E2FDC /* LaunchScreen.storyboard */; };
 		A1088999270731EC002E2FDC /* UnmaskedTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088998270731EC002E2FDC /* UnmaskedTests.swift */; };
 		A10889A4270731EC002E2FDC /* UnmaskedUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10889A3270731EC002E2FDC /* UnmaskedUITests.swift */; };
+		A10889B2270C925F002E2FDC /* SuperheroData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10889B1270C925F002E2FDC /* SuperheroData.swift */; };
+		A10889B5270CAB7C002E2FDC /* SuperheroResponseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10889B4270CAB7C002E2FDC /* SuperheroResponseManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		A108899F270731EC002E2FDC /* UnmaskedUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnmaskedUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A10889A3270731EC002E2FDC /* UnmaskedUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnmaskedUITests.swift; sourceTree = "<group>"; };
 		A10889A5270731EC002E2FDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A10889B1270C925F002E2FDC /* SuperheroData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroData.swift; sourceTree = "<group>"; };
+		A10889B4270CAB7C002E2FDC /* SuperheroResponseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroResponseManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,7 @@
 				A108898A270731EC002E2FDC /* Assets.xcassets */,
 				A108898C270731EC002E2FDC /* LaunchScreen.storyboard */,
 				A108898F270731EC002E2FDC /* Info.plist */,
+				A10889B3270C9269002E2FDC /* Models */,
 			);
 			path = Unmasked;
 			sourceTree = "<group>";
@@ -126,6 +131,15 @@
 				A10889A5270731EC002E2FDC /* Info.plist */,
 			);
 			path = UnmaskedUITests;
+			sourceTree = "<group>";
+		};
+		A10889B3270C9269002E2FDC /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A10889B1270C925F002E2FDC /* SuperheroData.swift */,
+				A10889B4270CAB7C002E2FDC /* SuperheroResponseManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10889B2270C925F002E2FDC /* SuperheroData.swift in Sources */,
 				A1088986270731E8002E2FDC /* ViewController.swift in Sources */,
 				A1088982270731E8002E2FDC /* AppDelegate.swift in Sources */,
 				A1088984270731E8002E2FDC /* SceneDelegate.swift in Sources */,
+				A10889B5270CAB7C002E2FDC /* SuperheroResponseManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
