@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SuperheroData: Codable {
+struct SuperheroResponseModel: Codable {
     let response: String
     let id: String
     let name: String
