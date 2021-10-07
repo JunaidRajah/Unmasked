@@ -9,7 +9,7 @@ import Foundation
 
 struct SuperheroRepository: SuperheroRepositoryFetchable {
 
-    private let superheroURL = "https://superheroapi.com/api/4431906776894007"
+    private let superheroURL = "https://superheroapi.com/api/\(apiKey)"
 
     func fetchHero(with id: String, completion: @escaping superheroResult) {
         let urlString = "\(superheroURL)/\(id)"
@@ -23,6 +23,8 @@ struct SuperheroRepository: SuperheroRepositoryFetchable {
                     if let superhero = self.parseJSON(safeData) {
                         completion(.success(superhero))
                     }
+                } else {
+                    completion(.failure(error as! URLError))
                 }
             }
             task.resume()
