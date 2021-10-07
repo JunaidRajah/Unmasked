@@ -21,7 +21,6 @@ struct SuperheroRepository: SuperheroRepositoryFetchable {
                 }
                 if let safeData = data {
                     if let superhero = self.parseJSON(safeData) {
-                        print(superhero.name)
                         completion(.success(superhero))
                     }
                 }
