@@ -13,6 +13,7 @@ struct SuperheroRepository: SuperheroRepositoryFetchable {
 
     func fetchHero(with id: String, completion: @escaping superheroResult) {
         let urlString = "\(superheroURL)/\(id)"
+        print(urlString)
         if let url = URL(string: urlString) {
             let session =  URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, _, error) in
@@ -22,6 +23,8 @@ struct SuperheroRepository: SuperheroRepositoryFetchable {
                     } else {
                         completion(.failure(error as! URLError))
                     }
+                } else {
+                    completion(.failure(error as! URLError))
                 }
             }
             task.resume()
