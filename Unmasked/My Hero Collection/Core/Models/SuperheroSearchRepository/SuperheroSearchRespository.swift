@@ -31,8 +31,6 @@ struct SuperheroSearchRepository: SuperheroRepositorySearchable {
     private func parseJSON(_ superheroData: Data) -> SuperheroSearchResponseModel? {
         do {
             let decodedData = try JSONDecoder().decode(SuperheroSearchResponseModel.self, from: superheroData)
-            print(decodedData.response)
-            print(decodedData.resultsFor)
             return decodedData
             
         } catch {
