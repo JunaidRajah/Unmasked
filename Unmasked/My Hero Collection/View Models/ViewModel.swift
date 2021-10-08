@@ -7,7 +7,7 @@
 
 import Foundation
 
-class ListViewModel {
+class ViewModel {
     private var repository: SuperheroRepositoryFetchable
     private weak var delegate: ViewModelDelegate?
     private var response: SuperheroResponseModel?
@@ -36,7 +36,9 @@ class ListViewModel {
             repository.fetchHero(with: String(i), completion: { [weak self] result in
                 switch result {
                 case .success(let response):
-                    self?.myHeroes.append(response)
+                    DispatchQueue.main.async {
+                        self?.myHeroes.append(response)
+                    }
                     if i == 6 {
                         self?.delegate?.refreshViewContents()
                     }

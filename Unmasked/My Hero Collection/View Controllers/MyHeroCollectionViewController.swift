@@ -21,7 +21,7 @@ class MyHeroCollectionViewController: UICollectionViewController, ViewModelDeleg
     }
     
 
-    private lazy var viewModel = ListViewModel(repository: SuperheroRepository(), delegate: self)
+    private lazy var viewModel = ViewModel(repository: SuperheroRepository(), delegate: self)
     private var superheroManager = SuperheroRepository()
     
     override func viewDidLoad() {
@@ -40,7 +40,7 @@ class MyHeroCollectionViewController: UICollectionViewController, ViewModelDeleg
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-       viewModel.myHeroList.count
+        viewModel.myHeroList.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

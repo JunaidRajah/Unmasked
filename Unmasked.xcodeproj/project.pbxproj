@@ -17,6 +17,8 @@
 		A100849B270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1008499270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.swift */; };
 		A100849C270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A100849A270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.xib */; };
 		A10084A0270F599400E92006 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100849F270F599400E92006 /* Constants.swift */; };
+		A10084C1270FD7FC00E92006 /* HeroSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084C0270FD7FC00E92006 /* HeroSearchViewController.swift */; };
+		A10084C3270FDA2F00E92006 /* HeroSeachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084C2270FDA2F00E92006 /* HeroSeachViewModel.swift */; };
 		A1088982270731E8002E2FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088981270731E8002E2FDC /* AppDelegate.swift */; };
 		A1088984270731E8002E2FDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088983270731E8002E2FDC /* SceneDelegate.swift */; };
 		A1088986270731E8002E2FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088985270731E8002E2FDC /* ViewController.swift */; };
@@ -58,6 +60,8 @@
 		A1008499270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroTokenCollectionViewCell.swift; sourceTree = "<group>"; };
 		A100849A270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuperheroTokenCollectionViewCell.xib; sourceTree = "<group>"; };
 		A100849F270F599400E92006 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A10084C0270FD7FC00E92006 /* HeroSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSearchViewController.swift; sourceTree = "<group>"; };
+		A10084C2270FDA2F00E92006 /* HeroSeachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSeachViewModel.swift; sourceTree = "<group>"; };
 		A108897E270731E8002E2FDC /* Unmasked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unmasked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1088981270731E8002E2FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1088983270731E8002E2FDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +143,7 @@
 			children = (
 				A100847A270E6EF100E92006 /* ViewModelDelegate.swift */,
 				A100847C270E6F2A00E92006 /* ViewModel.swift */,
+				A10084C2270FDA2F00E92006 /* HeroSeachViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -149,6 +154,7 @@
 				A1088985270731E8002E2FDC /* ViewController.swift */,
 				A1008497270E89D400E92006 /* MyHeroCollectionViewController.swift */,
 				A1008499270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.swift */,
+				A10084C0270FD7FC00E92006 /* HeroSearchViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A100849B270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.swift in Sources */,
+				A10084C3270FDA2F00E92006 /* HeroSeachViewModel.swift in Sources */,
 				A10889B2270C925F002E2FDC /* SuperheroResponseModel.swift in Sources */,
 				A1088986270731E8002E2FDC /* ViewController.swift in Sources */,
 				A10889BC270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift in Sources */,
@@ -393,7 +400,7 @@
 				A1008498270E89D400E92006 /* MyHeroCollectionViewController.swift in Sources */,
 				A100848B270E813900E92006 /* SuperheroSearchRespository.swift in Sources */,
 				A10889B5270CAB7C002E2FDC /* SuperheroRepository.swift in Sources */,
-				A10084A2270F858600E92006 /* Constants.swift in Sources */,
+				A10084C1270FD7FC00E92006 /* HeroSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    private lazy var viewModel = ListViewModel(repository: SuperheroRepository(), delegate: self)
+    private lazy var viewModel = ViewModel(repository: SuperheroRepository(), delegate: self)
     @IBOutlet private weak var responseLabel: UILabel!
     private var superheroManager = SuperheroRepository()
     
