@@ -8,7 +8,7 @@
 import Foundation
 
 struct SuperheroResponseModel: Codable {
-    let response: String
+    let response: String?
     let id: String
     let name: String
     let powerstats: Powerstats

@@ -5,44 +5,9 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
-        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Unmasked" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GMZ-If-grA">
-                                <rect key="frame" x="107" y="428" width="200" height="40"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="200" id="11i-Ok-WJH"/>
-                                    <constraint firstAttribute="height" constant="40" id="nqW-ll-PoR"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="GMZ-If-grA" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="I05-1J-Mjp"/>
-                            <constraint firstItem="GMZ-If-grA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="mNo-Np-r2A"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <outlet property="responseLabel" destination="GMZ-If-grA" id="9e6-oS-Kp3"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-294" y="113"/>
-        </scene>
         <!--Hero Search View Controller-->
         <scene sceneID="Zu6-7g-zDi">
             <objects>
@@ -51,68 +16,59 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <searchBar contentMode="redraw" placeholder="Begin Multiverse Search" translatesAutoresizingMaskIntoConstraints="NO" id="jEO-RL-BL3">
-                                <rect key="frame" x="0.0" y="44" width="414" height="51"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Begin Mutiverse Search" textAlignment="center" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="HX0-hE-gr4">
+                                <rect key="frame" x="20" y="44" width="374" height="34"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odU-sb-hYU">
+                                <rect key="frame" x="124.5" y="825" width="165" height="37"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="165" id="TyG-oE-6sI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
+                                <state key="normal" title="Unmask">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="nMt-4Z-RY7" eventType="touchUpInside" id="IjL-7g-YRg"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TY7-Ez-VpS">
+                                <rect key="frame" x="5" y="86" width="404" height="731"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <textInputTraits key="textInputTraits" keyboardAppearance="alert" returnKeyType="search" enablesReturnKeyAutomatically="YES" textContentType="name"/>
-                            </searchBar>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RNB-0H-lfU"/>
                         <color key="backgroundColor" systemColor="systemGrayColor"/>
                         <constraints>
-                            <constraint firstItem="jEO-RL-BL3" firstAttribute="trailing" secondItem="RNB-0H-lfU" secondAttribute="trailing" id="Bhl-Db-SAg"/>
-                            <constraint firstItem="jEO-RL-BL3" firstAttribute="leading" secondItem="RNB-0H-lfU" secondAttribute="leading" id="J5m-5R-ajJ"/>
-                            <constraint firstItem="jEO-RL-BL3" firstAttribute="top" secondItem="RNB-0H-lfU" secondAttribute="top" id="wzy-6Y-MT7"/>
+                            <constraint firstItem="HX0-hE-gr4" firstAttribute="top" secondItem="RNB-0H-lfU" secondAttribute="top" id="CTf-B2-x15"/>
+                            <constraint firstItem="odU-sb-hYU" firstAttribute="centerX" secondItem="RNB-0H-lfU" secondAttribute="centerX" id="VUZ-N9-MYr"/>
+                            <constraint firstItem="RNB-0H-lfU" firstAttribute="trailing" secondItem="HX0-hE-gr4" secondAttribute="trailing" constant="20" id="aeI-ge-kKP"/>
+                            <constraint firstItem="odU-sb-hYU" firstAttribute="top" secondItem="TY7-Ez-VpS" secondAttribute="bottom" constant="8" symbolic="YES" id="fyk-74-kCs"/>
+                            <constraint firstItem="odU-sb-hYU" firstAttribute="bottom" secondItem="RNB-0H-lfU" secondAttribute="bottom" id="kya-xs-n2y"/>
+                            <constraint firstItem="TY7-Ez-VpS" firstAttribute="top" secondItem="HX0-hE-gr4" secondAttribute="bottom" constant="8" symbolic="YES" id="lqc-dO-NHU"/>
+                            <constraint firstItem="HX0-hE-gr4" firstAttribute="leading" secondItem="RNB-0H-lfU" secondAttribute="leading" constant="20" id="vKk-c6-di0"/>
+                            <constraint firstItem="TY7-Ez-VpS" firstAttribute="leading" secondItem="RNB-0H-lfU" secondAttribute="leading" constant="5" id="x4B-79-XeU"/>
+                            <constraint firstItem="RNB-0H-lfU" firstAttribute="trailing" secondItem="TY7-Ez-VpS" secondAttribute="trailing" constant="5" id="zjS-0a-hPo"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="heroSearchBar" destination="jEO-RL-BL3" id="gb8-BW-bTs"/>
+                        <outlet property="searchBar" destination="HX0-hE-gr4" id="SfP-w8-i1e"/>
+                        <outlet property="searchResultsTable" destination="TY7-Ez-VpS" id="hoF-ne-Btu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aDs-M9-iLG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="11.594202898550726" y="-654.24107142857144"/>
         </scene>
-        <!--My Hero Collection View Controller-->
-        <scene sceneID="Bml-tT-FeL">
-            <objects>
-                <collectionViewController id="5DP-YX-3wf" customClass="MyHeroCollectionViewController" customModule="Unmasked" customModuleProvider="target" sceneMemberID="viewController">
-                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="Ce5-AB-3sp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Z0G-dc-0Jt">
-                            <size key="itemSize" width="128" height="128"/>
-                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                        </collectionViewFlowLayout>
-                        <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SuperheroToken" id="FhY-uo-1lZ" customClass="SuperheroTokenCollectionViewCell" customModule="Unmasked" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sym-03-x2D">
-                                    <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </collectionViewCellContentView>
-                            </collectionViewCell>
-                        </cells>
-                        <connections>
-                            <outlet property="dataSource" destination="5DP-YX-3wf" id="Fhz-bC-K8g"/>
-                            <outlet property="delegate" destination="5DP-YX-3wf" id="gsP-cl-VhN"/>
-                        </connections>
-                    </collectionView>
-                </collectionViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4ub-BM-1ba" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="613" y="113"/>
-        </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGrayColor">
             <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

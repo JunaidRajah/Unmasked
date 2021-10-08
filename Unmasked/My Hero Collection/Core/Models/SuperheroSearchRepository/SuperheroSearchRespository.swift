@@ -19,9 +19,9 @@ struct SuperheroSearchRepository: SuperheroRepositorySearchable {
                 if let safeData = data {
                     if let superhero = self.parseJSON(safeData) {
                         completion(.success(superhero))
-                    } else {
-                        completion(.failure(error as! URLError))
                     }
+                } else {
+                    completion(.failure(error!))
                 }
             }
             task.resume()
@@ -31,6 +31,8 @@ struct SuperheroSearchRepository: SuperheroRepositorySearchable {
     private func parseJSON(_ superheroData: Data) -> SuperheroSearchResponseModel? {
         do {
             let decodedData = try JSONDecoder().decode(SuperheroSearchResponseModel.self, from: superheroData)
+            print(decodedData.response)
+            print(decodedData.resultsFor)
             return decodedData
             
         } catch {

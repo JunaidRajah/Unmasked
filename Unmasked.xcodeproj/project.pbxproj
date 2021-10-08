@@ -8,20 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		A100847B270E6EF100E92006 /* ViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100847A270E6EF100E92006 /* ViewModelDelegate.swift */; };
-		A100847D270E6F2A00E92006 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100847C270E6F2A00E92006 /* ViewModel.swift */; };
 		A1008489270E7F4E00E92006 /* SuperheroSearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1008488270E7F4E00E92006 /* SuperheroSearchResponseModel.swift */; };
 		A100848B270E813900E92006 /* SuperheroSearchRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100848A270E813900E92006 /* SuperheroSearchRespository.swift */; };
-		A1008493270E83D000E92006 /* SuperheroTokenView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A1008492270E83D000E92006 /* SuperheroTokenView.xib */; };
 		A1008496270E884A00E92006 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1008495270E884A00E92006 /* Extensions.swift */; };
-		A1008498270E89D400E92006 /* MyHeroCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1008497270E89D400E92006 /* MyHeroCollectionViewController.swift */; };
-		A100849B270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1008499270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.swift */; };
-		A100849C270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A100849A270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.xib */; };
 		A10084A0270F599400E92006 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100849F270F599400E92006 /* Constants.swift */; };
 		A10084C1270FD7FC00E92006 /* HeroSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084C0270FD7FC00E92006 /* HeroSearchViewController.swift */; };
 		A10084C3270FDA2F00E92006 /* HeroSeachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084C2270FDA2F00E92006 /* HeroSeachViewModel.swift */; };
+		A10084C6270FE31400E92006 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084C4270FE31400E92006 /* HeroTableViewCell.swift */; };
+		A10084C7270FE31400E92006 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10084C5270FE31400E92006 /* HeroTableViewCell.xib */; };
 		A1088982270731E8002E2FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088981270731E8002E2FDC /* AppDelegate.swift */; };
 		A1088984270731E8002E2FDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088983270731E8002E2FDC /* SceneDelegate.swift */; };
-		A1088986270731E8002E2FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088985270731E8002E2FDC /* ViewController.swift */; };
 		A1088989270731E8002E2FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1088987270731E8002E2FDC /* Main.storyboard */; };
 		A108898B270731EC002E2FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A108898A270731EC002E2FDC /* Assets.xcassets */; };
 		A108898E270731EC002E2FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A108898C270731EC002E2FDC /* LaunchScreen.storyboard */; };
@@ -51,21 +47,17 @@
 
 /* Begin PBXFileReference section */
 		A100847A270E6EF100E92006 /* ViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDelegate.swift; sourceTree = "<group>"; };
-		A100847C270E6F2A00E92006 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		A1008488270E7F4E00E92006 /* SuperheroSearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSearchResponseModel.swift; sourceTree = "<group>"; };
 		A100848A270E813900E92006 /* SuperheroSearchRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSearchRespository.swift; sourceTree = "<group>"; };
-		A1008492270E83D000E92006 /* SuperheroTokenView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuperheroTokenView.xib; sourceTree = "<group>"; };
 		A1008495270E884A00E92006 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		A1008497270E89D400E92006 /* MyHeroCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyHeroCollectionViewController.swift; sourceTree = "<group>"; };
-		A1008499270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroTokenCollectionViewCell.swift; sourceTree = "<group>"; };
-		A100849A270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SuperheroTokenCollectionViewCell.xib; sourceTree = "<group>"; };
 		A100849F270F599400E92006 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		A10084C0270FD7FC00E92006 /* HeroSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSearchViewController.swift; sourceTree = "<group>"; };
 		A10084C2270FDA2F00E92006 /* HeroSeachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSeachViewModel.swift; sourceTree = "<group>"; };
+		A10084C4270FE31400E92006 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
+		A10084C5270FE31400E92006 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
 		A108897E270731E8002E2FDC /* Unmasked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unmasked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1088981270731E8002E2FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1088983270731E8002E2FDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A1088985270731E8002E2FDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A1088988270731E8002E2FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A108898A270731EC002E2FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A108898D270731EC002E2FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -132,8 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				A1088987270731E8002E2FDC /* Main.storyboard */,
-				A1008492270E83D000E92006 /* SuperheroTokenView.xib */,
-				A100849A270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.xib */,
+				A10084C5270FE31400E92006 /* HeroTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -142,7 +133,6 @@
 			isa = PBXGroup;
 			children = (
 				A100847A270E6EF100E92006 /* ViewModelDelegate.swift */,
-				A100847C270E6F2A00E92006 /* ViewModel.swift */,
 				A10084C2270FDA2F00E92006 /* HeroSeachViewModel.swift */,
 			);
 			path = "View Models";
@@ -151,10 +141,8 @@
 		A1008487270E7D3E00E92006 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A1088985270731E8002E2FDC /* ViewController.swift */,
-				A1008497270E89D400E92006 /* MyHeroCollectionViewController.swift */,
-				A1008499270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.swift */,
 				A10084C0270FD7FC00E92006 /* HeroSearchViewController.swift */,
+				A10084C4270FE31400E92006 /* HeroTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -356,11 +344,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A1008493270E83D000E92006 /* SuperheroTokenView.xib in Resources */,
 				A108898E270731EC002E2FDC /* LaunchScreen.storyboard in Resources */,
 				A108898B270731EC002E2FDC /* Assets.xcassets in Resources */,
-				A100849C270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.xib in Resources */,
 				A1088989270731E8002E2FDC /* Main.storyboard in Resources */,
+				A10084C7270FE31400E92006 /* HeroTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,10 +372,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A100849B270E8FEA00E92006 /* SuperheroTokenCollectionViewCell.swift in Sources */,
 				A10084C3270FDA2F00E92006 /* HeroSeachViewModel.swift in Sources */,
 				A10889B2270C925F002E2FDC /* SuperheroResponseModel.swift in Sources */,
-				A1088986270731E8002E2FDC /* ViewController.swift in Sources */,
 				A10889BC270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift in Sources */,
 				A10084A0270F599400E92006 /* Constants.swift in Sources */,
 				A100847B270E6EF100E92006 /* ViewModelDelegate.swift in Sources */,
@@ -396,9 +381,8 @@
 				A1088984270731E8002E2FDC /* SceneDelegate.swift in Sources */,
 				A1008496270E884A00E92006 /* Extensions.swift in Sources */,
 				A1008489270E7F4E00E92006 /* SuperheroSearchResponseModel.swift in Sources */,
-				A100847D270E6F2A00E92006 /* ViewModel.swift in Sources */,
-				A1008498270E89D400E92006 /* MyHeroCollectionViewController.swift in Sources */,
 				A100848B270E813900E92006 /* SuperheroSearchRespository.swift in Sources */,
+				A10084C6270FE31400E92006 /* HeroTableViewCell.swift in Sources */,
 				A10889B5270CAB7C002E2FDC /* SuperheroRepository.swift in Sources */,
 				A10084C1270FD7FC00E92006 /* HeroSearchViewController.swift in Sources */,
 			);
