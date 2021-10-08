@@ -23,8 +23,6 @@ struct SuperheroRepository: SuperheroRepositoryFetchable {
                     } else {
                         completion(.failure(error as! URLError))
                     }
-                } else {
-                    completion(.failure(error as! URLError))
                 }
             }
             task.resume()

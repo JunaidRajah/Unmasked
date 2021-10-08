@@ -16,15 +16,12 @@ struct SuperheroSearchRepository: SuperheroRepositorySearchable {
         if let url = URL(string: urlString) {
             let session =  URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, _, error) in
-                if error != nil {
-                    completion(.failure(error as! URLError))
-                }
                 if let safeData = data {
                     if let superhero = self.parseJSON(safeData) {
                         completion(.success(superhero))
+                    } else {
+                        completion(.failure(error as! URLError))
                     }
-                } else {
-                    completion(.failure(error as! URLError))
                 }
             }
             task.resume()
