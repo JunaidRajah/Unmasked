@@ -1,18 +1,18 @@
 //
-//  SuperheroResponseManager.swift
+//  SuperheroSearchRespository.swift
 //  Unmasked
 //
-//  Created by Junaid Rajah on 2021/10/05.
+//  Created by Junaid Rajah on 2021/10/07.
 //
 
 import Foundation
 
-struct SuperheroRepository: SuperheroRepositoryFetchable {
+struct SuperheroSearchRepository: SuperheroRepositorySearchable {
 
-    private let superheroURL = "https://superheroapi.com/api/4431906776894007"
+    private let superheroURL = "https://superheroapi.com/api/\(apiKey)"
 
-    func fetchHero(with id: String, completion: @escaping superheroResult) {
-        let urlString = "\(superheroURL)/\(id)"
+    func fetchHeroes(with name: String, completion: @escaping superheroSearchResult) {
+        let urlString = "\(superheroURL)/search/\(name)"
         if let url = URL(string: urlString) {
             let session =  URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, _, error) in
@@ -21,18 +21,19 @@ struct SuperheroRepository: SuperheroRepositoryFetchable {
                 }
                 if let safeData = data {
                     if let superhero = self.parseJSON(safeData) {
-                        print(superhero.name)
                         completion(.success(superhero))
                     }
+                } else {
+                    completion(.failure(error as! URLError))
                 }
             }
             task.resume()
         }
     }
     
-    private func parseJSON(_ superheroData: Data) -> SuperheroResponseModel? {
+    private func parseJSON(_ superheroData: Data) -> SuperheroSearchResponseModel? {
         do {
-            let decodedData = try JSONDecoder().decode(SuperheroResponseModel.self, from: superheroData)
+            let decodedData = try JSONDecoder().decode(SuperheroSearchResponseModel.self, from: superheroData)
             return decodedData
             
         } catch {
