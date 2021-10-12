@@ -34,4 +34,12 @@ class HeroSearchViewModel {
     var myHeroList: [SuperheroResponseModel]? {
         response?.results
     }
+    
+    var heroListCount: Int {
+        myHeroList?.count ?? 0
+    }
+    
+    func hero(at index: Int) -> SuperheroResponseModel? {
+        myHeroList?[index]
+    }
 }

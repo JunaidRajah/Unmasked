@@ -33,13 +33,17 @@ extension HeroSearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        searchViewModel.myHeroList?.count ?? 0
+        searchViewModel.heroListCount
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        // swiftlint:disable force_cast
-        let heroCell = tableView.dequeueReusableCell(withIdentifier: HeroTableViewCell.identifier, for: indexPath) as! HeroTableViewCell
-        if let hero = searchViewModel.myHeroList?[indexPath.row] {
+
+        guard let heroCell = tableView.dequeueReusableCell(withIdentifier: HeroTableViewCell.identifier,
+                                                           for: indexPath) as? HeroTableViewCell else {
+            return HeroTableViewCell()
+        }
+        
+        if let hero = searchViewModel.hero(at: indexPath.row){
             heroCell.configure(with: hero)
         }
         return heroCell
@@ -72,7 +76,13 @@ extension HeroSearchViewController: ViewModelDelegate {
     }
 
     func showErrorMessage(error: Error) {
-        print(error)
+        DispatchQueue.main.async {
+            let alertController = UIAlertController(title: "Still Masked",
+                                                    message: "Heroes not yet added to the codex",
+                                                    preferredStyle: .alert)
+            alertController.overrideUserInterfaceStyle = UIUserInterfaceStyle.dark
+            alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+            self.present(alertController, animated: true)
+        }
     }
-
 }

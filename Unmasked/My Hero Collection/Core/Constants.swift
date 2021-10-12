@@ -7,4 +7,15 @@
 
 import Foundation
 
-let apiKey = "4431906776894007"
+
+struct Constants {
+    struct URLBuilder {
+        static let scheme = "https"
+        static let host = "superheroapi.com"
+        static let path = "/"
+        static let apiKeyString = "api/"
+        static let apiKey = "4431906776894007"
+        static let searchString = "/search/"
+    }
+}
+

@@ -9,33 +9,39 @@ import Foundation
 
 struct SuperheroSearchRepository: SuperheroRepositorySearchable {
 
-    private let superheroURL = "https://superheroapi.com/api/\(apiKey)"
-
     func fetchHeroes(with name: String, completion: @escaping superheroSearchResult) {
-        let urlString = "\(superheroURL)/search/\(name)"
-        if let url = URL(string: urlString) {
+        if let url = URLHeroStringBuilder(for: name) {
             let session =  URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, _, error) in
                 if let safeData = data {
-                    if let superhero = self.parseJSON(safeData) {
+                    do {
+                        let superhero = try JSONDecoder().decode(SuperheroSearchResponseModel.self, from: safeData)
                         completion(.success(superhero))
+                        
+                    } catch {
+                        completion(.failure(error))
                     }
                 } else {
-                    completion(.failure(error!))
+                    completion(.failure(error as! URLError))
                 }
             }
             task.resume()
         }
     }
     
-    private func parseJSON(_ superheroData: Data) -> SuperheroSearchResponseModel? {
-        do {
-            let decodedData = try JSONDecoder().decode(SuperheroSearchResponseModel.self, from: superheroData)
-            return decodedData
-            
-        } catch {
-            print(error)
-            return nil
-        }
+    private func URLHeroStringBuilder(for name: String) -> URL? {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = Constants.URLBuilder.scheme
+        urlComponents.host = Constants.URLBuilder.host
+        urlComponents.path = Constants.URLBuilder.path
+        let apiKeyQueryItem = URLQueryItem(name: Constants.URLBuilder.apiKeyString,
+                                           value: Constants.URLBuilder.apiKey)
+        let heroSearchQueryItem = URLQueryItem(name: Constants.URLBuilder.searchString, value: name)
+        urlComponents.queryItems = [apiKeyQueryItem, heroSearchQueryItem]
+        let heroURL = urlComponents.url?.absoluteString
+            .replacingOccurrences(of: "?", with: "")
+            .replacingOccurrences(of: "=", with: "")
+            .replacingOccurrences(of: "&", with: "")
+        return URL(string: heroURL!)
     }
 }

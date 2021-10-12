@@ -9,18 +9,17 @@ import Foundation
 
 struct SuperheroRepository: SuperheroRepositoryFetchable {
 
-    private let superheroURL = "https://superheroapi.com/api/\(apiKey)"
-
     func fetchHero(with id: String, completion: @escaping superheroResult) {
-        let urlString = "\(superheroURL)/\(id)"
-        if let url = URL(string: urlString) {
+        if let url = URLHeroStringBuilder(for: id) {
             let session =  URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, _, error) in
                 if let safeData = data {
-                    if let superhero = self.parseJSON(safeData) {
+                    do {
+                        let superhero = try JSONDecoder().decode(SuperheroResponseModel.self, from: safeData)
                         completion(.success(superhero))
-                    } else {
-                        completion(.failure(error as! URLError))
+                        
+                    } catch {
+                        completion(.failure(error))
                     }
                 }
             }
@@ -28,14 +27,19 @@ struct SuperheroRepository: SuperheroRepositoryFetchable {
         }
     }
     
-    private func parseJSON(_ superheroData: Data) -> SuperheroResponseModel? {
-        do {
-            let decodedData = try JSONDecoder().decode(SuperheroResponseModel.self, from: superheroData)
-            return decodedData
-            
-        } catch {
-            print(error)
-            return nil
-        }
+    private func URLHeroStringBuilder(for id: String) -> URL? {
+        var urlComponents = URLComponents()
+        urlComponents.scheme = Constants.URLBuilder.scheme
+        urlComponents.host = Constants.URLBuilder.host
+        urlComponents.path = Constants.URLBuilder.path
+        let apiKeyQueryItem = URLQueryItem(name: Constants.URLBuilder.apiKeyString,
+                                           value: Constants.URLBuilder.apiKey)
+        let heroSearchQueryItem = URLQueryItem(name: Constants.URLBuilder.path, value: id)
+        urlComponents.queryItems = [apiKeyQueryItem, heroSearchQueryItem]
+        let heroURL = urlComponents.url?.absoluteString
+            .replacingOccurrences(of: "?", with: "")
+            .replacingOccurrences(of: "=", with: "")
+            .replacingOccurrences(of: "&", with: "")
+        return URL(string: heroURL!)
     }
 }
