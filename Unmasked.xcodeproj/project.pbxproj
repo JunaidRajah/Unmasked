@@ -8,11 +8,21 @@
 
 /* Begin PBXBuildFile section */
 		A100847B270E6EF100E92006 /* ViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100847A270E6EF100E92006 /* ViewModelDelegate.swift */; };
-		A100847D270E6F2A00E92006 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100847C270E6F2A00E92006 /* ViewModel.swift */; };
-		A10084A2270F858600E92006 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084A1270F858600E92006 /* Constants.swift */; };
+		A1008489270E7F4E00E92006 /* SuperheroSearchResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1008488270E7F4E00E92006 /* SuperheroSearchResponseModel.swift */; };
+		A100848B270E813900E92006 /* SuperheroSearchRespository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100848A270E813900E92006 /* SuperheroSearchRespository.swift */; };
+		A1008496270E884A00E92006 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1008495270E884A00E92006 /* Extensions.swift */; };
+		A10084A0270F599400E92006 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = A100849F270F599400E92006 /* Constants.swift */; };
+		A10084C1270FD7FC00E92006 /* HeroSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084C0270FD7FC00E92006 /* HeroSearchViewController.swift */; };
+		A10084C3270FDA2F00E92006 /* HeroSeachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084C2270FDA2F00E92006 /* HeroSeachViewModel.swift */; };
+		A10084C6270FE31400E92006 /* HeroTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084C4270FE31400E92006 /* HeroTableViewCell.swift */; };
+		A10084C7270FE31400E92006 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10084C5270FE31400E92006 /* HeroTableViewCell.xib */; };
+		A10084CA2715219600E92006 /* HeroSearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084C82715219600E92006 /* HeroSearchViewModelTests.swift */; };
+		A10084CD2715223600E92006 /* MockSuperheroSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084CB2715223600E92006 /* MockSuperheroSearchRepository.swift */; };
+		A10084D427152C2700E92006 /* MockHeroSearchApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084D227152C2700E92006 /* MockHeroSearchApiClient.swift */; };
+		A10084D82715677F00E92006 /* SuperheroSearchRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084D62715677F00E92006 /* SuperheroSearchRepositoryTests.swift */; };
+		A10084DA27157C9B00E92006 /* mockHeroSearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084D927157C9B00E92006 /* mockHeroSearchData.swift */; };
 		A1088982270731E8002E2FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088981270731E8002E2FDC /* AppDelegate.swift */; };
 		A1088984270731E8002E2FDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088983270731E8002E2FDC /* SceneDelegate.swift */; };
-		A1088986270731E8002E2FDC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088985270731E8002E2FDC /* ViewController.swift */; };
 		A1088989270731E8002E2FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1088987270731E8002E2FDC /* Main.storyboard */; };
 		A108898B270731EC002E2FDC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A108898A270731EC002E2FDC /* Assets.xcassets */; };
 		A108898E270731EC002E2FDC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A108898C270731EC002E2FDC /* LaunchScreen.storyboard */; };
@@ -42,12 +52,22 @@
 
 /* Begin PBXFileReference section */
 		A100847A270E6EF100E92006 /* ViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelDelegate.swift; sourceTree = "<group>"; };
-		A100847C270E6F2A00E92006 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		A10084A1270F858600E92006 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A1008488270E7F4E00E92006 /* SuperheroSearchResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSearchResponseModel.swift; sourceTree = "<group>"; };
+		A100848A270E813900E92006 /* SuperheroSearchRespository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSearchRespository.swift; sourceTree = "<group>"; };
+		A1008495270E884A00E92006 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		A100849F270F599400E92006 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		A10084C0270FD7FC00E92006 /* HeroSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSearchViewController.swift; sourceTree = "<group>"; };
+		A10084C2270FDA2F00E92006 /* HeroSeachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSeachViewModel.swift; sourceTree = "<group>"; };
+		A10084C4270FE31400E92006 /* HeroTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroTableViewCell.swift; sourceTree = "<group>"; };
+		A10084C5270FE31400E92006 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
+		A10084C82715219600E92006 /* HeroSearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSearchViewModelTests.swift; sourceTree = "<group>"; };
+		A10084CB2715223600E92006 /* MockSuperheroSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSuperheroSearchRepository.swift; sourceTree = "<group>"; };
+		A10084D227152C2700E92006 /* MockHeroSearchApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeroSearchApiClient.swift; sourceTree = "<group>"; };
+		A10084D62715677F00E92006 /* SuperheroSearchRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSearchRepositoryTests.swift; sourceTree = "<group>"; };
+		A10084D927157C9B00E92006 /* mockHeroSearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mockHeroSearchData.swift; sourceTree = "<group>"; };
 		A108897E270731E8002E2FDC /* Unmasked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unmasked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1088981270731E8002E2FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1088983270731E8002E2FDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A1088985270731E8002E2FDC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		A1088988270731E8002E2FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A108898A270731EC002E2FDC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A108898D270731EC002E2FDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -91,45 +111,76 @@
 		A100847E270E76E300E92006 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				A10889BA270D9908002E2FDC /* Protocols */,
+				A1008494270E882F00E92006 /* Extensions */,
 				A10889B3270C9269002E2FDC /* Models */,
-				A10084A1270F858600E92006 /* Constants.swift */,
+				A100849F270F599400E92006 /* Constants.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
 		};
-		A100847F270E771500E92006 /* Basic View  */ = {
+		A1008483270E7C5000E92006 /* My Hero Collection */ = {
 			isa = PBXGroup;
 			children = (
-				A1008482270E778600E92006 /* Views */,
-				A1008481270E776800E92006 /* View Controllers */,
-				A1008480270E775F00E92006 /* View Models */,
+				A100847E270E76E300E92006 /* Core */,
+				A1008487270E7D3E00E92006 /* View Controllers */,
+				A1008486270E7D2C00E92006 /* View Models */,
+				A1008484270E7CF100E92006 /* Views */,
 			);
-			path = "Basic View ";
+			path = "My Hero Collection";
 			sourceTree = "<group>";
 		};
-		A1008480270E775F00E92006 /* View Models */ = {
+		A1008484270E7CF100E92006 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1088987270731E8002E2FDC /* Main.storyboard */,
+				A10084C5270FE31400E92006 /* HeroTableViewCell.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A1008486270E7D2C00E92006 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
 				A100847A270E6EF100E92006 /* ViewModelDelegate.swift */,
-				A100847C270E6F2A00E92006 /* ViewModel.swift */,
+				A10084C2270FDA2F00E92006 /* HeroSeachViewModel.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
 		};
-		A1008481270E776800E92006 /* View Controllers */ = {
+		A1008487270E7D3E00E92006 /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				A1088985270731E8002E2FDC /* ViewController.swift */,
+				A10084C0270FD7FC00E92006 /* HeroSearchViewController.swift */,
+				A10084C4270FE31400E92006 /* HeroTableViewCell.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
 		};
-		A1008482270E778600E92006 /* Views */ = {
+		A100848C270E817100E92006 /* SuperheroRepository */ = {
 			isa = PBXGroup;
 			children = (
-				A1088987270731E8002E2FDC /* Main.storyboard */,
+				A10889B1270C925F002E2FDC /* SuperheroResponseModel.swift */,
+				A10889B4270CAB7C002E2FDC /* SuperheroRepository.swift */,
 			);
-			path = Views;
+			path = SuperheroRepository;
+			sourceTree = "<group>";
+		};
+		A100848D270E818400E92006 /* SuperheroSearchRepository */ = {
+			isa = PBXGroup;
+			children = (
+				A1008488270E7F4E00E92006 /* SuperheroSearchResponseModel.swift */,
+				A100848A270E813900E92006 /* SuperheroSearchRespository.swift */,
+			);
+			path = SuperheroSearchRepository;
+			sourceTree = "<group>";
+		};
+		A1008494270E882F00E92006 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				A1008495270E884A00E92006 /* Extensions.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		A1088975270731E8002E2FDC = {
@@ -155,8 +206,7 @@
 		A1088980270731E8002E2FDC /* Unmasked */ = {
 			isa = PBXGroup;
 			children = (
-				A100847E270E76E300E92006 /* Core */,
-				A100847F270E771500E92006 /* Basic View  */,
+				A1008483270E7C5000E92006 /* My Hero Collection */,
 				A1088981270731E8002E2FDC /* AppDelegate.swift */,
 				A1088983270731E8002E2FDC /* SceneDelegate.swift */,
 				A108898A270731EC002E2FDC /* Assets.xcassets */,
@@ -169,6 +219,11 @@
 		A1088997270731EC002E2FDC /* UnmaskedTests */ = {
 			isa = PBXGroup;
 			children = (
+				A10084D927157C9B00E92006 /* mockHeroSearchData.swift */,
+				A10084D227152C2700E92006 /* MockHeroSearchApiClient.swift */,
+				A10084CB2715223600E92006 /* MockSuperheroSearchRepository.swift */,
+				A10084D62715677F00E92006 /* SuperheroSearchRepositoryTests.swift */,
+				A10084C82715219600E92006 /* HeroSearchViewModelTests.swift */,
 				A1088998270731EC002E2FDC /* UnmaskedTests.swift */,
 				A108899A270731EC002E2FDC /* Info.plist */,
 			);
@@ -187,9 +242,8 @@
 		A10889B3270C9269002E2FDC /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				A10889BA270D9908002E2FDC /* Protocols */,
-				A10889B1270C925F002E2FDC /* SuperheroResponseModel.swift */,
-				A10889B4270CAB7C002E2FDC /* SuperheroRepository.swift */,
+				A100848D270E818400E92006 /* SuperheroSearchRepository */,
+				A100848C270E817100E92006 /* SuperheroRepository */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -308,6 +362,7 @@
 				A108898E270731EC002E2FDC /* LaunchScreen.storyboard in Resources */,
 				A108898B270731EC002E2FDC /* Assets.xcassets in Resources */,
 				A1088989270731E8002E2FDC /* Main.storyboard in Resources */,
+				A10084C7270FE31400E92006 /* HeroTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,15 +387,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10084C3270FDA2F00E92006 /* HeroSeachViewModel.swift in Sources */,
 				A10889B2270C925F002E2FDC /* SuperheroResponseModel.swift in Sources */,
-				A1088986270731E8002E2FDC /* ViewController.swift in Sources */,
 				A10889BC270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift in Sources */,
+				A10084A0270F599400E92006 /* Constants.swift in Sources */,
 				A100847B270E6EF100E92006 /* ViewModelDelegate.swift in Sources */,
 				A1088982270731E8002E2FDC /* AppDelegate.swift in Sources */,
 				A1088984270731E8002E2FDC /* SceneDelegate.swift in Sources */,
-				A100847D270E6F2A00E92006 /* ViewModel.swift in Sources */,
+				A1008496270E884A00E92006 /* Extensions.swift in Sources */,
+				A1008489270E7F4E00E92006 /* SuperheroSearchResponseModel.swift in Sources */,
+				A100848B270E813900E92006 /* SuperheroSearchRespository.swift in Sources */,
+				A10084C6270FE31400E92006 /* HeroTableViewCell.swift in Sources */,
 				A10889B5270CAB7C002E2FDC /* SuperheroRepository.swift in Sources */,
-				A10084A2270F858600E92006 /* Constants.swift in Sources */,
+				A10084C1270FD7FC00E92006 /* HeroSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +407,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10084D82715677F00E92006 /* SuperheroSearchRepositoryTests.swift in Sources */,
+				A10084CA2715219600E92006 /* HeroSearchViewModelTests.swift in Sources */,
+				A10084CD2715223600E92006 /* MockSuperheroSearchRepository.swift in Sources */,
+				A10084DA27157C9B00E92006 /* mockHeroSearchData.swift in Sources */,
+				A10084D427152C2700E92006 /* MockHeroSearchApiClient.swift in Sources */,
 				A1088999270731EC002E2FDC /* UnmaskedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
