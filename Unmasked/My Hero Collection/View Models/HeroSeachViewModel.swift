@@ -40,6 +40,6 @@ class HeroSearchViewModel {
     }
     
     func hero(at index: Int) -> SuperheroResponseModel? {
-        myHeroList?[index]
+        response?.results?[index]
     }
 }

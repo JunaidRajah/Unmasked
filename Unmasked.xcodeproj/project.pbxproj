@@ -18,8 +18,9 @@
 		A10084C7270FE31400E92006 /* HeroTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = A10084C5270FE31400E92006 /* HeroTableViewCell.xib */; };
 		A10084CA2715219600E92006 /* HeroSearchViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084C82715219600E92006 /* HeroSearchViewModelTests.swift */; };
 		A10084CD2715223600E92006 /* MockSuperheroSearchRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084CB2715223600E92006 /* MockSuperheroSearchRepository.swift */; };
-		A10084D1271527CC00E92006 /* MockHeroSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084CF271527CC00E92006 /* MockHeroSearchViewModel.swift */; };
 		A10084D427152C2700E92006 /* MockHeroSearchApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084D227152C2700E92006 /* MockHeroSearchApiClient.swift */; };
+		A10084D82715677F00E92006 /* SuperheroSearchRepositoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084D62715677F00E92006 /* SuperheroSearchRepositoryTests.swift */; };
+		A10084DA27157C9B00E92006 /* mockHeroSearchData.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10084D927157C9B00E92006 /* mockHeroSearchData.swift */; };
 		A1088982270731E8002E2FDC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088981270731E8002E2FDC /* AppDelegate.swift */; };
 		A1088984270731E8002E2FDC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1088983270731E8002E2FDC /* SceneDelegate.swift */; };
 		A1088989270731E8002E2FDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1088987270731E8002E2FDC /* Main.storyboard */; };
@@ -61,8 +62,9 @@
 		A10084C5270FE31400E92006 /* HeroTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroTableViewCell.xib; sourceTree = "<group>"; };
 		A10084C82715219600E92006 /* HeroSearchViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroSearchViewModelTests.swift; sourceTree = "<group>"; };
 		A10084CB2715223600E92006 /* MockSuperheroSearchRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockSuperheroSearchRepository.swift; sourceTree = "<group>"; };
-		A10084CF271527CC00E92006 /* MockHeroSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeroSearchViewModel.swift; sourceTree = "<group>"; };
 		A10084D227152C2700E92006 /* MockHeroSearchApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockHeroSearchApiClient.swift; sourceTree = "<group>"; };
+		A10084D62715677F00E92006 /* SuperheroSearchRepositoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroSearchRepositoryTests.swift; sourceTree = "<group>"; };
+		A10084D927157C9B00E92006 /* mockHeroSearchData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mockHeroSearchData.swift; sourceTree = "<group>"; };
 		A108897E270731E8002E2FDC /* Unmasked.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Unmasked.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1088981270731E8002E2FDC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A1088983270731E8002E2FDC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,17 +183,6 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		A10084D52715344200E92006 /* HeroSearchViewModelTests */ = {
-			isa = PBXGroup;
-			children = (
-				A10084D227152C2700E92006 /* MockHeroSearchApiClient.swift */,
-				A10084CB2715223600E92006 /* MockSuperheroSearchRepository.swift */,
-				A10084CF271527CC00E92006 /* MockHeroSearchViewModel.swift */,
-				A10084C82715219600E92006 /* HeroSearchViewModelTests.swift */,
-			);
-			path = HeroSearchViewModelTests;
-			sourceTree = "<group>";
-		};
 		A1088975270731E8002E2FDC = {
 			isa = PBXGroup;
 			children = (
@@ -228,7 +219,11 @@
 		A1088997270731EC002E2FDC /* UnmaskedTests */ = {
 			isa = PBXGroup;
 			children = (
-				A10084D52715344200E92006 /* HeroSearchViewModelTests */,
+				A10084D927157C9B00E92006 /* mockHeroSearchData.swift */,
+				A10084D227152C2700E92006 /* MockHeroSearchApiClient.swift */,
+				A10084CB2715223600E92006 /* MockSuperheroSearchRepository.swift */,
+				A10084D62715677F00E92006 /* SuperheroSearchRepositoryTests.swift */,
+				A10084C82715219600E92006 /* HeroSearchViewModelTests.swift */,
 				A1088998270731EC002E2FDC /* UnmaskedTests.swift */,
 				A108899A270731EC002E2FDC /* Info.plist */,
 			);
@@ -412,9 +407,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A10084D82715677F00E92006 /* SuperheroSearchRepositoryTests.swift in Sources */,
 				A10084CA2715219600E92006 /* HeroSearchViewModelTests.swift in Sources */,
-				A10084D1271527CC00E92006 /* MockHeroSearchViewModel.swift in Sources */,
 				A10084CD2715223600E92006 /* MockSuperheroSearchRepository.swift in Sources */,
+				A10084DA27157C9B00E92006 /* mockHeroSearchData.swift in Sources */,
 				A10084D427152C2700E92006 /* MockHeroSearchApiClient.swift in Sources */,
 				A1088999270731EC002E2FDC /* UnmaskedTests.swift in Sources */,
 			);
