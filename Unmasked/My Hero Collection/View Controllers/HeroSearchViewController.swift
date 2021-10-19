@@ -80,19 +80,15 @@ extension HeroSearchViewController: UITableViewDelegate {
 
 extension HeroSearchViewController: ViewModelDelegate {
     func refreshViewContents() {
-        DispatchQueue.main.async {
-            self.searchResultsTable.reloadData()
-        }
+        self.searchResultsTable.reloadData()
     }
 
     func showErrorMessage(error: Error) {
-        DispatchQueue.main.async {
-            let alertController = UIAlertController(title: "Still Masked",
-                                                    message: "Heroes not yet added to the codex",
-                                                    preferredStyle: .alert)
-            alertController.overrideUserInterfaceStyle = UIUserInterfaceStyle.dark
-            alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
-            self.present(alertController, animated: true)
-        }
+        let alertController = UIAlertController(title: "Still Masked",
+                                                message: "Heroes not yet added to the codex",
+                                                preferredStyle: .alert)
+        alertController.overrideUserInterfaceStyle = UIUserInterfaceStyle.dark
+        alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
+        self.present(alertController, animated: true)
     }
 }
