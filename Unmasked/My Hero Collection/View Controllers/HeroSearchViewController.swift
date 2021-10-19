@@ -20,6 +20,13 @@ class HeroSearchViewController: UIViewController {
         searchResultsTable?.dataSource = self
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        let destination = segue.destination as! HeroViewController
+        guard let selectedHero = searchViewModel.selectedHero else { return }
+        destination.set(selectedHero)
+    }
+    
     @IBAction func searchButtonPressed(_ sender: UIButton) {
         searchViewModel.fetchHeroes(with: searchBar.text ?? "")
     }
@@ -63,6 +70,9 @@ extension HeroSearchViewController: UITableViewDataSource {
 extension HeroSearchViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        searchViewModel.selectHero(at: indexPath.row)
+        performSegue(withIdentifier: "selectedHeroFromSearch", sender: self)
+        
     }
 }
 

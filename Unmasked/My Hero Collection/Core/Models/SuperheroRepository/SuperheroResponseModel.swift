@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SuperheroResponseModel: Codable {
+@objcMembers class SuperheroResponseModel: NSObject, Codable {
     let response: String?
     let id: String
     let name: String
@@ -19,7 +19,7 @@ struct SuperheroResponseModel: Codable {
     let image: Image
 }
 
-struct Appearance: Codable {
+@objcMembers class Appearance: NSObject, Codable  {
     let gender: String
     let race: String
     let height: [String]
@@ -34,7 +34,7 @@ struct Appearance: Codable {
     }
 }
 
-struct Biography: Codable {
+@objcMembers class Biography: NSObject, Codable  {
     let fullName: String
     let alterEgos: String
     let aliases: [String]
@@ -52,7 +52,7 @@ struct Biography: Codable {
     }
 }
 
-struct Connections: Codable {
+@objcMembers class Connections: NSObject, Codable  {
     let groupAffiliation: String
     let relatives: String
     enum CodingKeys: String, CodingKey {
@@ -61,11 +61,11 @@ struct Connections: Codable {
     }
 }
 
-struct Image: Codable {
+@objcMembers class Image: NSObject, Codable  {
     let url: String
 }
 
-struct Powerstats: Codable {
+@objcMembers class Powerstats: NSObject, Codable  {
     let intelligence: String
     let strength: String
     let speed: String
@@ -74,7 +74,7 @@ struct Powerstats: Codable {
     let combat: String
 }
 
-struct Work: Codable {
+@objcMembers class Work: NSObject, Codable  {
     let occupation: String
     let base: String
 }

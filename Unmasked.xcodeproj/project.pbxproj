@@ -26,6 +26,9 @@
 		A10889B2270C925F002E2FDC /* SuperheroResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10889B1270C925F002E2FDC /* SuperheroResponseModel.swift */; };
 		A10889B5270CAB7C002E2FDC /* SuperheroRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10889B4270CAB7C002E2FDC /* SuperheroRepository.swift */; };
 		A10889BC270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10889BB270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift */; };
+		A128D55B271E1CBE00C69F2B /* Powerstats.xib in Resources */ = {isa = PBXBuildFile; fileRef = A128D55A271E1CBE00C69F2B /* Powerstats.xib */; };
+		A128D56C271E426A00C69F2B /* HeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D56B271E426A00C69F2B /* HeroViewController.m */; };
+		A128D571271E46BC00C69F2B /* HeroViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D570271E46BC00C69F2B /* HeroViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,6 +74,12 @@
 		A10889B1270C925F002E2FDC /* SuperheroResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroResponseModel.swift; sourceTree = "<group>"; };
 		A10889B4270CAB7C002E2FDC /* SuperheroRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroRepository.swift; sourceTree = "<group>"; };
 		A10889BB270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroRepositoryFetchable.swift; sourceTree = "<group>"; };
+		A128D55A271E1CBE00C69F2B /* Powerstats.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Powerstats.xib; sourceTree = "<group>"; };
+		A128D569271E426900C69F2B /* Unmasked-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unmasked-Bridging-Header.h"; sourceTree = "<group>"; };
+		A128D56A271E426A00C69F2B /* HeroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroViewController.h; sourceTree = "<group>"; };
+		A128D56B271E426A00C69F2B /* HeroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroViewController.m; sourceTree = "<group>"; };
+		A128D56F271E46BC00C69F2B /* HeroViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroViewModel.h; sourceTree = "<group>"; };
+		A128D570271E46BC00C69F2B /* HeroViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroViewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,15 +113,16 @@
 				A10889BA270D9908002E2FDC /* Protocols */,
 				A1008494270E882F00E92006 /* Extensions */,
 				A10889B3270C9269002E2FDC /* Models */,
+				A128D557271E111600C69F2B /* Views */,
 				A100849F270F599400E92006 /* Constants.swift */,
 			);
-			path = Core;
+			name = Core;
+			path = "My Hero Collection/Core";
 			sourceTree = "<group>";
 		};
 		A1008483270E7C5000E92006 /* My Hero Collection */ = {
 			isa = PBXGroup;
 			children = (
-				A100847E270E76E300E92006 /* Core */,
 				A1008487270E7D3E00E92006 /* View Controllers */,
 				A1008486270E7D2C00E92006 /* View Models */,
 				A1008484270E7CF100E92006 /* Views */,
@@ -123,7 +133,6 @@
 		A1008484270E7CF100E92006 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A1088987270731E8002E2FDC /* Main.storyboard */,
 				A10084C5270FE31400E92006 /* HeroTableViewCell.xib */,
 			);
 			path = Views;
@@ -196,6 +205,8 @@
 		A1088980270731E8002E2FDC /* Unmasked */ = {
 			isa = PBXGroup;
 			children = (
+				A128D558271E1C2F00C69F2B /* Hero View */,
+				A100847E270E76E300E92006 /* Core */,
 				A1008483270E7C5000E92006 /* My Hero Collection */,
 				A1088981270731E8002E2FDC /* AppDelegate.swift */,
 				A1088983270731E8002E2FDC /* SceneDelegate.swift */,
@@ -239,6 +250,51 @@
 				A10889BB270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A128D557271E111600C69F2B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A1088987270731E8002E2FDC /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A128D558271E1C2F00C69F2B /* Hero View */ = {
+			isa = PBXGroup;
+			children = (
+				A128D55D271E210700C69F2B /* View Models */,
+				A128D55C271E20F900C69F2B /* View Controllers */,
+				A128D559271E1C6F00C69F2B /* Views */,
+			);
+			path = "Hero View";
+			sourceTree = "<group>";
+		};
+		A128D559271E1C6F00C69F2B /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A128D55A271E1CBE00C69F2B /* Powerstats.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		A128D55C271E20F900C69F2B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A128D56A271E426A00C69F2B /* HeroViewController.h */,
+				A128D56B271E426A00C69F2B /* HeroViewController.m */,
+				A128D569271E426900C69F2B /* Unmasked-Bridging-Header.h */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A128D55D271E210700C69F2B /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A128D56F271E46BC00C69F2B /* HeroViewModel.h */,
+				A128D570271E46BC00C69F2B /* HeroViewModel.m */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +364,7 @@
 				TargetAttributes = {
 					A108897D270731E8002E2FDC = {
 						CreatedOnToolsVersion = 12.5.1;
+						LastSwiftMigration = 1250;
 					};
 					A1088993270731EC002E2FDC = {
 						CreatedOnToolsVersion = 12.5.1;
@@ -348,6 +405,7 @@
 				A108898B270731EC002E2FDC /* Assets.xcassets in Resources */,
 				A1088989270731E8002E2FDC /* Main.storyboard in Resources */,
 				A10084C7270FE31400E92006 /* HeroTableViewCell.xib in Resources */,
+				A128D55B271E1CBE00C69F2B /* Powerstats.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -381,9 +439,11 @@
 				A1088984270731E8002E2FDC /* SceneDelegate.swift in Sources */,
 				A1008496270E884A00E92006 /* Extensions.swift in Sources */,
 				A1008489270E7F4E00E92006 /* SuperheroSearchResponseModel.swift in Sources */,
+				A128D571271E46BC00C69F2B /* HeroViewModel.m in Sources */,
 				A100848B270E813900E92006 /* SuperheroSearchRespository.swift in Sources */,
 				A10084C6270FE31400E92006 /* HeroTableViewCell.swift in Sources */,
 				A10889B5270CAB7C002E2FDC /* SuperheroRepository.swift in Sources */,
+				A128D56C271E426A00C69F2B /* HeroViewController.m in Sources */,
 				A10084C1270FD7FC00E92006 /* HeroSearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -560,6 +620,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X464DV3JXR;
 				INFOPLIST_FILE = Unmasked/Info.plist;
@@ -569,6 +630,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.junaid.Unmasked;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Unmasked/Hero View/View Controllers/Unmasked-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -579,6 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = X464DV3JXR;
 				INFOPLIST_FILE = Unmasked/Info.plist;
@@ -588,6 +652,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.junaid.Unmasked;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Unmasked/Hero View/View Controllers/Unmasked-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
