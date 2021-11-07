@@ -29,6 +29,11 @@
 		A128D55B271E1CBE00C69F2B /* Powerstats.xib in Resources */ = {isa = PBXBuildFile; fileRef = A128D55A271E1CBE00C69F2B /* Powerstats.xib */; };
 		A128D56C271E426A00C69F2B /* HeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D56B271E426A00C69F2B /* HeroViewController.m */; };
 		A128D571271E46BC00C69F2B /* HeroViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D570271E46BC00C69F2B /* HeroViewModel.m */; };
+		A1562E9A27383BBA00F80BA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1562E9927383BBA00F80BA0 /* GoogleService-Info.plist */; };
+		A1562E9B27383BBA00F80BA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1562E9927383BBA00F80BA0 /* GoogleService-Info.plist */; };
+		A1562E9C27383BBA00F80BA0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A1562E9927383BBA00F80BA0 /* GoogleService-Info.plist */; };
+		A15B004727335ADA00FFB706 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B004627335ADA00FFB706 /* GameViewController.swift */; };
+		A15B004927335B4300FFB706 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B004827335B4300FFB706 /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +85,9 @@
 		A128D56B271E426A00C69F2B /* HeroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroViewController.m; sourceTree = "<group>"; };
 		A128D56F271E46BC00C69F2B /* HeroViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroViewModel.h; sourceTree = "<group>"; };
 		A128D570271E46BC00C69F2B /* HeroViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroViewModel.m; sourceTree = "<group>"; };
+		A1562E9927383BBA00F80BA0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		A15B004627335ADA00FFB706 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		A15B004827335B4300FFB706 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +213,7 @@
 		A1088980270731E8002E2FDC /* Unmasked */ = {
 			isa = PBXGroup;
 			children = (
+				A15B004227335A7900FFB706 /* Game View */,
 				A128D558271E1C2F00C69F2B /* Hero View */,
 				A100847E270E76E300E92006 /* Core */,
 				A1008483270E7C5000E92006 /* My Hero Collection */,
@@ -213,6 +222,7 @@
 				A108898A270731EC002E2FDC /* Assets.xcassets */,
 				A108898C270731EC002E2FDC /* LaunchScreen.storyboard */,
 				A108898F270731EC002E2FDC /* Info.plist */,
+				A1562E9927383BBA00F80BA0 /* GoogleService-Info.plist */,
 			);
 			path = Unmasked;
 			sourceTree = "<group>";
@@ -295,6 +305,39 @@
 				A128D570271E46BC00C69F2B /* HeroViewModel.m */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A15B004227335A7900FFB706 /* Game View */ = {
+			isa = PBXGroup;
+			children = (
+				A15B004327335A8700FFB706 /* View Models */,
+				A15B004427335A9700FFB706 /* View Controllers */,
+				A15B004527335AA200FFB706 /* Views */,
+			);
+			path = "Game View";
+			sourceTree = "<group>";
+		};
+		A15B004327335A8700FFB706 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A15B004827335B4300FFB706 /* GameViewModel.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A15B004427335A9700FFB706 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A15B004627335ADA00FFB706 /* GameViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A15B004527335AA200FFB706 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -406,6 +449,7 @@
 				A1088989270731E8002E2FDC /* Main.storyboard in Resources */,
 				A10084C7270FE31400E92006 /* HeroTableViewCell.xib in Resources */,
 				A128D55B271E1CBE00C69F2B /* Powerstats.xib in Resources */,
+				A1562E9A27383BBA00F80BA0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,6 +457,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1562E9B27383BBA00F80BA0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +465,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A1562E9C27383BBA00F80BA0 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,11 +483,13 @@
 				A100847B270E6EF100E92006 /* ViewModelDelegate.swift in Sources */,
 				A1088982270731E8002E2FDC /* AppDelegate.swift in Sources */,
 				A1088984270731E8002E2FDC /* SceneDelegate.swift in Sources */,
+				A15B004927335B4300FFB706 /* GameViewModel.swift in Sources */,
 				A1008496270E884A00E92006 /* Extensions.swift in Sources */,
 				A1008489270E7F4E00E92006 /* SuperheroSearchResponseModel.swift in Sources */,
 				A128D571271E46BC00C69F2B /* HeroViewModel.m in Sources */,
 				A100848B270E813900E92006 /* SuperheroSearchRespository.swift in Sources */,
 				A10084C6270FE31400E92006 /* HeroTableViewCell.swift in Sources */,
+				A15B004727335ADA00FFB706 /* GameViewController.swift in Sources */,
 				A10889B5270CAB7C002E2FDC /* SuperheroRepository.swift in Sources */,
 				A128D56C271E426A00C69F2B /* HeroViewController.m in Sources */,
 				A10084C1270FD7FC00E92006 /* HeroSearchViewController.swift in Sources */,

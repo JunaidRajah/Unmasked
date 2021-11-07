@@ -10,11 +10,13 @@ import UIKit
 
 @objc extension UIImageView {
     func load(url: URL) {
+        self.contentMode = .scaleAspectFit
         DispatchQueue.global().async { [weak self] in
             if let data = try? Data(contentsOf: url) {
                 if let image = UIImage(data: data) {
                     DispatchQueue.main.async {
                         self?.image = image
+                        self?.contentMode = .scaleAspectFill
                     }
                 }
             }

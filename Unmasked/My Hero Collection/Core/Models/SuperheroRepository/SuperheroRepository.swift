@@ -14,13 +14,17 @@ struct SuperheroRepository: SuperheroRepositoryFetchable {
             let session =  URLSession(configuration: .default)
             let task = session.dataTask(with: url) { (data, _, error) in
                 if let safeData = data {
-                    do {
-                        let superhero = try JSONDecoder().decode(SuperheroResponseModel.self, from: safeData)
-                        completion(.success(superhero))
-                        
-                    } catch {
-                        completion(.failure(error))
+                    DispatchQueue.main.async {
+                        do {
+                            let superhero = try JSONDecoder().decode(SuperheroResponseModel.self, from: safeData)
+                            completion(.success(superhero))
+                            
+                        } catch {
+                            completion(.failure(error))
+                        }
                     }
+                } else {
+                    completion(.failure(error as! URLError))
                 }
             }
             task.resume()

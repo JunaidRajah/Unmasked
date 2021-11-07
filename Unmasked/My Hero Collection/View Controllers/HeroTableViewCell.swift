@@ -20,10 +20,12 @@ class HeroTableViewCell: UITableViewCell {
 
     public func configure(with hero: SuperheroResponseModel) {
         if let url = URL(string: hero.image.url) {
+            heroImage.contentMode = .scaleAspectFit
             heroImage.image = UIImage(systemName: "arrow.clockwise")
             DispatchQueue.main.async {
                 self.heroImage.load(url: url)
             }
+            heroImage.contentMode = .scaleAspectFill
         }
         heroName.text = hero.name
         heroPublisher.text = hero.biography.publisher
