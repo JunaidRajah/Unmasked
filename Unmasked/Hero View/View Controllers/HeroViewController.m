@@ -10,6 +10,7 @@
 
 @interface HeroViewController () {
     HeroViewModel *_viewModel;
+    BOOL fromSearchView;
     IBOutlet UILabel *heroNameLabel;
     IBOutlet UIImageView *heroPortraitView;
     IBOutlet UILabel *heroIntLabel;
@@ -34,13 +35,22 @@
     [_viewModel set:hero];
 }
 
+- (void)setReturn:(BOOL) fromSearch {
+    fromSearchView = fromSearch;
+}
+
 - (void)setupViewModel {
     if (!_viewModel) {
         _viewModel = [[HeroViewModel alloc] init];
     }
 }
 - (IBAction)returnButtonPressed:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"returnFromHero" sender:self];
+    if (fromSearchView) {
+        [self performSegueWithIdentifier:@"returnFromHero" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"returnToCollectionList" sender:self];
+    }
+    
 }
 
 - (void)setupView {

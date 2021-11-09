@@ -8,22 +8,24 @@
 import UIKit
 
 class GroupViewController: UIViewController {
+    
+    var selectedGroup = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "groupsToList" {
+            super.prepare(for: segue, sender: sender)
+            let destination = segue.destination as! HeroCollectionViewController
+            destination.heroGroup = selectedGroup
+        }
     }
-    */
-
+    
+    @IBAction func heroGroupSelected(_ sender: UIButton) {
+        selectedGroup = sender.tag
+        performSegue(withIdentifier: "groupsToList", sender: self)
+    }
 }

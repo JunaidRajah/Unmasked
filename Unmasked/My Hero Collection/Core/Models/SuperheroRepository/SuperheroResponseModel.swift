@@ -78,3 +78,15 @@ import Foundation
     let occupation: String
     let base: String
 }
+
+func convertToDictionary(hero: SuperheroResponseModel) -> NSDictionary {
+    
+    
+    var dictionary = ["id": hero.id,
+                    "name": hero.name,
+                    "publisher": hero.biography.publisher,
+                    "alignment": hero.biography.alignment,
+                    "image": hero.image.url] as [String : String]
+
+    return dictionary as NSDictionary
+}

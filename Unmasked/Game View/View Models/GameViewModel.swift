@@ -6,9 +6,11 @@
 //
 
 import Foundation
-
+import Firebase
 
 class GameViewModel {
+    
+    var ref = Database.database().reference()
     
     private var repository: SuperheroRepositoryFetchable
     private weak var delegate: ViewModelDelegate?
@@ -16,6 +18,7 @@ class GameViewModel {
     private var hero2: SuperheroResponseModel?
     private var stat = 1
     private var score = 0
+    private var unlockScore = 0
     
     init(repository: SuperheroRepositoryFetchable,
          delegate: ViewModelDelegate) {
@@ -29,6 +32,7 @@ class GameViewModel {
     }
     
     func heroButtonPressed(isHeroOne: Bool) {
+    
         var hero1Stat = 0
         var hero2Stat = 0
         switch stat {
@@ -59,23 +63,49 @@ class GameViewModel {
         if isHeroOne == true {
             if hero1Stat >= hero2Stat {
                 score += 1
+                incrementUnlock()
                 let heroTwoID = generateRandomID(heroIDToCheck: hero1?.id)
                 fetchHero(isHeroOne: false, heroNo: heroTwoID)
             } else {
-                score -= 1
+                if score > 0 {
+                    score -= 1
+                }
                 let heroOneID = generateRandomID(heroIDToCheck: hero2?.id)
                 fetchHero(isHeroOne: true, heroNo: heroOneID)
             }
         } else {
             if hero2Stat >= hero1Stat {
                 score += 1
+                incrementUnlock()
                 let heroOneID = generateRandomID(heroIDToCheck: hero2?.id)
                 fetchHero(isHeroOne: true, heroNo: heroOneID)
             } else {
-                score -= 1
+                if score > 0 {
+                    score -= 1
+                }
                 let heroTwoID = generateRandomID(heroIDToCheck: hero1?.id)
                 fetchHero(isHeroOne: false, heroNo: heroTwoID)
             }
+        }
+    }
+    
+    private func incrementUnlock() {
+        if unlockScore == 2 {
+            unlockScore = 0
+            let heroToSave = ["id": hero1!.id,
+                              "name": hero1!.name,
+                              "publisher": hero1!.biography.publisher,
+                              "alignment": hero1!.biography.alignment,
+                              "image": hero1!.image.url]
+//            let heroToSave = superheroCollectionModel(id: hero1!.id,
+//                                                      name: hero1!.name,
+//                                                      publisher: hero1!.biography.publisher,
+//                                                      alignment: hero1!.biography.alignment,
+//                                                      image: hero1!.image.url)
+            
+            self.ref.child("heroes").child(hero1?.name ?? "Unmasked").setValue(heroToSave)
+        } else {
+            unlockScore += 1
         }
     }
     

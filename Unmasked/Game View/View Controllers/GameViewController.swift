@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class GameViewController: UIViewController {
     
@@ -29,9 +30,8 @@ class GameViewController: UIViewController {
         } else {
             gameViewModel.heroButtonPressed(isHeroOne: false)
         }
+        
     }
-    
-    
 }
 
 extension GameViewController: ViewModelDelegate {

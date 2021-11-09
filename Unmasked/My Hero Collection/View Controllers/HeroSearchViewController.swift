@@ -21,10 +21,13 @@ class HeroSearchViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        let destination = segue.destination as! HeroViewController
-        guard let selectedHero = searchViewModel.selectedHero else { return }
-        destination.set(selectedHero)
+        if segue.identifier == "selectedHeroFromSearch" {
+            super.prepare(for: segue, sender: sender)
+            let destination = segue.destination as! HeroViewController
+            guard let selectedHero = searchViewModel.selectedHero else { return }
+            destination.set(selectedHero)
+            destination.setReturn(true)
+        }
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
