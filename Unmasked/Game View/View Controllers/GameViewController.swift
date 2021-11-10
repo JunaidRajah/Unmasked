@@ -24,6 +24,15 @@ class GameViewController: UIViewController {
         gameViewModel.startGame()
     }
     
+    private func loadImage(with imageURL: String, imageView: UIImageView) {
+        if let url = URL(string: imageURL) {
+            imageView.image = UIImage(systemName: "arrow.clockwise")
+            DispatchQueue.main.async {
+                imageView.load(url: url)
+            }
+        }
+    }
+    
     @IBAction func heroButtonPressed(_ sender: UIButton) {
         if sender.tag == 1 {
             gameViewModel.heroButtonPressed(isHeroOne: true)
@@ -38,20 +47,10 @@ extension GameViewController: ViewModelDelegate {
         heroOneImage.contentMode = .scaleAspectFit
         heroTwoImage.contentMode = .scaleAspectFit
         heroOneName.text = gameViewModel.heroOneName
-        if let url = URL(string: gameViewModel.heroOneImageURL) {
-            heroOneImage.image = UIImage(systemName: "arrow.clockwise")
-            DispatchQueue.main.async {
-                self.heroOneImage.load(url: url)
-            }
-        }
+        loadImage(with: gameViewModel.heroOneImageURL, imageView: heroOneImage)
         
         heroTwoName.text = gameViewModel.heroTwoName
-        if let url = URL(string: gameViewModel.heroTwoImageURL) {
-            heroTwoImage.image = UIImage(systemName: "arrow.clockwise")
-            DispatchQueue.main.async {
-                self.heroTwoImage.load(url: url)
-            }
-        }
+        loadImage(with: gameViewModel.heroTwoImageURL, imageView: heroTwoImage)
         
         statLabel.text = gameViewModel.statName
         scoreLabel.text = gameViewModel.currentScore

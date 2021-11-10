@@ -17,78 +17,68 @@ class HeroCollectionViewModel {
     private var repository: SuperheroRepositoryFetchable
     private var response: [superheroCollectionModel]?
     private var heroToSend: SuperheroResponseModel?
-    let userModel = UserModel.userInstance
-    var user: User?
     
     init(repository: SuperheroRepositoryFetchable,
          delegate: CollectionViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
-        handle = Auth.auth().addStateDidChangeListener { _, user in
-          guard let user = user else { return }
-          self.user = User(authData: user)
+    }
+    
+    func fetchCollection(heroGroup: Int) {
+        handle = Auth.auth().addStateDidChangeListener { _, currentUser in
+            if currentUser == nil {
+                return
+            } else {
+                let completed = self.ref.child(currentUser!.uid).child("heroes").observe(.value) { snapshot in
+                    var newItems: [superheroCollectionModel] = []
+                    for child in snapshot.children {
+                        if
+                            let snapshot = child as? DataSnapshot,
+                            let hero = superheroCollectionModel(snapshot: snapshot) {
+                            newItems.append(hero)
+                            print(hero.name)
+                        }
+                    }
+                    var groupItems: [superheroCollectionModel] = []
+                    switch heroGroup {
+                    case 1:
+                        groupItems = self.filterCollection(with: "Marvel Comics", collection: newItems)
+                    case 2:
+                        groupItems = self.filterCollection(with: "DC Comics", collection: newItems)
+                    case 3:
+                        groupItems = self.filterCollection(with: "George Lucas", collection: newItems)
+                    case 4:
+                        groupItems = self.filterCollection(with: "Shueisha", collection: newItems)
+                    case 5:
+                        groupItems = self.filterCollection(with: "Dark Horse Comics", collection: newItems)
+                    default:
+                        for hero in newItems {
+                            if hero.publisher != "Marvel Comics" &&
+                                hero.publisher != "DC Comics" &&
+                                hero.publisher != "George Lucas" &&
+                                hero.publisher != "Shueisha" &&
+                                hero.publisher != "Dark Horse Comics" {
+                                groupItems.append(hero)
+                            }
+                        }
+                    }
+                    
+                    self.response = groupItems
+                    self.delegate?.refreshViewContents()
+                }
+                self.refObservers.append(completed)
+            }
         }
     }
     
-    func fetchCollection(heroGroup: Int){
-        let completed = ref.child(userModel.currentUser!.uid).child("heroes").observe(.value) { snapshot in
-            var newItems: [superheroCollectionModel] = []
-            for child in snapshot.children {
-                if
-                    let snapshot = child as? DataSnapshot,
-                    let hero = superheroCollectionModel(snapshot: snapshot) {
-                    newItems.append(hero)
-                    print(hero.name)
-                }
+    private func filterCollection(with publisher: String, collection: [superheroCollectionModel]) -> [superheroCollectionModel] {
+        var filteredCollection: [superheroCollectionModel] = []
+        for hero in collection {
+            if hero.publisher == publisher {
+                filteredCollection.append(hero)
             }
-            var groupItems: [superheroCollectionModel] = []
-            switch heroGroup {
-            case 1:
-                for hero in newItems {
-                    if hero.publisher == "Marvel Comics" {
-                        groupItems.append(hero)
-                    }
-                }
-            case 2:
-                for hero in newItems {
-                    if hero.publisher == "DC Comics" {
-                        groupItems.append(hero)
-                    }
-                }
-            case 3:
-                for hero in newItems {
-                    if hero.publisher == "George Lucas" {
-                        groupItems.append(hero)
-                    }
-                }
-            case 4:
-                for hero in newItems {
-                    if hero.publisher == "Shueisha" {
-                        groupItems.append(hero)
-                    }
-                }
-            case 5:
-                for hero in newItems {
-                    if hero.publisher == "Dark Horse Comics" {
-                        groupItems.append(hero)
-                    }
-                }
-            default:
-                for hero in newItems {
-                    if hero.publisher != "Marvel Comics" &&
-                        hero.publisher != "DC Comics" &&
-                        hero.publisher != "George Lucas" &&
-                        hero.publisher != "Shueisha" &&
-                        hero.publisher != "Dark Horse Comics" {
-                        groupItems.append(hero)
-                    }
-                }
-            }
-            
-            self.response = groupItems
-            self.delegate?.refreshViewContents()
         }
-        refObservers.append(completed)
+        return filteredCollection
     }
     
     func selectHero(at index: Int) {
@@ -103,19 +93,6 @@ class HeroCollectionViewModel {
             }
         })
     }
-    
-//    func userSignedIn() {
-//        handle = Auth.auth().addStateDidChangeListener { _, user in
-//          guard let user = user else { return }
-//          self.user = User(authData: user)
-//        }
-//    }
-    
-    func userRemoveListener() {
-        guard let handle = handle else { return }
-        Auth.auth().removeStateDidChangeListener(handle)
-    }
-    
     
     var selectedHero: SuperheroResponseModel? {
         heroToSend

@@ -17,7 +17,6 @@ struct superheroCollectionModel {
     let alignment: String
     let image: String
     
-    // MARK: Initialize with Raw Data
     init(id: String, name: String, publisher: String, alignment: String, image: String, key: String = "") {
         self.ref = nil
         self.key = key
@@ -28,7 +27,6 @@ struct superheroCollectionModel {
         self.image = image
     }
     
-    // MARK: Initialize with Firebase DataSnapshot
     init?(snapshot: DataSnapshot) {
         guard
             let value = snapshot.value as? [String: AnyObject],
@@ -49,7 +47,6 @@ struct superheroCollectionModel {
         self.image = image
     }
     
-    // MARK: Convert to AnyObject
     func toAnyObject() -> NSDictionary {
         return [
             "id": id,

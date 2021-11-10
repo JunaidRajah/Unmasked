@@ -31,16 +31,6 @@ class HeroCollectionViewController: UIViewController {
             destination.setGroup(heroGroup)
         }
     }
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        DispatchQueue.main.async {
-//            self.heroCollectionViewModel.userSignedIn()
-//        }
-//    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        heroCollectionViewModel.userRemoveListener()
-    }
 }
 
 // MARK: - UITableView DataSource functions

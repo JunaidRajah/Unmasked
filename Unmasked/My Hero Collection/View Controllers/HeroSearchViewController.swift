@@ -75,7 +75,6 @@ extension HeroSearchViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         searchViewModel.selectHero(at: indexPath.row)
         performSegue(withIdentifier: "selectedHeroFromSearch", sender: self)
-        
     }
 }
 

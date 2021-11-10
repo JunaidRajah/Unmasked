@@ -10,16 +10,10 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
-    let userModel = UserModel.userInstance
-    
     @IBOutlet weak var enterEmail: UITextField!
     @IBOutlet weak var enterPassword: UITextField!
     
     var handle: AuthStateDidChangeListenerHandle?
-    
-    override var preferredStatusBarStyle: UIStatusBarStyle {
-        return .lightContent
-    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,22 +23,15 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: false)
         handle = Auth.auth().addStateDidChangeListener { _, user in
             if user == nil {
                 self.navigationController?.popToRootViewController(animated: true)
             } else {
-                self.userModel.currentUser = User(uid: user!.uid, email: (user?.email)!)
                 self.performSegue(withIdentifier: "LoginToMenu", sender: nil)
                 self.enterEmail.text = nil
                 self.enterPassword.text = nil
             }
         }
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(animated)
-        navigationController?.setNavigationBarHidden(false, animated: false)
     }
     
     override func viewDidDisappear(_ animated: Bool) {

@@ -12,7 +12,6 @@ class GameViewModel {
     
     var ref = Database.database().reference()
     var handle: AuthStateDidChangeListenerHandle?
-    let userModel = UserModel.userInstance
     
     private var repository: SuperheroRepositoryFetchable
     private weak var delegate: ViewModelDelegate?
@@ -93,17 +92,21 @@ class GameViewModel {
     }
     
     private func incrementUnlock() {
-        if unlockScore == 2 {
+        unlockScore += 1
+        if unlockScore == 4 {
             unlockScore = 0
             let heroToSave = ["id": hero1!.id,
                               "name": hero1!.name,
                               "publisher": hero1!.biography.publisher,
                               "alignment": hero1!.biography.alignment,
                               "image": hero1!.image.url]
-            
-            self.ref.child(userModel.currentUser!.uid).child("heroes").child(hero1?.name ?? "Unmasked").setValue(heroToSave)
-        } else {
-            unlockScore += 1
+            handle = Auth.auth().addStateDidChangeListener { _, currentUser in
+                if currentUser == nil {
+                    return
+                } else {
+                    self.ref.child(currentUser!.uid).child("heroes").child(self.hero1?.name ?? "Unmasked").setValue(heroToSave)
+                }
+            }
         }
     }
     
@@ -184,5 +187,4 @@ class GameViewModel {
     var currentScore: String {
         "\(score)"
     }
-    
 }
