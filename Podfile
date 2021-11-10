@@ -7,6 +7,7 @@ target 'Unmasked' do
 
   # Pods for Unmasked
 pod 'Firebase/Database'
+pod 'Firebase/Auth'
 
   target 'UnmaskedTests' do
     inherit! :search_paths

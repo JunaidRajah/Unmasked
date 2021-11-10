@@ -11,6 +11,8 @@ import Firebase
 class GameViewModel {
     
     var ref = Database.database().reference()
+    var handle: AuthStateDidChangeListenerHandle?
+    let userModel = UserModel.userInstance
     
     private var repository: SuperheroRepositoryFetchable
     private weak var delegate: ViewModelDelegate?
@@ -19,6 +21,7 @@ class GameViewModel {
     private var stat = 1
     private var score = 0
     private var unlockScore = 0
+    var user: User?
     
     init(repository: SuperheroRepositoryFetchable,
          delegate: ViewModelDelegate) {
@@ -97,13 +100,8 @@ class GameViewModel {
                               "publisher": hero1!.biography.publisher,
                               "alignment": hero1!.biography.alignment,
                               "image": hero1!.image.url]
-//            let heroToSave = superheroCollectionModel(id: hero1!.id,
-//                                                      name: hero1!.name,
-//                                                      publisher: hero1!.biography.publisher,
-//                                                      alignment: hero1!.biography.alignment,
-//                                                      image: hero1!.image.url)
             
-            self.ref.child("heroes").child(hero1?.name ?? "Unmasked").setValue(heroToSave)
+            self.ref.child(userModel.currentUser!.uid).child("heroes").child(hero1?.name ?? "Unmasked").setValue(heroToSave)
         } else {
             unlockScore += 1
         }

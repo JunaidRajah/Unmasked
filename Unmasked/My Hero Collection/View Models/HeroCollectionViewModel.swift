@@ -10,21 +10,28 @@ import Firebase
 
 class HeroCollectionViewModel {
     
-    var ref = Database.database().reference(withPath: "heroes")
+    var ref = Database.database().reference()
+    var handle: AuthStateDidChangeListenerHandle?
     var refObservers: [DatabaseHandle] = []
     private weak var delegate: CollectionViewModelDelegate?
     private var repository: SuperheroRepositoryFetchable
     private var response: [superheroCollectionModel]?
     private var heroToSend: SuperheroResponseModel?
+    let userModel = UserModel.userInstance
+    var user: User?
     
     init(repository: SuperheroRepositoryFetchable,
          delegate: CollectionViewModelDelegate) {
         self.repository = repository
         self.delegate = delegate
+        handle = Auth.auth().addStateDidChangeListener { _, user in
+          guard let user = user else { return }
+          self.user = User(authData: user)
+        }
     }
     
     func fetchCollection(heroGroup: Int){
-        let completed = ref.observe(.value) { snapshot in
+        let completed = ref.child(userModel.currentUser!.uid).child("heroes").observe(.value) { snapshot in
             var newItems: [superheroCollectionModel] = []
             for child in snapshot.children {
                 if
@@ -96,6 +103,19 @@ class HeroCollectionViewModel {
             }
         })
     }
+    
+//    func userSignedIn() {
+//        handle = Auth.auth().addStateDidChangeListener { _, user in
+//          guard let user = user else { return }
+//          self.user = User(authData: user)
+//        }
+//    }
+    
+    func userRemoveListener() {
+        guard let handle = handle else { return }
+        Auth.auth().removeStateDidChangeListener(handle)
+    }
+    
     
     var selectedHero: SuperheroResponseModel? {
         heroToSend

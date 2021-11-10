@@ -13,6 +13,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface HeroViewController : UIViewController
 - (void)set:(SuperheroResponseModel *) hero;
 - (void)setReturn:(BOOL) fromSearch;
+- (void)setGroup:(NSInteger) heroGroup;
 @end
 
 NS_ASSUME_NONNULL_END

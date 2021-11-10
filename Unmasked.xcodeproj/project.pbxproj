@@ -28,6 +28,9 @@
 		A10889B2270C925F002E2FDC /* SuperheroResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10889B1270C925F002E2FDC /* SuperheroResponseModel.swift */; };
 		A10889B5270CAB7C002E2FDC /* SuperheroRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10889B4270CAB7C002E2FDC /* SuperheroRepository.swift */; };
 		A10889BC270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10889BB270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift */; };
+		A11BE1AF273B349300A78E54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1AE273B349300A78E54 /* LoginViewController.swift */; };
+		A11BE1B3273B45AC00A78E54 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1B2273B45AC00A78E54 /* UserModel.swift */; };
+		A11BE1B5273B567F00A78E54 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1B4273B567F00A78E54 /* MenuViewController.swift */; };
 		A128D55B271E1CBE00C69F2B /* Powerstats.xib in Resources */ = {isa = PBXBuildFile; fileRef = A128D55A271E1CBE00C69F2B /* Powerstats.xib */; };
 		A128D56C271E426A00C69F2B /* HeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D56B271E426A00C69F2B /* HeroViewController.m */; };
 		A128D571271E46BC00C69F2B /* HeroViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D570271E46BC00C69F2B /* HeroViewModel.m */; };
@@ -35,6 +38,7 @@
 		A1590587273AD75900A8DEE0 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1590586273AD75900A8DEE0 /* GroupViewController.swift */; };
 		A15B004727335ADA00FFB706 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B004627335ADA00FFB706 /* GameViewController.swift */; };
 		A15B004927335B4300FFB706 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15B004827335B4300FFB706 /* GameViewModel.swift */; };
+		A171877D273B3368004BB803 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A171877C273B3368004BB803 /* User.swift */; };
 		A177D2A3273851A800DF9749 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A177D2A2273851A800DF9749 /* GoogleService-Info.plist */; };
 		A177D2A4273851A800DF9749 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A177D2A2273851A800DF9749 /* GoogleService-Info.plist */; };
 		A177D2A5273851A800DF9749 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A177D2A2273851A800DF9749 /* GoogleService-Info.plist */; };
@@ -97,6 +101,9 @@
 		A10889B1270C925F002E2FDC /* SuperheroResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroResponseModel.swift; sourceTree = "<group>"; };
 		A10889B4270CAB7C002E2FDC /* SuperheroRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroRepository.swift; sourceTree = "<group>"; };
 		A10889BB270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroRepositoryFetchable.swift; sourceTree = "<group>"; };
+		A11BE1AE273B349300A78E54 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		A11BE1B2273B45AC00A78E54 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		A11BE1B4273B567F00A78E54 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		A128D55A271E1CBE00C69F2B /* Powerstats.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Powerstats.xib; sourceTree = "<group>"; };
 		A128D569271E426900C69F2B /* Unmasked-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unmasked-Bridging-Header.h"; sourceTree = "<group>"; };
 		A128D56A271E426A00C69F2B /* HeroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroViewController.h; sourceTree = "<group>"; };
@@ -107,6 +114,7 @@
 		A1590586273AD75900A8DEE0 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		A15B004627335ADA00FFB706 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		A15B004827335B4300FFB706 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		A171877C273B3368004BB803 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		A177D2A2273851A800DF9749 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A177D2A62739FD1300DF9749 /* HeroCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewController.swift; sourceTree = "<group>"; };
 		A177D2AA2739FDC400DF9749 /* HeroCollectionViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroCollectionViewModel.swift; sourceTree = "<group>"; };
@@ -268,6 +276,8 @@
 		A1088980270731E8002E2FDC /* Unmasked */ = {
 			isa = PBXGroup;
 			children = (
+				A11BE1B6273B568800A78E54 /* Main Menu */,
+				A1718779273B332D004BB803 /* Login */,
 				A15B004227335A7900FFB706 /* Game View */,
 				A128D558271E1C2F00C69F2B /* Hero View */,
 				A100847E270E76E300E92006 /* Core */,
@@ -306,6 +316,8 @@
 				A100848D270E818400E92006 /* SuperheroSearchRepository */,
 				A100848C270E817100E92006 /* SuperheroRepository */,
 				A1590584273AB99F00A8DEE0 /* superheroCollectionModel.swift */,
+				A171877C273B3368004BB803 /* User.swift */,
+				A11BE1B2273B45AC00A78E54 /* UserModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -316,6 +328,22 @@
 				A10889BB270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		A11BE1B6273B568800A78E54 /* Main Menu */ = {
+			isa = PBXGroup;
+			children = (
+				A11BE1B7273B569500A78E54 /* View Controllers */,
+			);
+			path = "Main Menu";
+			sourceTree = "<group>";
+		};
+		A11BE1B7273B569500A78E54 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A11BE1B4273B567F00A78E54 /* MenuViewController.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 		A128D557271E111600C69F2B /* Views */ = {
@@ -394,6 +422,30 @@
 			children = (
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		A1718779273B332D004BB803 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				A171877B273B334E004BB803 /* View Models */,
+				A171877A273B3341004BB803 /* View Controllers */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		A171877A273B3341004BB803 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A11BE1AE273B349300A78E54 /* LoginViewController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A171877B273B334E004BB803 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -643,16 +695,20 @@
 				A10084C3270FDA2F00E92006 /* HeroSeachViewModel.swift in Sources */,
 				A10889B2270C925F002E2FDC /* SuperheroResponseModel.swift in Sources */,
 				A10889BC270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift in Sources */,
+				A11BE1AF273B349300A78E54 /* LoginViewController.swift in Sources */,
 				A10084A0270F599400E92006 /* Constants.swift in Sources */,
 				A100847B270E6EF100E92006 /* ViewModelDelegate.swift in Sources */,
 				A1088982270731E8002E2FDC /* AppDelegate.swift in Sources */,
 				A1590587273AD75900A8DEE0 /* GroupViewController.swift in Sources */,
 				A1088984270731E8002E2FDC /* SceneDelegate.swift in Sources */,
 				A15B004927335B4300FFB706 /* GameViewModel.swift in Sources */,
+				A11BE1B3273B45AC00A78E54 /* UserModel.swift in Sources */,
 				A1008496270E884A00E92006 /* Extensions.swift in Sources */,
+				A171877D273B3368004BB803 /* User.swift in Sources */,
 				A1008489270E7F4E00E92006 /* SuperheroSearchResponseModel.swift in Sources */,
 				A128D571271E46BC00C69F2B /* HeroViewModel.m in Sources */,
 				A100848B270E813900E92006 /* SuperheroSearchRespository.swift in Sources */,
+				A11BE1B5273B567F00A78E54 /* MenuViewController.swift in Sources */,
 				A177D2AB2739FDC400DF9749 /* HeroCollectionViewModel.swift in Sources */,
 				A177D2A72739FD1300DF9749 /* HeroCollectionViewController.swift in Sources */,
 				A10084C6270FE31400E92006 /* HeroTableViewCell.swift in Sources */,

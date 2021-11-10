@@ -11,7 +11,7 @@ class HeroCollectionViewController: UIViewController {
     
     private lazy var heroCollectionViewModel = HeroCollectionViewModel(repository: SuperheroRepository(), delegate: self)
     @IBOutlet weak var heroTable: UITableView!
-    var heroGroup: Int = 0
+    @objc var heroGroup: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,7 +28,18 @@ class HeroCollectionViewController: UIViewController {
             guard let selectedHero = heroCollectionViewModel.selectedHero else { return }
             destination.set(selectedHero)
             destination.setReturn(false)
+            destination.setGroup(heroGroup)
         }
+    }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        DispatchQueue.main.async {
+//            self.heroCollectionViewModel.userSignedIn()
+//        }
+//    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        heroCollectionViewModel.userRemoveListener()
     }
 }
 

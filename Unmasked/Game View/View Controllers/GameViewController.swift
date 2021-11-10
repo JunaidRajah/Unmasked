@@ -30,7 +30,6 @@ class GameViewController: UIViewController {
         } else {
             gameViewModel.heroButtonPressed(isHeroOne: false)
         }
-        
     }
 }
 

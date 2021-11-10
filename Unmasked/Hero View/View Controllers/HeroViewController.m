@@ -11,6 +11,7 @@
 @interface HeroViewController () {
     HeroViewModel *_viewModel;
     BOOL fromSearchView;
+    NSInteger groupFromCollection;
     IBOutlet UILabel *heroNameLabel;
     IBOutlet UIImageView *heroPortraitView;
     IBOutlet UILabel *heroIntLabel;
@@ -39,18 +40,29 @@
     fromSearchView = fromSearch;
 }
 
+- (void)setGroup:(NSInteger) heroGroup {
+    groupFromCollection = heroGroup;
+}
+
 - (void)setupViewModel {
     if (!_viewModel) {
         _viewModel = [[HeroViewModel alloc] init];
     }
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.identifier isEqualToString:@"returnToCollectionList"]) {
+      HeroCollectionViewController *vc = segue.destinationViewController;
+      vc.heroGroup = groupFromCollection;
+  }
+}
+
 - (IBAction)returnButtonPressed:(UIButton *)sender {
     if (fromSearchView) {
         [self performSegueWithIdentifier:@"returnFromHero" sender:self];
     } else {
         [self performSegueWithIdentifier:@"returnToCollectionList" sender:self];
     }
-    
 }
 
 - (void)setupView {
