@@ -9,7 +9,7 @@ import UIKit
 
 class GroupViewController: UIViewController {
     
-    var selectedGroup = 0
+    private var selectedGroup = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()

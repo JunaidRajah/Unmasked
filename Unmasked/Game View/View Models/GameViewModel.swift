@@ -8,19 +8,29 @@
 import Foundation
 import Firebase
 
+enum statistic: String, CaseIterable {
+    case intelligence = "intelligence"
+    case strength = "strength"
+    case speed = "speed"
+    case durability = "durability"
+    case power = "power"
+    case combat = "combat"
+}
+
 class GameViewModel {
     
-    var ref = Database.database().reference()
-    var handle: AuthStateDidChangeListenerHandle?
+    private var ref = Database.database().reference()
+    private var handle: AuthStateDidChangeListenerHandle?
     
     private var repository: SuperheroRepositoryFetchable
     private weak var delegate: ViewModelDelegate?
     private var hero1: SuperheroResponseModel?
     private var hero2: SuperheroResponseModel?
-    private var stat = 1
+    private var stat = statistic.intelligence
     private var score = 0
     private var unlockScore = 0
-    var user: User?
+    private var gameViewStrings = String.GameViewStrings()
+    private var user: User?
     
     init(repository: SuperheroRepositoryFetchable,
          delegate: ViewModelDelegate) {
@@ -33,61 +43,49 @@ class GameViewModel {
         score = 0
     }
     
-    func heroButtonPressed(isHeroOne: Bool) {
-    
-        var hero1Stat = 0
-        var hero2Stat = 0
+    private func assignHeroStat(hero: SuperheroResponseModel?) -> Int {
         switch stat {
-        case 1:
-            hero1Stat = Int(hero1?.powerstats.intelligence ?? "0") ?? 0
-            hero2Stat = Int(hero2?.powerstats.intelligence ?? "0") ?? 0
-        case 2:
-            hero1Stat = Int(hero1?.powerstats.strength ?? "0") ?? 0
-            hero2Stat = Int(hero2?.powerstats.strength ?? "0") ?? 0
-        case 3:
-            hero1Stat = Int(hero1?.powerstats.speed ?? "0") ?? 0
-            hero2Stat = Int(hero2?.powerstats.speed ?? "0") ?? 0
-        case 4:
-            hero1Stat = Int(hero1?.powerstats.durability ?? "0") ?? 0
-            hero2Stat = Int(hero2?.powerstats.durability ?? "0") ?? 0
-        case 5:
-            hero1Stat = Int(hero1?.powerstats.power ?? "0") ?? 0
-            hero2Stat = Int(hero2?.powerstats.power ?? "0") ?? 0
-        case 6:
-            hero1Stat = Int(hero1?.powerstats.combat ?? "0") ?? 0
-            hero2Stat = Int(hero2?.powerstats.combat ?? "0") ?? 0
-        default:
-            hero1Stat = Int(hero1?.powerstats.intelligence ?? "0") ?? 0
-            hero2Stat = Int(hero2?.powerstats.intelligence ?? "0") ?? 0
+        case .intelligence:
+            return Int(hero?.powerstats.intelligence ?? "0") ?? 0
+        case .strength:
+            return Int(hero?.powerstats.strength ?? "0") ?? 0
+        case .speed:
+            return Int(hero?.powerstats.speed ?? "0") ?? 0
+        case .durability:
+            return Int(hero?.powerstats.durability ?? "0") ?? 0
+        case .power:
+            return Int(hero?.powerstats.power ?? "0") ?? 0
+        case .combat:
+            return Int(hero?.powerstats.combat ?? "0") ?? 0
         }
-        stat = Int.random(in: 1...6)
+    }
+    
+    private func compareStats(selectedHeroStat: Int, heroStatToCompare: Int, isHeroOne: Bool) {
+        if selectedHeroStat >= heroStatToCompare {
+            score += 1
+            incrementUnlock()
+            let heroTwoID = generateRandomID(heroIDToCheck: hero1?.id)
+            fetchHero(isHeroOne: !isHeroOne, heroNo: heroTwoID)
+        } else {
+            if score > 0 {
+                score -= 1
+            }
+            let heroOneID = generateRandomID(heroIDToCheck: hero2?.id)
+            fetchHero(isHeroOne: isHeroOne, heroNo: heroOneID)
+        }
+    }
+    
+    func heroButtonPressed(isHeroOne: Bool) {
+        
+        let hero1Stat = assignHeroStat(hero: hero1)
+        let hero2Stat = assignHeroStat(hero: hero2)
+        
+        stat = statistic.allCases.randomElement()!
         
         if isHeroOne == true {
-            if hero1Stat >= hero2Stat {
-                score += 1
-                incrementUnlock()
-                let heroTwoID = generateRandomID(heroIDToCheck: hero1?.id)
-                fetchHero(isHeroOne: false, heroNo: heroTwoID)
-            } else {
-                if score > 0 {
-                    score -= 1
-                }
-                let heroOneID = generateRandomID(heroIDToCheck: hero2?.id)
-                fetchHero(isHeroOne: true, heroNo: heroOneID)
-            }
+            compareStats(selectedHeroStat: hero1Stat, heroStatToCompare: hero2Stat, isHeroOne: isHeroOne)
         } else {
-            if hero2Stat >= hero1Stat {
-                score += 1
-                incrementUnlock()
-                let heroOneID = generateRandomID(heroIDToCheck: hero2?.id)
-                fetchHero(isHeroOne: true, heroNo: heroOneID)
-            } else {
-                if score > 0 {
-                    score -= 1
-                }
-                let heroTwoID = generateRandomID(heroIDToCheck: hero1?.id)
-                fetchHero(isHeroOne: false, heroNo: heroTwoID)
-            }
+            compareStats(selectedHeroStat: hero2Stat, heroStatToCompare: hero1Stat, isHeroOne: isHeroOne)
         }
     }
     
@@ -107,6 +105,7 @@ class GameViewModel {
                     self.ref.child(currentUser!.uid).child("heroes").child(self.hero1?.name ?? "Unmasked").setValue(heroToSave)
                 }
             }
+            fetchHeroes()
         }
     }
     
@@ -114,9 +113,9 @@ class GameViewModel {
         guard let heroOneID = heroIDToCheck else {
             return "1"
         }
-        var heroTwoID = "\(Int.random(in: 1...732))"
+        var heroTwoID = gameViewStrings.randomHeroID()
         while heroOneID == heroTwoID {
-            heroTwoID = "\(Int.random(in: 1...732))"
+            heroTwoID = gameViewStrings.randomHeroID()
         }
         return heroTwoID
     }
@@ -138,12 +137,12 @@ class GameViewModel {
     }
     
     private func fetchHeroes() {
-        let super1 = "\(Int.random(in: 1...732))"
-        var super2 = "\(Int.random(in: 1...732))"
+        let super1 = gameViewStrings.randomHeroID()
+        var super2 = gameViewStrings.randomHeroID()
         while super2 == super1 {
-            super2 = "\(Int.random(in: 1...732))"
+            super2 = gameViewStrings.randomHeroID()
         }
-        stat = Int.random(in: 1...6)
+        stat = statistic.allCases.randomElement()!
         
         fetchHero(isHeroOne: true, heroNo: super1)
         fetchHero(isHeroOne: false, heroNo: super2)
@@ -165,26 +164,11 @@ class GameViewModel {
         hero2?.name ?? "Masked"
     }
     
-    var statName: String {
-        switch stat {
-        case 1:
-            return "intelligence"
-        case 2:
-            return "strength"
-        case 3:
-            return "speed"
-        case 4:
-            return "durability"
-        case 5:
-            return "power"
-        case 6:
-            return "combat"
-        default:
-            return "Hacked"
-        }
-    }
-    
     var currentScore: String {
         "\(score)"
+    }
+    
+    var statName: String {
+        stat.rawValue
     }
 }

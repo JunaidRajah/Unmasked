@@ -18,7 +18,7 @@ class HeroCollectionViewController: UIViewController {
         heroTable.register(HeroTableViewCell.nib(), forCellReuseIdentifier: HeroTableViewCell.identifier)
         heroTable?.delegate = self
         heroTable?.dataSource = self
-        heroCollectionViewModel.fetchCollection(heroGroup: heroGroup)
+        heroCollectionViewModel.fetchCollection(heroGroup: heroPublisher.allCases[heroGroup-1])
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -36,9 +36,6 @@ class HeroCollectionViewController: UIViewController {
 // MARK: - UITableView DataSource functions
 
 extension HeroCollectionViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         heroCollectionViewModel.heroListCount
@@ -58,11 +55,11 @@ extension HeroCollectionViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        120
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        true
     }
 }
 
@@ -87,11 +84,6 @@ extension HeroCollectionViewController: CollectionViewModelDelegate {
     }
 
     func showErrorMessage(error: Error) {
-        let alertController = UIAlertController(title: "Still Masked",
-                                                message: "Heroes not yet added to the codex",
-                                                preferredStyle: .alert)
-        alertController.overrideUserInterfaceStyle = UIUserInterfaceStyle.dark
-        alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
-        self.present(alertController, animated: true)
+        Alert.showCollectionHeroSelectFailAlert(on: self)
     }
 }

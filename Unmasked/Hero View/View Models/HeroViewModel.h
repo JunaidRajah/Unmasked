@@ -14,12 +14,12 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)set:(SuperheroResponseModel *) selectedHero;
 - (NSString *)heroName;
 - (NSString *)heroImageURL;
-- (NSString *)heroInt;
-- (NSString *)heroDur;
-- (NSString *)heroStr;
-- (NSString *)heroCom;
-- (NSString *)heroPow;
-- (NSString *)heroSpd;
+- (NSString *)heroIntelligence;
+- (NSString *)heroDurability;
+- (NSString *)heroStrength;
+- (NSString *)heroCombat;
+- (NSString *)heroPower;
+- (NSString *)heroSpeed;
 @end
 
 NS_ASSUME_NONNULL_END

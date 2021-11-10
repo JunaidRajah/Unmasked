@@ -28,27 +28,27 @@
     return _hero.image.url;
 }
 
-- (NSString *)heroInt {
+- (NSString *)heroIntelligence {
     return _hero.powerstats.intelligence;
 }
 
-- (NSString *)heroDur {
+- (NSString *)heroDurability {
     return _hero.powerstats.durability;
 }
 
-- (NSString *)heroStr {
+- (NSString *)heroStrength {
     return _hero.powerstats.strength;
 }
 
-- (NSString *)heroCom {
+- (NSString *)heroCombat {
     return _hero.powerstats.combat;
 }
 
-- (NSString *)heroPow {
+- (NSString *)heroPower {
     return _hero.powerstats.power;
 }
 
-- (NSString *)heroSpd {
+- (NSString *)heroSpeed {
     return _hero.powerstats.speed;
 }
 @end

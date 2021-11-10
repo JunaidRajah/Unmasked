@@ -22,4 +22,22 @@ import UIKit
             }
         }
     }
+    
+    func loadImage(with imageURL: String) {
+        if let url = URL(string: imageURL) {
+            self.image = UIImage(systemName: "arrow.clockwise")
+            DispatchQueue.main.async {
+                self.load(url: url)
+            }
+        }
+    }
+}
+
+extension String {
+    
+    class GameViewStrings {
+        func randomHeroID() -> String {
+            "\(Int.random(in: 1...732))"
+        }
+    }
 }

@@ -69,12 +69,12 @@
     NSURL *url = [NSURL URLWithString: _viewModel.heroImageURL];
     [heroPortraitView loadWithUrl: url];
     heroNameLabel.text = _viewModel.heroName;
-    heroIntLabel.text = _viewModel.heroInt;
-    heroDurLabel.text = _viewModel.heroDur;
-    heroStrLabel.text = _viewModel.heroStr;
-    heroComLabel.text = _viewModel.heroCom;
-    heroPowLabel.text = _viewModel.heroPow;
-    heroSpdLabel.text = _viewModel.heroSpd;
+    heroIntLabel.text = _viewModel.heroIntelligence;
+    heroDurLabel.text = _viewModel.heroDurability;
+    heroStrLabel.text = _viewModel.heroStrength;
+    heroComLabel.text = _viewModel.heroCombat;
+    heroPowLabel.text = _viewModel.heroPower;
+    heroSpdLabel.text = _viewModel.heroSpeed;
 }
 
 @end

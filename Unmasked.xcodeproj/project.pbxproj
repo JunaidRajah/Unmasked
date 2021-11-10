@@ -30,6 +30,11 @@
 		A10889BC270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A10889BB270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift */; };
 		A11BE1AF273B349300A78E54 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1AE273B349300A78E54 /* LoginViewController.swift */; };
 		A11BE1B5273B567F00A78E54 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1B4273B567F00A78E54 /* MenuViewController.swift */; };
+		A11BE1BB273BBF3500A78E54 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1BA273BBF3500A78E54 /* LoginViewModel.swift */; };
+		A11BE1BD273BBFB500A78E54 /* LoginViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1BC273BBFB500A78E54 /* LoginViewModelDelegate.swift */; };
+		A11BE1C0273BCA1300A78E54 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1BF273BCA1300A78E54 /* MenuViewModel.swift */; };
+		A11BE1C2273BCA6F00A78E54 /* MenuViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1C1273BCA6F00A78E54 /* MenuViewModelDelegate.swift */; };
+		A11BE1C4273BD39D00A78E54 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1C3273BD39D00A78E54 /* Alerts.swift */; };
 		A128D55B271E1CBE00C69F2B /* Powerstats.xib in Resources */ = {isa = PBXBuildFile; fileRef = A128D55A271E1CBE00C69F2B /* Powerstats.xib */; };
 		A128D56C271E426A00C69F2B /* HeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D56B271E426A00C69F2B /* HeroViewController.m */; };
 		A128D571271E46BC00C69F2B /* HeroViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D570271E46BC00C69F2B /* HeroViewModel.m */; };
@@ -102,6 +107,11 @@
 		A10889BB270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroRepositoryFetchable.swift; sourceTree = "<group>"; };
 		A11BE1AE273B349300A78E54 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		A11BE1B4273B567F00A78E54 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		A11BE1BA273BBF3500A78E54 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		A11BE1BC273BBFB500A78E54 /* LoginViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelDelegate.swift; sourceTree = "<group>"; };
+		A11BE1BF273BCA1300A78E54 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		A11BE1C1273BCA6F00A78E54 /* MenuViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelDelegate.swift; sourceTree = "<group>"; };
+		A11BE1C3273BD39D00A78E54 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
 		A128D55A271E1CBE00C69F2B /* Powerstats.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Powerstats.xib; sourceTree = "<group>"; };
 		A128D569271E426900C69F2B /* Unmasked-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unmasked-Bridging-Header.h"; sourceTree = "<group>"; };
 		A128D56A271E426A00C69F2B /* HeroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroViewController.h; sourceTree = "<group>"; };
@@ -245,6 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				A1008495270E884A00E92006 /* Extensions.swift */,
+				A11BE1C3273BD39D00A78E54 /* Alerts.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -330,6 +341,7 @@
 		A11BE1B6273B568800A78E54 /* Main Menu */ = {
 			isa = PBXGroup;
 			children = (
+				A11BE1BE273BCA0000A78E54 /* View Models */,
 				A11BE1B7273B569500A78E54 /* View Controllers */,
 			);
 			path = "Main Menu";
@@ -341,6 +353,15 @@
 				A11BE1B4273B567F00A78E54 /* MenuViewController.swift */,
 			);
 			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		A11BE1BE273BCA0000A78E54 /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				A11BE1BF273BCA1300A78E54 /* MenuViewModel.swift */,
+				A11BE1C1273BCA6F00A78E54 /* MenuViewModelDelegate.swift */,
+			);
+			path = "View Models";
 			sourceTree = "<group>";
 		};
 		A128D557271E111600C69F2B /* Views */ = {
@@ -441,6 +462,8 @@
 		A171877B273B334E004BB803 /* View Models */ = {
 			isa = PBXGroup;
 			children = (
+				A11BE1BA273BBF3500A78E54 /* LoginViewModel.swift */,
+				A11BE1BC273BBFB500A78E54 /* LoginViewModelDelegate.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -692,16 +715,21 @@
 				A10084C3270FDA2F00E92006 /* HeroSeachViewModel.swift in Sources */,
 				A10889B2270C925F002E2FDC /* SuperheroResponseModel.swift in Sources */,
 				A10889BC270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift in Sources */,
+				A11BE1C0273BCA1300A78E54 /* MenuViewModel.swift in Sources */,
 				A11BE1AF273B349300A78E54 /* LoginViewController.swift in Sources */,
 				A10084A0270F599400E92006 /* Constants.swift in Sources */,
 				A100847B270E6EF100E92006 /* ViewModelDelegate.swift in Sources */,
 				A1088982270731E8002E2FDC /* AppDelegate.swift in Sources */,
 				A1590587273AD75900A8DEE0 /* GroupViewController.swift in Sources */,
 				A1088984270731E8002E2FDC /* SceneDelegate.swift in Sources */,
+				A11BE1C2273BCA6F00A78E54 /* MenuViewModelDelegate.swift in Sources */,
 				A15B004927335B4300FFB706 /* GameViewModel.swift in Sources */,
+				A11BE1C4273BD39D00A78E54 /* Alerts.swift in Sources */,
 				A1008496270E884A00E92006 /* Extensions.swift in Sources */,
 				A171877D273B3368004BB803 /* User.swift in Sources */,
 				A1008489270E7F4E00E92006 /* SuperheroSearchResponseModel.swift in Sources */,
+				A11BE1BD273BBFB500A78E54 /* LoginViewModelDelegate.swift in Sources */,
+				A11BE1BB273BBF3500A78E54 /* LoginViewModel.swift in Sources */,
 				A128D571271E46BC00C69F2B /* HeroViewModel.m in Sources */,
 				A100848B270E813900E92006 /* SuperheroSearchRespository.swift in Sources */,
 				A11BE1B5273B567F00A78E54 /* MenuViewController.swift in Sources */,

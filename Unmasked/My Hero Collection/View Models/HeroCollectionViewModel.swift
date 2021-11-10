@@ -8,6 +8,15 @@
 import Foundation
 import Firebase
 
+enum heroPublisher: String, CaseIterable {
+    case Marvel = "Marvel Comics"
+    case DC = "DC Comics"
+    case StarWars = "George Lucas"
+    case Anime = "Shueisha"
+    case DarkHorse = "Dark Horse Comics"
+    case Other
+}
+
 class HeroCollectionViewModel {
     
     var ref = Database.database().reference()
@@ -24,7 +33,7 @@ class HeroCollectionViewModel {
         self.delegate = delegate
     }
     
-    func fetchCollection(heroGroup: Int) {
+    func fetchCollection(heroGroup: heroPublisher) {
         handle = Auth.auth().addStateDidChangeListener { _, currentUser in
             if currentUser == nil {
                 return
@@ -39,36 +48,39 @@ class HeroCollectionViewModel {
                             print(hero.name)
                         }
                     }
-                    var groupItems: [superheroCollectionModel] = []
-                    switch heroGroup {
-                    case 1:
-                        groupItems = self.filterCollection(with: "Marvel Comics", collection: newItems)
-                    case 2:
-                        groupItems = self.filterCollection(with: "DC Comics", collection: newItems)
-                    case 3:
-                        groupItems = self.filterCollection(with: "George Lucas", collection: newItems)
-                    case 4:
-                        groupItems = self.filterCollection(with: "Shueisha", collection: newItems)
-                    case 5:
-                        groupItems = self.filterCollection(with: "Dark Horse Comics", collection: newItems)
-                    default:
-                        for hero in newItems {
-                            if hero.publisher != "Marvel Comics" &&
-                                hero.publisher != "DC Comics" &&
-                                hero.publisher != "George Lucas" &&
-                                hero.publisher != "Shueisha" &&
-                                hero.publisher != "Dark Horse Comics" {
-                                groupItems.append(hero)
-                            }
-                        }
-                    }
-                    
-                    self.response = groupItems
-                    self.delegate?.refreshViewContents()
+                    self.collectionFromGroup(from: newItems, heroGroup: heroGroup)
                 }
                 self.refObservers.append(completed)
             }
         }
+    }
+    
+    private func collectionFromGroup(from heroCollection: [superheroCollectionModel], heroGroup: heroPublisher) {
+        var groupItems: [superheroCollectionModel] = []
+        switch heroGroup {
+        case .Marvel:
+            groupItems = self.filterCollection(with: heroGroup.rawValue, collection: heroCollection)
+        case .DC:
+            groupItems = self.filterCollection(with: heroGroup.rawValue, collection: heroCollection)
+        case .StarWars:
+            groupItems = self.filterCollection(with: heroGroup.rawValue, collection: heroCollection)
+        case .Anime:
+            groupItems = self.filterCollection(with: heroGroup.rawValue, collection: heroCollection)
+        case .DarkHorse:
+            groupItems = self.filterCollection(with: heroGroup.rawValue, collection: heroCollection)
+        case .Other:
+            for hero in heroCollection {
+                if hero.publisher != heroPublisher.Marvel.rawValue &&
+                    hero.publisher != heroPublisher.DC.rawValue &&
+                    hero.publisher != heroPublisher.StarWars.rawValue &&
+                    hero.publisher != heroPublisher.Anime.rawValue &&
+                    hero.publisher != heroPublisher.DarkHorse.rawValue {
+                    groupItems.append(hero)
+                }
+            }
+        }
+        self.response = groupItems
+        self.delegate?.refreshViewContents()
     }
     
     private func filterCollection(with publisher: String, collection: [superheroCollectionModel]) -> [superheroCollectionModel] {

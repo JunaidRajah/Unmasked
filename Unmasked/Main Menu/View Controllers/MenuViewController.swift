@@ -10,18 +10,19 @@ import Firebase
 
 class MenuViewController: UIViewController {
     
+    private lazy var menuViewModel = MenuViewModel(delegate: self)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
     }
     
     @IBAction func didPressSignOut(_ sender: UIButton) {
-        guard Auth.auth().currentUser != nil else { return }
-        do {
-            try Auth.auth().signOut()
-            performSegue(withIdentifier: "mainToLogin", sender: self)
-        } catch let error {
-            print("Auth sign out failed: \(error)")
-        }
+        menuViewModel.signOut()
+    }
+}
+
+extension MenuViewController: MenuViewModelDelegate {
+    func signOut() {
+        performSegue(withIdentifier: "mainToLogin", sender: self)
     }
 }

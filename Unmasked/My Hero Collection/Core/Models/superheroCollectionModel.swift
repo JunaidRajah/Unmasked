@@ -46,14 +46,4 @@ struct superheroCollectionModel {
         self.alignment = alignment
         self.image = image
     }
-    
-    func toAnyObject() -> NSDictionary {
-        return [
-            "id": id,
-            "name": name,
-            "publisher": publisher,
-            "alignment": alignment,
-            "image": image
-        ]
-    }
 }

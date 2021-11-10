@@ -38,9 +38,6 @@ class HeroSearchViewController: UIViewController {
 // MARK: - UITableView DataSource functions
 
 extension HeroSearchViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         searchViewModel.heroListCount
@@ -60,11 +57,11 @@ extension HeroSearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        120
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        true
     }
 }
 
@@ -86,11 +83,6 @@ extension HeroSearchViewController: ViewModelDelegate {
     }
 
     func showErrorMessage(error: Error) {
-        let alertController = UIAlertController(title: "Still Masked",
-                                                message: "Heroes not yet added to the codex",
-                                                preferredStyle: .alert)
-        alertController.overrideUserInterfaceStyle = UIUserInterfaceStyle.dark
-        alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
-        self.present(alertController, animated: true)
+        Alert.showSearchFailAlert(on: self)
     }
 }

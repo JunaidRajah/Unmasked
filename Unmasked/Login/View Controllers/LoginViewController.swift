@@ -10,10 +10,9 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var enterEmail: UITextField!
-    @IBOutlet weak var enterPassword: UITextField!
-    
-    var handle: AuthStateDidChangeListenerHandle?
+    private lazy var loginViewModel = LoginViewModel(delegate: self)
+    @IBOutlet private weak var enterEmail: UITextField!
+    @IBOutlet private weak var enterPassword: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,21 +22,12 @@ class LoginViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        handle = Auth.auth().addStateDidChangeListener { _, user in
-            if user == nil {
-                self.navigationController?.popToRootViewController(animated: true)
-            } else {
-                self.performSegue(withIdentifier: "LoginToMenu", sender: nil)
-                self.enterEmail.text = nil
-                self.enterPassword.text = nil
-            }
-        }
+        loginViewModel.initialUserCheck()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        guard let handle = handle else { return }
-        Auth.auth().removeStateDidChangeListener(handle)
+        loginViewModel.removeUserStateListener()
     }
     
     @IBAction func loginDidTouch(_ sender: AnyObject) {
@@ -47,18 +37,7 @@ class LoginViewController: UIViewController {
             !email.isEmpty,
             !password.isEmpty
         else { return }
-        
-        Auth.auth().signIn(withEmail: email, password: password) { user, error in
-            if let error = error, user == nil {
-                let alert = UIAlertController(
-                    title: "Sign In Failed",
-                    message: error.localizedDescription,
-                    preferredStyle: .alert)
-                
-                alert.addAction(UIAlertAction(title: "OK", style: .default))
-                self.present(alert, animated: true, completion: nil)
-            }
-        }
+        loginViewModel.login(withEmail: email, password: password)
     }
     
     @IBAction func signUpDidTouch(_ sender: AnyObject) {
@@ -68,14 +47,7 @@ class LoginViewController: UIViewController {
             !email.isEmpty,
             !password.isEmpty
         else { return }
-        
-        Auth.auth().createUser(withEmail: email, password: password) { _, error in
-            if error == nil {
-                Auth.auth().signIn(withEmail: email, password: password)
-            } else {
-                print("Error in createUser: \(error?.localizedDescription ?? "")")
-            }
-        }
+        loginViewModel.signUp(withEmail: email, password: password)
     }
 }
 
@@ -90,4 +62,21 @@ extension LoginViewController: UITextFieldDelegate {
         }
         return true
     }
+}
+
+extension LoginViewController: LoginViewModelDelegate {
+    func showSignInFailed(error: Error) {
+        Alert.showSignInFailAlert(on: self, errorMesssage: error.localizedDescription)
+    }
+    
+    func autoSignIn() {
+        self.performSegue(withIdentifier: "LoginToMenu", sender: nil)
+        self.enterEmail.text = nil
+        self.enterPassword.text = nil
+    }
+    
+    func userNotFound() {
+        self.navigationController?.popToRootViewController(animated: true)
+    }
+    
 }

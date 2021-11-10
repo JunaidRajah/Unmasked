@@ -12,25 +12,16 @@ class GameViewController: UIViewController {
     
     private lazy var gameViewModel =  GameViewModel(repository: SuperheroRepository(), delegate: self)
 
-    @IBOutlet weak var heroOneImage: UIImageView!
-    @IBOutlet weak var heroOneName: UILabel!
-    @IBOutlet weak var heroTwoImage: UIImageView!
-    @IBOutlet weak var heroTwoName: UILabel!
-    @IBOutlet weak var statLabel: UILabel!
-    @IBOutlet weak var scoreLabel: UILabel!
+    @IBOutlet private weak var heroOneImage: UIImageView!
+    @IBOutlet private weak var heroOneName: UILabel!
+    @IBOutlet private weak var heroTwoImage: UIImageView!
+    @IBOutlet private weak var heroTwoName: UILabel!
+    @IBOutlet private weak var statLabel: UILabel!
+    @IBOutlet private weak var scoreLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         gameViewModel.startGame()
-    }
-    
-    private func loadImage(with imageURL: String, imageView: UIImageView) {
-        if let url = URL(string: imageURL) {
-            imageView.image = UIImage(systemName: "arrow.clockwise")
-            DispatchQueue.main.async {
-                imageView.load(url: url)
-            }
-        }
     }
     
     @IBAction func heroButtonPressed(_ sender: UIButton) {
@@ -46,22 +37,18 @@ extension GameViewController: ViewModelDelegate {
     func refreshViewContents() {
         heroOneImage.contentMode = .scaleAspectFit
         heroTwoImage.contentMode = .scaleAspectFit
+        
         heroOneName.text = gameViewModel.heroOneName
-        loadImage(with: gameViewModel.heroOneImageURL, imageView: heroOneImage)
+        heroOneImage.loadImage(with: gameViewModel.heroOneImageURL)
         
         heroTwoName.text = gameViewModel.heroTwoName
-        loadImage(with: gameViewModel.heroTwoImageURL, imageView: heroTwoImage)
+        heroTwoImage.loadImage(with: gameViewModel.heroTwoImageURL)
         
         statLabel.text = gameViewModel.statName
         scoreLabel.text = gameViewModel.currentScore
     }
 
     func showErrorMessage(error: Error) {
-        let alertController = UIAlertController(title: "Critical Error",
-                                                message: "Multiverse convergence engine has been compromised",
-                                                preferredStyle: .alert)
-        alertController.overrideUserInterfaceStyle = UIUserInterfaceStyle.dark
-        alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
-        self.present(alertController, animated: true)
+        Alert.showGameFailAlert(on: self)
     }
 }
