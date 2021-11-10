@@ -10,7 +10,7 @@ import UIKit
 class HeroCollectionViewController: UIViewController {
     
     private lazy var heroCollectionViewModel = HeroCollectionViewModel(repository: SuperheroRepository(), delegate: self)
-    @IBOutlet weak var heroTable: UITableView!
+    @IBOutlet private weak var heroTable: UITableView!
     @objc var heroGroup: Int = 0
     
     override func viewDidLoad() {

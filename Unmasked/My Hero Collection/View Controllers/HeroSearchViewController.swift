@@ -11,7 +11,7 @@ class HeroSearchViewController: UIViewController {
 
     private lazy var searchViewModel = HeroSearchViewModel(repository: SuperheroSearchRepository(), delegate: self)
     @IBOutlet private weak var searchResultsTable: UITableView!
-    @IBOutlet weak var searchBar: UITextField!
+    @IBOutlet private weak var searchBar: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
