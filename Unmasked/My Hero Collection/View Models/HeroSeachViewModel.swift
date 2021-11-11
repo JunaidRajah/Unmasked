@@ -11,6 +11,7 @@ class HeroSearchViewModel {
     private var repository: SuperheroRepositorySearchable
     private weak var delegate: ViewModelDelegate?
     private var response: SuperheroSearchResponseModel?
+    private var heroToSend: SuperheroResponseModel?
     private var myHeroes = [SuperheroResponseModel]()
     
     init(repository: SuperheroRepositorySearchable,
@@ -31,6 +32,15 @@ class HeroSearchViewModel {
         })
     }
     
+    func selectHero(at index: Int) {
+        guard let response = self.response else { return }
+        heroToSend = response.results?[index]
+    }
+    
+    var selectedHero: SuperheroResponseModel? {
+        heroToSend
+    }
+    
     var myHeroList: [SuperheroResponseModel]? {
         response?.results
     }
@@ -40,6 +50,7 @@ class HeroSearchViewModel {
     }
     
     func hero(at index: Int) -> SuperheroResponseModel? {
-        response?.results?[index]
+        guard let response = self.response else {return nil}
+        return response.results?[index]
     }
 }

@@ -11,3 +11,9 @@ protocol ViewModelDelegate: AnyObject {
     func refreshViewContents()
     func showErrorMessage(error: Error)
 }
+
+protocol CollectionViewModelDelegate: AnyObject {
+    func refreshViewContents()
+    func loadHeroFromCollection()
+    func showErrorMessage(error: Error)
+}
