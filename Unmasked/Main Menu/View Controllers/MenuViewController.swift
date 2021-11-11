@@ -10,7 +10,7 @@ import Firebase
 
 class MenuViewController: UIViewController {
     
-    private lazy var menuViewModel = MenuViewModel(delegate: self)
+    private lazy var menuViewModel = MenuViewModel(delegate: self, collectionRepository: SuperheroCollectionRepository())
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,4 +25,9 @@ extension MenuViewController: MenuViewModelDelegate {
     func signOut() {
         performSegue(withIdentifier: "mainToLogin", sender: self)
     }
+    
+    func showSignOutFailed(error: Error) {
+        Alert.showSignInFailAlert(on: self, errorMesssage: error.localizedDescription.description)
+    }
+    
 }

@@ -9,4 +9,5 @@ import Foundation
 
 protocol MenuViewModelDelegate: AnyObject {
     func signOut()
+    func showSignOutFailed(error: Error)
 }

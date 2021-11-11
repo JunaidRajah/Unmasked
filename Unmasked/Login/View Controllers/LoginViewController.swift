@@ -10,7 +10,7 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
-    private lazy var loginViewModel = LoginViewModel(delegate: self)
+    private lazy var loginViewModel = LoginViewModel(delegate: self, collectionRepository: SuperheroCollectionRepository())
     @IBOutlet private weak var enterEmail: UITextField!
     @IBOutlet private weak var enterPassword: UITextField!
     
@@ -66,7 +66,7 @@ extension LoginViewController: UITextFieldDelegate {
 
 extension LoginViewController: LoginViewModelDelegate {
     func showSignInFailed(error: Error) {
-        Alert.showSignInFailAlert(on: self, errorMesssage: error.localizedDescription)
+        Alert.showSignInFailAlert(on: self, errorMesssage: error.localizedDescription.description)
     }
     
     func autoSignIn() {

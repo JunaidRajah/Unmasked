@@ -10,43 +10,48 @@ import Firebase
 
 class LoginViewModel {
     
-    private weak var handle: AuthStateDidChangeListenerHandle?
     private weak var delegate: LoginViewModelDelegate?
+    private var repository: UserRepositoryFetchable
     
-    init(delegate: LoginViewModelDelegate) {
+    init(delegate: LoginViewModelDelegate, collectionRepository: UserRepositoryFetchable) {
         self.delegate = delegate
+        self.repository = collectionRepository
     }
     
     func initialUserCheck() {
-        handle = Auth.auth().addStateDidChangeListener { _, user in
-            if user == nil {
-                self.delegate?.userNotFound()
-            } else {
-                self.delegate?.autoSignIn()
+        repository.fetchUser(completion: { [weak self] result in
+            switch result {
+            case .success(_):
+                self?.delegate?.autoSignIn()
+            case .failure(let error):
+                self?.delegate?.showSignInFailed(error: error)
             }
-        }
+        })
     }
     
     func removeUserStateListener() {
-        guard let handle = handle else { return }
-        Auth.auth().removeStateDidChangeListener(handle)
+        repository.removeUserListener()
     }
     
     func login(withEmail email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { user, error in
-            if let loginError = error, user == nil {
-                self.delegate?.showSignInFailed(error: loginError)
+        repository.signInUser(withEmail: email, password: password, completion: { [weak self] result in
+            switch result {
+            case .success(_):
+                self?.delegate?.autoSignIn()
+            case .failure(let error):
+                self?.delegate?.showSignInFailed(error: error)
             }
-        }
+        })
     }
     
     func signUp(withEmail email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { _, error in
-            if error == nil {
-                Auth.auth().signIn(withEmail: email, password: password)
-            } else {
-                print("Error in createUser: \(error?.localizedDescription ?? "")")
+        repository.createUser(withEmail: email, password: password, completion:  { [weak self] result in
+            switch result {
+            case .success(_):
+                self?.delegate?.autoSignIn()
+            case .failure(let error):
+                self?.delegate?.showSignInFailed(error: error)
             }
-        }
+        })
     }
 }

@@ -19,9 +19,7 @@ enum statistic: String, CaseIterable {
 
 class GameViewModel {
     
-    private var ref = Database.database().reference()
-    private var handle: AuthStateDidChangeListenerHandle?
-    
+    private var collectionRepository = SuperheroCollectionRepository()
     private var repository: SuperheroRepositoryFetchable
     private weak var delegate: ViewModelDelegate?
     private var hero1: SuperheroResponseModel?
@@ -34,6 +32,7 @@ class GameViewModel {
     
     init(repository: SuperheroRepositoryFetchable,
          delegate: ViewModelDelegate) {
+        
         self.repository = repository
         self.delegate = delegate
     }
@@ -98,13 +97,7 @@ class GameViewModel {
                               "publisher": hero1!.biography.publisher,
                               "alignment": hero1!.biography.alignment,
                               "image": hero1!.image.url]
-            handle = Auth.auth().addStateDidChangeListener { _, currentUser in
-                if currentUser == nil {
-                    return
-                } else {
-                    self.ref.child(currentUser!.uid).child("heroes").child(self.hero1?.name ?? "Unmasked").setValue(heroToSave)
-                }
-            }
+            collectionRepository.addHero(with: self.hero1?.name ?? "Unmasked", heroToSave: heroToSave)
             fetchHeroes()
         }
     }

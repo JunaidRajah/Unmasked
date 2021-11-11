@@ -9,7 +9,9 @@ import UIKit
 
 class HeroCollectionViewController: UIViewController {
     
-    private lazy var heroCollectionViewModel = HeroCollectionViewModel(repository: SuperheroRepository(), delegate: self)
+    private lazy var heroCollectionViewModel = HeroCollectionViewModel(repository: SuperheroRepository(),
+                                                                       collectionRepository: SuperheroCollectionRepository(),
+                                                                       delegate: self)
     @IBOutlet private weak var heroTable: UITableView!
     @objc var heroGroup: Int = 0
     

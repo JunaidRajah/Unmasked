@@ -35,6 +35,9 @@
 		A11BE1C0273BCA1300A78E54 /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1BF273BCA1300A78E54 /* MenuViewModel.swift */; };
 		A11BE1C2273BCA6F00A78E54 /* MenuViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1C1273BCA6F00A78E54 /* MenuViewModelDelegate.swift */; };
 		A11BE1C4273BD39D00A78E54 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1C3273BD39D00A78E54 /* Alerts.swift */; };
+		A11BE1C7273D3BBC00A78E54 /* SuperheroCollectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1C6273D3BBC00A78E54 /* SuperheroCollectionRepository.swift */; };
+		A11BE1C9273D413600A78E54 /* SuperheroCollectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1C8273D413600A78E54 /* SuperheroCollectionProtocol.swift */; };
+		A11BE1CB273D57A000A78E54 /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1CA273D57A000A78E54 /* CustomErrors.swift */; };
 		A128D55B271E1CBE00C69F2B /* Powerstats.xib in Resources */ = {isa = PBXBuildFile; fileRef = A128D55A271E1CBE00C69F2B /* Powerstats.xib */; };
 		A128D56C271E426A00C69F2B /* HeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D56B271E426A00C69F2B /* HeroViewController.m */; };
 		A128D571271E46BC00C69F2B /* HeroViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D570271E46BC00C69F2B /* HeroViewModel.m */; };
@@ -112,6 +115,9 @@
 		A11BE1BF273BCA1300A78E54 /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
 		A11BE1C1273BCA6F00A78E54 /* MenuViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModelDelegate.swift; sourceTree = "<group>"; };
 		A11BE1C3273BD39D00A78E54 /* Alerts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		A11BE1C6273D3BBC00A78E54 /* SuperheroCollectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroCollectionRepository.swift; sourceTree = "<group>"; };
+		A11BE1C8273D413600A78E54 /* SuperheroCollectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroCollectionProtocol.swift; sourceTree = "<group>"; };
+		A11BE1CA273D57A000A78E54 /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
 		A128D55A271E1CBE00C69F2B /* Powerstats.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Powerstats.xib; sourceTree = "<group>"; };
 		A128D569271E426900C69F2B /* Unmasked-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unmasked-Bridging-Header.h"; sourceTree = "<group>"; };
 		A128D56A271E426A00C69F2B /* HeroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroViewController.h; sourceTree = "<group>"; };
@@ -256,6 +262,7 @@
 			children = (
 				A1008495270E884A00E92006 /* Extensions.swift */,
 				A11BE1C3273BD39D00A78E54 /* Alerts.swift */,
+				A11BE1CA273D57A000A78E54 /* CustomErrors.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -322,10 +329,9 @@
 		A10889B3270C9269002E2FDC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				A11BE1C5273D3AF800A78E54 /* SuperheroCollectionRepository */,
 				A100848D270E818400E92006 /* SuperheroSearchRepository */,
 				A100848C270E817100E92006 /* SuperheroRepository */,
-				A1590584273AB99F00A8DEE0 /* superheroCollectionModel.swift */,
-				A171877C273B3368004BB803 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -334,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				A10889BB270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift */,
+				A11BE1C8273D413600A78E54 /* SuperheroCollectionProtocol.swift */,
 			);
 			path = Protocols;
 			sourceTree = "<group>";
@@ -362,6 +369,16 @@
 				A11BE1C1273BCA6F00A78E54 /* MenuViewModelDelegate.swift */,
 			);
 			path = "View Models";
+			sourceTree = "<group>";
+		};
+		A11BE1C5273D3AF800A78E54 /* SuperheroCollectionRepository */ = {
+			isa = PBXGroup;
+			children = (
+				A1590584273AB99F00A8DEE0 /* superheroCollectionModel.swift */,
+				A171877C273B3368004BB803 /* User.swift */,
+				A11BE1C6273D3BBC00A78E54 /* SuperheroCollectionRepository.swift */,
+			);
+			path = SuperheroCollectionRepository;
 			sourceTree = "<group>";
 		};
 		A128D557271E111600C69F2B /* Views */ = {
@@ -717,6 +734,7 @@
 				A10889BC270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift in Sources */,
 				A11BE1C0273BCA1300A78E54 /* MenuViewModel.swift in Sources */,
 				A11BE1AF273B349300A78E54 /* LoginViewController.swift in Sources */,
+				A11BE1CB273D57A000A78E54 /* CustomErrors.swift in Sources */,
 				A10084A0270F599400E92006 /* Constants.swift in Sources */,
 				A100847B270E6EF100E92006 /* ViewModelDelegate.swift in Sources */,
 				A1088982270731E8002E2FDC /* AppDelegate.swift in Sources */,
@@ -727,6 +745,7 @@
 				A11BE1C4273BD39D00A78E54 /* Alerts.swift in Sources */,
 				A1008496270E884A00E92006 /* Extensions.swift in Sources */,
 				A171877D273B3368004BB803 /* User.swift in Sources */,
+				A11BE1C7273D3BBC00A78E54 /* SuperheroCollectionRepository.swift in Sources */,
 				A1008489270E7F4E00E92006 /* SuperheroSearchResponseModel.swift in Sources */,
 				A11BE1BD273BBFB500A78E54 /* LoginViewModelDelegate.swift in Sources */,
 				A11BE1BB273BBF3500A78E54 /* LoginViewModel.swift in Sources */,
@@ -737,6 +756,7 @@
 				A177D2A72739FD1300DF9749 /* HeroCollectionViewController.swift in Sources */,
 				A10084C6270FE31400E92006 /* HeroTableViewCell.swift in Sources */,
 				A1590585273AB99F00A8DEE0 /* superheroCollectionModel.swift in Sources */,
+				A11BE1C9273D413600A78E54 /* SuperheroCollectionProtocol.swift in Sources */,
 				A15B004727335ADA00FFB706 /* GameViewController.swift in Sources */,
 				A10889B5270CAB7C002E2FDC /* SuperheroRepository.swift in Sources */,
 				A128D56C271E426A00C69F2B /* HeroViewController.m in Sources */,

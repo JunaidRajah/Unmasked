@@ -19,40 +19,29 @@ enum heroPublisher: String, CaseIterable {
 
 class HeroCollectionViewModel {
     
-    var ref = Database.database().reference()
-    var handle: AuthStateDidChangeListenerHandle?
-    var refObservers: [DatabaseHandle] = []
+    private var collectionRepository: UserRepositoryFetchable
     private weak var delegate: CollectionViewModelDelegate?
     private var repository: SuperheroRepositoryFetchable
     private var response: [superheroCollectionModel]?
     private var heroToSend: SuperheroResponseModel?
     
     init(repository: SuperheroRepositoryFetchable,
+         collectionRepository: UserRepositoryFetchable,
          delegate: CollectionViewModelDelegate) {
         self.repository = repository
+        self.collectionRepository = collectionRepository
         self.delegate = delegate
     }
     
     func fetchCollection(heroGroup: heroPublisher) {
-        handle = Auth.auth().addStateDidChangeListener { _, currentUser in
-            if currentUser == nil {
-                return
-            } else {
-                let completed = self.ref.child(currentUser!.uid).child("heroes").observe(.value) { snapshot in
-                    var newItems: [superheroCollectionModel] = []
-                    for child in snapshot.children {
-                        if
-                            let snapshot = child as? DataSnapshot,
-                            let hero = superheroCollectionModel(snapshot: snapshot) {
-                            newItems.append(hero)
-                            print(hero.name)
-                        }
-                    }
-                    self.collectionFromGroup(from: newItems, heroGroup: heroGroup)
-                }
-                self.refObservers.append(completed)
+        collectionRepository.fetchUserHeroCollection(completion: { [weak self] result in
+            switch result {
+            case .success(let collectionResponse):
+                self!.collectionFromGroup(from: collectionResponse, heroGroup: heroGroup)
+            case .failure(let error):
+                self?.delegate?.showErrorMessage(error: error)
             }
-        }
+        })
     }
     
     private func collectionFromGroup(from heroCollection: [superheroCollectionModel], heroGroup: heroPublisher) {
