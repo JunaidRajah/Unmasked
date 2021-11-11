@@ -37,7 +37,7 @@ class HeroCollectionViewModel {
         collectionRepository.fetchUserHeroCollection(completion: { [weak self] result in
             switch result {
             case .success(let collectionResponse):
-                self!.collectionFromGroup(from: collectionResponse, heroGroup: heroGroup)
+                self?.collectionFromGroup(from: collectionResponse, heroGroup: heroGroup)
             case .failure(let error):
                 self?.delegate?.showErrorMessage(error: error)
             }
