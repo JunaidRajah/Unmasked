@@ -21,7 +21,7 @@ class GameViewModel {
     
     private var collectionRepository = SuperheroCollectionRepository()
     private var repository: SuperheroRepositoryFetchable
-    private weak var delegate: ViewModelDelegate?
+    private weak var delegate: GameViewModelDelegate?
     private var hero1: SuperheroResponseModel?
     private var hero2: SuperheroResponseModel?
     private var stat = statistic.intelligence
@@ -31,7 +31,7 @@ class GameViewModel {
     private var user: User?
     
     init(repository: SuperheroRepositoryFetchable,
-         delegate: ViewModelDelegate) {
+         delegate: GameViewModelDelegate) {
         
         self.repository = repository
         self.delegate = delegate
@@ -62,7 +62,11 @@ class GameViewModel {
     private func compareStats(selectedHeroStat: Int, heroStatToCompare: Int, isHeroOne: Bool) {
         if selectedHeroStat >= heroStatToCompare {
             score += 1
-            incrementUnlock()
+            if isHeroOne {
+                incrementUnlock(with: hero1)
+            } else {
+                incrementUnlock(with: hero2)
+            }
             let heroTwoID = generateRandomID(heroIDToCheck: hero1?.id)
             fetchHero(isHeroOne: !isHeroOne, heroNo: heroTwoID)
         } else {
@@ -88,16 +92,18 @@ class GameViewModel {
         }
     }
     
-    private func incrementUnlock() {
+    private func incrementUnlock(with hero: SuperheroResponseModel?) {
         unlockScore += 1
         if unlockScore == 4 {
             unlockScore = 0
-            let heroToSave = ["id": hero1!.id,
-                              "name": hero1!.name,
-                              "publisher": hero1!.biography.publisher,
-                              "alignment": hero1!.biography.alignment,
-                              "image": hero1!.image.url]
-            collectionRepository.addHero(with: self.hero1?.name ?? "Unmasked", heroToSave: heroToSave)
+            let heroToSave = ["id": hero!.id,
+                              "name": hero!.name,
+                              "publisher": hero!.biography.publisher,
+                              "alignment": hero!.biography.alignment,
+                              "image": hero!.image.url]
+            collectionRepository.addHero(with: hero?.name ?? "Unmasked", heroToSave: heroToSave)
+            delegate?.showUnlockHeroAlert(with: hero?.name ?? "Glitch",
+                                          with: hero?.biography.publisher ?? "Divergent Universe")
             fetchHeroes()
         }
     }

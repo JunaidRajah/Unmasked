@@ -38,6 +38,7 @@
 		A11BE1C7273D3BBC00A78E54 /* SuperheroCollectionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1C6273D3BBC00A78E54 /* SuperheroCollectionRepository.swift */; };
 		A11BE1C9273D413600A78E54 /* SuperheroCollectionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1C8273D413600A78E54 /* SuperheroCollectionProtocol.swift */; };
 		A11BE1CB273D57A000A78E54 /* CustomErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1CA273D57A000A78E54 /* CustomErrors.swift */; };
+		A11BE1CD273DE91900A78E54 /* GameViewModelDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A11BE1CC273DE91900A78E54 /* GameViewModelDelegate.swift */; };
 		A128D55B271E1CBE00C69F2B /* Powerstats.xib in Resources */ = {isa = PBXBuildFile; fileRef = A128D55A271E1CBE00C69F2B /* Powerstats.xib */; };
 		A128D56C271E426A00C69F2B /* HeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D56B271E426A00C69F2B /* HeroViewController.m */; };
 		A128D571271E46BC00C69F2B /* HeroViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D570271E46BC00C69F2B /* HeroViewModel.m */; };
@@ -118,6 +119,7 @@
 		A11BE1C6273D3BBC00A78E54 /* SuperheroCollectionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroCollectionRepository.swift; sourceTree = "<group>"; };
 		A11BE1C8273D413600A78E54 /* SuperheroCollectionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperheroCollectionProtocol.swift; sourceTree = "<group>"; };
 		A11BE1CA273D57A000A78E54 /* CustomErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomErrors.swift; sourceTree = "<group>"; };
+		A11BE1CC273DE91900A78E54 /* GameViewModelDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModelDelegate.swift; sourceTree = "<group>"; };
 		A128D55A271E1CBE00C69F2B /* Powerstats.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Powerstats.xib; sourceTree = "<group>"; };
 		A128D569271E426900C69F2B /* Unmasked-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Unmasked-Bridging-Header.h"; sourceTree = "<group>"; };
 		A128D56A271E426A00C69F2B /* HeroViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroViewController.h; sourceTree = "<group>"; };
@@ -440,6 +442,7 @@
 			isa = PBXGroup;
 			children = (
 				A15B004827335B4300FFB706 /* GameViewModel.swift */,
+				A11BE1CC273DE91900A78E54 /* GameViewModelDelegate.swift */,
 			);
 			path = "View Models";
 			sourceTree = "<group>";
@@ -733,6 +736,7 @@
 				A10889B2270C925F002E2FDC /* SuperheroResponseModel.swift in Sources */,
 				A10889BC270D9A05002E2FDC /* SuperheroRepositoryFetchable.swift in Sources */,
 				A11BE1C0273BCA1300A78E54 /* MenuViewModel.swift in Sources */,
+				A11BE1CD273DE91900A78E54 /* GameViewModelDelegate.swift in Sources */,
 				A11BE1AF273B349300A78E54 /* LoginViewController.swift in Sources */,
 				A11BE1CB273D57A000A78E54 /* CustomErrors.swift in Sources */,
 				A10084A0270F599400E92006 /* Constants.swift in Sources */,
