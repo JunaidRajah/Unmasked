@@ -62,11 +62,7 @@ class GameViewModel {
     private func compareStats(selectedHeroStat: Int, heroStatToCompare: Int, isHeroOne: Bool) {
         if selectedHeroStat >= heroStatToCompare {
             score += 1
-            if isHeroOne {
-                incrementUnlock(with: hero1)
-            } else {
-                incrementUnlock(with: hero2)
-            }
+            isHeroOne ? incrementUnlock(with: hero1) : incrementUnlock(with: hero2)
             let heroTwoID = generateRandomID(heroIDToCheck: hero1?.id)
             fetchHero(isHeroOne: !isHeroOne, heroNo: heroTwoID)
         } else {
