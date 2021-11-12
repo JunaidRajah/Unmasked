@@ -23,8 +23,9 @@ class LoginViewModel {
             switch result {
             case .success(_):
                 self?.delegate?.autoSignIn()
-            case .failure(let error):
-                self?.delegate?.showSignInFailed(error: error)
+            case .failure(_):
+                let userError = CustomError.userNotFound
+                self?.delegate?.showSignInFailed(error: userError)
             }
         })
     }
@@ -38,8 +39,9 @@ class LoginViewModel {
             switch result {
             case .success(_):
                 self?.delegate?.autoSignIn()
-            case .failure(let error):
-                self?.delegate?.showSignInFailed(error: error)
+            case .failure(_):
+                let userError = CustomError.userNotFound
+                self?.delegate?.showSignInFailed(error: userError)
             }
         })
     }
@@ -49,8 +51,9 @@ class LoginViewModel {
             switch result {
             case .success(_):
                 self?.delegate?.autoSignIn()
-            case .failure(let error):
-                self?.delegate?.showSignInFailed(error: error)
+            case .failure(_):
+                let userError = CustomError.signUpFailed
+                self?.delegate?.showSignUpFailed(error: userError)
             }
         })
     }

@@ -65,8 +65,12 @@ extension LoginViewController: UITextFieldDelegate {
 }
 
 extension LoginViewController: LoginViewModelDelegate {
-    func showSignInFailed(error: Error) {
-        Alert.showSignInFailAlert(on: self, errorMesssage: error.localizedDescription.description)
+    func showSignUpFailed(error: CustomError) {
+        Alert.showSignUpFailAlert(on: self, errorMesssage: error.description)
+    }
+    
+    func showSignInFailed(error: CustomError) {
+        Alert.showSignInFailAlert(on: self, errorMesssage: error.description)
     }
     
     func autoSignIn() {

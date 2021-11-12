@@ -13,6 +13,7 @@ class HeroCollectionViewController: UIViewController {
                                                                        collectionRepository: SuperheroCollectionRepository(),
                                                                        delegate: self)
     @IBOutlet private weak var heroTable: UITableView!
+    @IBOutlet private weak var groupNameLabel: UILabel!
     @objc var heroGroup: Int = 0
     
     override func viewDidLoad() {
@@ -82,6 +83,7 @@ extension HeroCollectionViewController: CollectionViewModelDelegate {
     }
     
     func refreshViewContents() {
+        groupNameLabel.text = "\(heroPublisher.allCases[heroGroup-1].rawValue) Universe"
         self.heroTable.reloadData()
     }
 

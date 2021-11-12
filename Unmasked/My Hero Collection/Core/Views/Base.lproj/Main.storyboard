@@ -686,7 +686,7 @@
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Marvel Universe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Io2-qZ-wgx">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Io2-qZ-wgx">
                                 <rect key="frame" x="0.0" y="40" width="428" height="32.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <color key="textColor" red="0.65798176900000005" green="0.69732705969999997" blue="0.94011162449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -712,6 +712,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="groupNameLabel" destination="Io2-qZ-wgx" id="UWo-bz-lXs"/>
                         <outlet property="heroTable" destination="cHm-fk-k5a" id="RLm-Lj-Hfm"/>
                         <segue destination="HoY-YA-Eun" kind="presentation" identifier="selectedHeroFromCollection" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="ymw-8J-tfm"/>
                     </connections>
@@ -813,8 +814,9 @@
                                 <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="batman" translatesAutoresizingMaskIntoConstraints="NO" id="M06-x5-POZ">
-                                <rect key="frame" x="44" y="147.66666666666663" width="340" height="241"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="dot.arrowtriangles.up.right.down.left.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="M06-x5-POZ">
+                                <rect key="frame" x="44" y="148.66666666666669" width="340" height="239.66666666666669"/>
+                                <color key="tintColor" red="0.69989749280000002" green="0.74174921520000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy8-7n-Rqb">
                                 <rect key="frame" x="1" y="43.999999999999993" width="72.333333333333329" height="72.333333333333314"/>
@@ -1055,21 +1057,21 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="6F6-By-hDU"/>
+        <segue reference="ymw-8J-tfm"/>
         <segue reference="8v4-qq-PhE"/>
-        <segue reference="QZG-Dw-yoW"/>
-        <segue reference="zeS-Ws-dQc"/>
+        <segue reference="hqv-fO-eo2"/>
+        <segue reference="tmX-X1-TPN"/>
         <segue reference="QWk-i1-9ge"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="MainBack" width="768" height="995"/>
         <image name="animeLogo" width="928" height="513"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
-        <image name="batman" width="480" height="640"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
         <image name="cyberBackground" width="1205" height="2609"/>
         <image name="dcLogo" width="600" height="600"/>
         <image name="dhLogo" width="1049" height="283"/>
+        <image name="dot.arrowtriangles.up.right.down.left.circle" catalog="system" width="128" height="121"/>
         <image name="futureBorder" width="1000" height="1000"/>
         <image name="futureBorderRotated" width="1000" height="1000"/>
         <image name="geoBackground" width="1280" height="2275"/>

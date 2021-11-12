@@ -33,7 +33,11 @@ class GameViewController: UIViewController {
     }
 }
 
-extension GameViewController: ViewModelDelegate {
+extension GameViewController: GameViewModelDelegate {
+    func showUnlockHeroAlert(with name: String, with publisher: String) {
+        Alert.showHeroUnlockAlert(on: self, name: name, publisher: publisher)
+    }
+    
     func refreshViewContents() {
         heroOneImage.contentMode = .scaleAspectFit
         heroTwoImage.contentMode = .scaleAspectFit

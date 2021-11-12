@@ -10,5 +10,6 @@ import Foundation
 protocol LoginViewModelDelegate: AnyObject {
     func autoSignIn()
     func userNotFound()
-    func showSignInFailed(error: Error)
+    func showSignInFailed(error: CustomError)
+    func showSignUpFailed(error: CustomError)
 }
