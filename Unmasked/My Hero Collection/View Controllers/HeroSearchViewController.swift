@@ -11,7 +11,7 @@ class HeroSearchViewController: UIViewController {
 
     private lazy var searchViewModel = HeroSearchViewModel(repository: SuperheroSearchRepository(), delegate: self)
     @IBOutlet private weak var searchResultsTable: UITableView!
-    @IBOutlet weak var searchBar: UITextField!
+    @IBOutlet private weak var searchBar: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,10 +21,13 @@ class HeroSearchViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        super.prepare(for: segue, sender: sender)
-        let destination = segue.destination as! HeroViewController
-        guard let selectedHero = searchViewModel.selectedHero else { return }
-        destination.set(selectedHero)
+        if segue.identifier == "selectedHeroFromSearch" {
+            super.prepare(for: segue, sender: sender)
+            let destination = segue.destination as! HeroViewController
+            guard let selectedHero = searchViewModel.selectedHero else { return }
+            destination.set(selectedHero)
+            destination.setReturn(true)
+        }
     }
     
     @IBAction func searchButtonPressed(_ sender: UIButton) {
@@ -35,9 +38,6 @@ class HeroSearchViewController: UIViewController {
 // MARK: - UITableView DataSource functions
 
 extension HeroSearchViewController: UITableViewDataSource {
-    func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         searchViewModel.heroListCount
@@ -57,11 +57,11 @@ extension HeroSearchViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
+        120
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        return true
+        true
     }
 }
 
@@ -72,7 +72,6 @@ extension HeroSearchViewController: UITableViewDelegate {
         tableView.deselectRow(at: indexPath, animated: true)
         searchViewModel.selectHero(at: indexPath.row)
         performSegue(withIdentifier: "selectedHeroFromSearch", sender: self)
-        
     }
 }
 
@@ -84,11 +83,6 @@ extension HeroSearchViewController: ViewModelDelegate {
     }
 
     func showErrorMessage(error: Error) {
-        let alertController = UIAlertController(title: "Still Masked",
-                                                message: "Heroes not yet added to the codex",
-                                                preferredStyle: .alert)
-        alertController.overrideUserInterfaceStyle = UIUserInterfaceStyle.dark
-        alertController.addAction(UIAlertAction(title: "Continue", style: .default, handler: nil))
-        self.present(alertController, animated: true)
+        Alert.showSearchFailAlert(on: self)
     }
 }

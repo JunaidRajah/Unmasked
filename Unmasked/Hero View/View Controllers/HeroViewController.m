@@ -10,6 +10,8 @@
 
 @interface HeroViewController () {
     HeroViewModel *_viewModel;
+    BOOL fromSearchView;
+    NSInteger groupFromCollection;
     IBOutlet UILabel *heroNameLabel;
     IBOutlet UIImageView *heroPortraitView;
     IBOutlet UILabel *heroIntLabel;
@@ -34,25 +36,45 @@
     [_viewModel set:hero];
 }
 
+- (void)setReturn:(BOOL) fromSearch {
+    fromSearchView = fromSearch;
+}
+
+- (void)setGroup:(NSInteger) heroGroup {
+    groupFromCollection = heroGroup;
+}
+
 - (void)setupViewModel {
     if (!_viewModel) {
         _viewModel = [[HeroViewModel alloc] init];
     }
 }
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+  if ([segue.identifier isEqualToString:@"returnToCollectionList"]) {
+      HeroCollectionViewController *vc = segue.destinationViewController;
+      vc.heroGroup = groupFromCollection;
+  }
+}
+
 - (IBAction)returnButtonPressed:(UIButton *)sender {
-    [self performSegueWithIdentifier:@"returnFromHero" sender:self];
+    if (fromSearchView) {
+        [self performSegueWithIdentifier:@"returnFromHero" sender:self];
+    } else {
+        [self performSegueWithIdentifier:@"returnToCollectionList" sender:self];
+    }
 }
 
 - (void)setupView {
     NSURL *url = [NSURL URLWithString: _viewModel.heroImageURL];
     [heroPortraitView loadWithUrl: url];
     heroNameLabel.text = _viewModel.heroName;
-    heroIntLabel.text = _viewModel.heroInt;
-    heroDurLabel.text = _viewModel.heroDur;
-    heroStrLabel.text = _viewModel.heroStr;
-    heroComLabel.text = _viewModel.heroCom;
-    heroPowLabel.text = _viewModel.heroPow;
-    heroSpdLabel.text = _viewModel.heroSpd;
+    heroIntLabel.text = _viewModel.heroIntelligence;
+    heroDurLabel.text = _viewModel.heroDurability;
+    heroStrLabel.text = _viewModel.heroStrength;
+    heroComLabel.text = _viewModel.heroCombat;
+    heroPowLabel.text = _viewModel.heroPower;
+    heroSpdLabel.text = _viewModel.heroSpeed;
 }
 
 @end
