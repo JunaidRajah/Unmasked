@@ -7,6 +7,7 @@
 
 #import "HeroViewController.h"
 #import "HeroViewModel.h"
+#import <UnmaskedEngine/UnmaskedEngine-Swift.h>
 
 @interface HeroViewController () {
     HeroViewModel *_viewModel;

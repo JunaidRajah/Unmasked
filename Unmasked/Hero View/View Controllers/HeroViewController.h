@@ -6,6 +6,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <UnmaskedEngine/UnmaskedEngine-Swift.h>
+
 @class SuperheroResponseModel;
 
 NS_ASSUME_NONNULL_BEGIN
