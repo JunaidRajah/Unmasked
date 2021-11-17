@@ -6,6 +6,7 @@
 //
 
 #import "HeroViewModel.h"
+#import <UnmaskedEngine/UnmaskedEngine-Swift.h>
 
 @implementation HeroViewModel {
     SuperheroResponseModel * _hero;

@@ -51,10 +51,14 @@ PODS:
   - nanopb/decode (2.30908.0)
   - nanopb/encode (2.30908.0)
   - PromisesObjC (2.0.0)
+  - UnmaskedEngine (0.0.1):
+    - Firebase/Auth
+    - Firebase/Database
 
 DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Database
+  - UnmaskedEngine (from `/Users/jrajah/Desktop/UnmaskedEngine`)
 
 SPEC REPOS:
   trunk:
@@ -70,6 +74,10 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
 
+EXTERNAL SOURCES:
+  UnmaskedEngine:
+    :path: "/Users/jrajah/Desktop/UnmaskedEngine"
+
 SPEC CHECKSUMS:
   Firebase: 54cdc8bc9c9b3de54f43dab86e62f5a76b47034f
   FirebaseAuth: 8ef169751d795f20921d425f7b0131cc1c70935c
@@ -82,7 +90,8 @@ SPEC CHECKSUMS:
   leveldb-library: 50c7b45cbd7bf543c81a468fe557a16ae3db8729
   nanopb: a0ba3315591a9ae0a16a309ee504766e90db0c96
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
+  UnmaskedEngine: f0e621f6201482c8e3eb5af0138c619ab452cd8b
 
-PODFILE CHECKSUM: 8247d63dec6aa578af571351f516f19e47dfe30c
+PODFILE CHECKSUM: 32fa0844a6175ffe53538c19f09777906d31ed2b
 
 COCOAPODS: 1.10.1

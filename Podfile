@@ -8,6 +8,8 @@ target 'Unmasked' do
   # Pods for Unmasked
 pod 'Firebase/Database'
 pod 'Firebase/Auth'
+pod 'UnmaskedEngine', :git => 'https://github.com/JunaidRajah/UnmaskedEngine.git'
+# pod 'UnmaskedEngine', :path => '/Users/jrajah/Desktop/UnmaskedEngine'
 
   target 'UnmaskedTests' do
     inherit! :search_paths
