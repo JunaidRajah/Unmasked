@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="yZ7-4K-1gn">
-    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Image references" minToolsVersion="12.0"/>
@@ -14,37 +14,37 @@
             <objects>
                 <viewController id="hPI-tr-WId" customClass="GameViewController" customModule="Unmasked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jRq-Qg-Cao">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="aHL-x3-drB">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWh-GH-BV8">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="373"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="340"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="arrow.clockwise" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="PWw-td-FRb">
-                                        <rect key="frame" x="57.666666666666657" y="75" width="312.66666666666674" height="221.33333333333331"/>
+                                        <rect key="frame" x="52.666666666666657" y="68.333333333333329" width="285" height="201.66666666666669"/>
                                         <color key="tintColor" red="0.69989749280000002" green="0.74174921520000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <rect key="contentStretch" x="0.14999999999999999" y="0.14999999999999999" width="1" height="1"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="futureBorder" translatesAutoresizingMaskIntoConstraints="NO" id="CXF-JY-zkR">
-                                        <rect key="frame" x="18" y="-59.666666666666657" width="392" height="492.33333333333326"/>
+                                        <rect key="frame" x="16.666666666666657" y="-54.666666666666657" width="357" height="449.33333333333326"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="8OY-We-sFb">
-                                        <rect key="frame" x="0.0" y="330.66666666666669" width="428" height="42.333333333333314"/>
+                                        <rect key="frame" x="0.0" y="301.33333333333331" width="390" height="38.666666666666686"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="38"/>
                                         <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gQe-s0-OCt">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="373"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="340"/>
                                         <connections>
                                             <action selector="heroButtonPressed:" destination="hPI-tr-WId" eventType="touchUpInside" id="zFs-1G-o1r"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c4N-0f-qbY">
-                                        <rect key="frame" x="52" y="305.33333333333331" width="52.666666666666657" height="36.333333333333314"/>
+                                        <rect key="frame" x="52" y="279" width="48" height="33"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="20"/>
                                         <state key="normal" title="Back">
                                             <color key="titleColor" red="0.31481376568562436" green="0.49214679560433533" blue="0.67899897782431351" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -80,22 +80,22 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a2y-Lc-xgf">
-                                <rect key="frame" x="0.0" y="373" width="428" height="194.33333333333337"/>
+                                <rect key="frame" x="0.0" y="340" width="390" height="177"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Who has higher" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="mlW-uK-Mvi">
-                                        <rect key="frame" x="0.0" y="40.333333333333314" width="428" height="33.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="37" width="390" height="30.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="26"/>
                                         <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Ysa-Kq-oEE">
-                                        <rect key="frame" x="57.666666666666657" y="73.666666666666686" width="312.66666666666674" height="47"/>
+                                        <rect key="frame" x="52.666666666666657" y="67.333333333333314" width="285" height="42.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="42"/>
                                         <color key="textColor" red="0.6998974928428634" green="0.74174921521949089" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8lz-Nw-DRF">
-                                        <rect key="frame" x="171.33333333333334" y="128.66666666666669" width="85.333333333333343" height="23"/>
+                                        <rect key="frame" x="156" y="118" width="78" height="21"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="32"/>
                                         <color key="textColor" red="0.69989749280000002" green="0.74174921520000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -122,24 +122,24 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Vh-7r-5N7">
-                                <rect key="frame" x="0.0" y="567.33333333333337" width="428" height="358.66666666666663"/>
+                                <rect key="frame" x="0.0" y="517" width="390" height="327"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="futureBorderRotated" translatesAutoresizingMaskIntoConstraints="NO" id="1LQ-8b-dJT">
-                                        <rect key="frame" x="18" y="-67.000000000000057" width="392" height="492.66666666666669"/>
+                                        <rect key="frame" x="16.666666666666657" y="-61" width="357" height="449"/>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="arrow.clockwise" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="WDI-3T-gHx">
-                                        <rect key="frame" x="57.666666666666657" y="67.6666666666666" width="312.66666666666674" height="221.33333333333331"/>
+                                        <rect key="frame" x="52.666666666666657" y="61.999999999999957" width="285" height="201.66666666666669"/>
                                         <color key="tintColor" red="0.65798176900000005" green="0.69732705969999997" blue="0.94011162449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <rect key="contentStretch" x="0.14999999999999999" y="0.14999999999999999" width="1" height="1"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="NcU-nw-Pey">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="42.333333333333336"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="38.666666666666664"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="38"/>
                                         <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZxY-Ma-s0H">
-                                        <rect key="frame" x="0.0" y="0.0" width="428" height="358.66666666666669"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="327"/>
                                         <connections>
                                             <action selector="heroButtonPressed:" destination="hPI-tr-WId" eventType="touchUpInside" id="b00-Yp-NNJ"/>
                                         </connections>
@@ -207,20 +207,20 @@
             <objects>
                 <viewController id="wh6-yN-Rqa" customClass="MenuViewController" customModule="Unmasked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aAO-iC-fJf">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MainBack" translatesAutoresizingMaskIntoConstraints="NO" id="gCf-BV-WNd">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unmasked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="9Ok-la-Mk9">
-                                <rect key="frame" x="96" y="79" width="236" height="47.666666666666657"/>
+                                <rect key="frame" x="77" y="79" width="236" height="43.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="45"/>
                                 <color key="textColor" red="0.64260456922305098" green="0.68103110595319416" blue="0.90516907457810925" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsR-mp-ry8">
-                                <rect key="frame" x="20.666666666666657" y="290" width="386.66666666666674" height="48.666666666666686"/>
+                                <rect key="frame" x="19" y="255.66666666666666" width="352" height="44.333333333333343"/>
                                 <color key="backgroundColor" red="0.1692250669" green="0.078285507860000006" blue="0.33893892170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="wsR-mp-ry8" secondAttribute="height" multiplier="374:47" id="ue3-eY-dcF"/>
@@ -234,7 +234,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oL6-pZ-hQd">
-                                <rect key="frame" x="20.666666666666657" y="587.33333333333337" width="386.66666666666674" height="48.666666666666629"/>
+                                <rect key="frame" x="19" y="544" width="352" height="44.333333333333371"/>
                                 <color key="backgroundColor" red="0.2703352571" green="0.1630616486" blue="0.61774080990000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="oL6-pZ-hQd" secondAttribute="height" multiplier="374:47" id="Pf0-3v-XEa"/>
@@ -248,7 +248,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BvZ-sv-vCG">
-                                <rect key="frame" x="20.666666666666657" y="438.66666666666669" width="386.66666666666674" height="48.666666666666686"/>
+                                <rect key="frame" x="19" y="400" width="352" height="44"/>
                                 <color key="backgroundColor" red="0.2449584007" green="0.062505938110000006" blue="0.39455911519999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="BvZ-sv-vCG" secondAttribute="height" multiplier="374:47" id="4Ap-em-WK2"/>
@@ -262,7 +262,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cjz-d7-LEV">
-                                <rect key="frame" x="123.33333333333333" y="766.33333333333337" width="181.33333333333337" height="43.666666666666629"/>
+                                <rect key="frame" x="112.66666666666669" y="695.66666666666663" width="165" height="40"/>
                                 <color key="backgroundColor" red="0.0" green="0.31021726129999999" blue="0.60099107029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="cjz-d7-LEV" secondAttribute="height" multiplier="33:8" id="FoE-wg-YFM"/>
@@ -315,17 +315,17 @@
             <objects>
                 <viewController id="Zk8-Vx-ekd" customClass="GroupViewController" customModule="Unmasked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ewS-UO-dq8">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space2Logo" translatesAutoresizingMaskIntoConstraints="NO" id="qYp-60-UM9">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urM-2w-gPA">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="109.66666666666667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="100"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Multiverse" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="YqQ-ej-sZ3">
-                                        <rect key="frame" x="0.0" y="64" width="428" height="35.666666666666657"/>
+                                        <rect key="frame" x="0.0" y="57.333333333333343" width="390" height="32.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="32"/>
                                         <color key="textColor" red="0.1692250669" green="0.078285507860000006" blue="0.33893892170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -341,13 +341,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aja-m2-sXX">
-                                <rect key="frame" x="0.0" y="117.66666666666667" width="214" height="219.33333333333331"/>
+                                <rect key="frame" x="0.0" y="108" width="195" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="marvelLogo" translatesAutoresizingMaskIntoConstraints="NO" id="V41-e8-AQC">
-                                        <rect key="frame" x="8.3333333333333286" y="10.999999999999986" width="197.33333333333337" height="197.66666666666663"/>
+                                        <rect key="frame" x="7.6666666666666714" y="10" width="180" height="180"/>
                                     </imageView>
                                     <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFl-z6-qpz">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="219.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="200"/>
                                         <connections>
                                             <action selector="heroGroupSelected:" destination="Zk8-Vx-ekd" eventType="touchUpInside" id="82X-2p-6ar"/>
                                         </connections>
@@ -366,13 +366,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QzM-e6-JX5">
-                                <rect key="frame" x="214" y="117.66666666666667" width="214" height="219.33333333333331"/>
+                                <rect key="frame" x="195" y="108" width="195" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dcLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Lyp-gH-wZZ">
-                                        <rect key="frame" x="8.3333333333333428" y="10.999999999999986" width="197.33333333333334" height="197.66666666666663"/>
+                                        <rect key="frame" x="7.6666666666666572" y="10" width="180" height="180"/>
                                     </imageView>
                                     <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNR-fo-Cah">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="219.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="200"/>
                                         <connections>
                                             <action selector="heroGroupSelected:" destination="Zk8-Vx-ekd" eventType="touchUpInside" id="Vxk-WF-TyY"/>
                                         </connections>
@@ -391,13 +391,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GTu-fi-bjq">
-                                <rect key="frame" x="0.0" y="345" width="214" height="219.66666666666663"/>
+                                <rect key="frame" x="0.0" y="316" width="195" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="swLogo" translatesAutoresizingMaskIntoConstraints="NO" id="dbW-sv-Vpi">
-                                        <rect key="frame" x="8.3333333333333286" y="11" width="197.33333333333337" height="197.66666666666666"/>
+                                        <rect key="frame" x="7.6666666666666714" y="10" width="180" height="180"/>
                                     </imageView>
                                     <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6KD-4S-9f0">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="219.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="200"/>
                                         <connections>
                                             <action selector="heroGroupSelected:" destination="Zk8-Vx-ekd" eventType="touchUpInside" id="pEZ-sE-h6S"/>
                                         </connections>
@@ -416,13 +416,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bgG-nn-sry">
-                                <rect key="frame" x="0.0" y="572.66666666666663" width="214" height="219.33333333333337"/>
+                                <rect key="frame" x="0.0" y="524" width="195" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dhLogo" translatesAutoresizingMaskIntoConstraints="NO" id="Zv0-mp-3G3">
-                                        <rect key="frame" x="8.3333333333333286" y="11" width="197.33333333333337" height="197.33333333333334"/>
+                                        <rect key="frame" x="7.6666666666666714" y="10" width="180" height="180"/>
                                     </imageView>
                                     <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wh6-To-6dz">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="219.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="200"/>
                                         <connections>
                                             <action selector="heroGroupSelected:" destination="Zk8-Vx-ekd" eventType="touchUpInside" id="eZI-KV-IXM"/>
                                         </connections>
@@ -441,13 +441,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZh-Qw-aKS">
-                                <rect key="frame" x="214" y="345" width="214" height="219.66666666666663"/>
+                                <rect key="frame" x="195" y="316" width="195" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="animeLogo" translatesAutoresizingMaskIntoConstraints="NO" id="31N-S5-wx0">
-                                        <rect key="frame" x="8.3333333333333428" y="11" width="197.33333333333334" height="197.66666666666666"/>
+                                        <rect key="frame" x="7.6666666666666572" y="10" width="180" height="180"/>
                                     </imageView>
                                     <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZQL-lp-YLn">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="219.66666666666666"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="200"/>
                                         <connections>
                                             <action selector="heroGroupSelected:" destination="Zk8-Vx-ekd" eventType="touchUpInside" id="qbF-dn-Noo"/>
                                         </connections>
@@ -466,13 +466,13 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rI6-kx-RRa">
-                                <rect key="frame" x="214" y="572.66666666666663" width="214" height="219.33333333333337"/>
+                                <rect key="frame" x="195" y="524" width="195" height="200"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="otherLogo" translatesAutoresizingMaskIntoConstraints="NO" id="CFV-k4-BES">
-                                        <rect key="frame" x="8.3333333333333428" y="11" width="197.33333333333334" height="197.33333333333334"/>
+                                        <rect key="frame" x="7.6666666666666572" y="10" width="180" height="180"/>
                                     </imageView>
                                     <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ul5-xi-S5X">
-                                        <rect key="frame" x="0.0" y="0.0" width="214" height="219.33333333333334"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="195" height="200"/>
                                         <connections>
                                             <action selector="heroGroupSelected:" destination="Zk8-Vx-ekd" eventType="touchUpInside" id="Ja7-H6-TvS"/>
                                         </connections>
@@ -491,10 +491,10 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6Z5-iX-xgX">
-                                <rect key="frame" x="0.0" y="800" width="428" height="126"/>
+                                <rect key="frame" x="0.0" y="732" width="390" height="112"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUi-9y-DbI">
-                                        <rect key="frame" x="68.666666666666657" y="37.666666666666629" width="290.66666666666674" height="50.666666666666657"/>
+                                        <rect key="frame" x="62.666666666666657" y="33.666666666666629" width="265" height="45"/>
                                         <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                         <state key="normal" title="Return">
                                             <color key="titleColor" red="0.1692250669" green="0.078285507860000006" blue="0.33893892170000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -578,21 +578,21 @@
             <objects>
                 <viewController id="nMt-4Z-RY7" customClass="HeroSearchViewController" customModule="Unmasked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Q3t-5t-EC5">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cyberBackground" translatesAutoresizingMaskIntoConstraints="NO" id="cb7-o7-PKl">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Begin Multiverse Search" textAlignment="center" minimumFontSize="13" translatesAutoresizingMaskIntoConstraints="NO" id="HX0-hE-gr4">
-                                <rect key="frame" x="20" y="44" width="388" height="34"/>
+                                <rect key="frame" x="20" y="44" width="350" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="odU-sb-hYU">
-                                <rect key="frame" x="131.66666666666666" y="855" width="164.99999999999997" height="37"/>
+                                <rect key="frame" x="112.66666666666669" y="773" width="165" height="37"/>
                                 <color key="backgroundColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="165" id="TyG-oE-6sI"/>
@@ -606,13 +606,13 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TY7-Ez-VpS">
-                                <rect key="frame" x="5" y="86" width="418" height="761"/>
+                                <rect key="frame" x="5" y="86" width="380" height="679"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jhn-ln-uE2">
-                                <rect key="frame" x="5" y="856" width="119" height="36"/>
+                                <rect key="frame" x="5" y="774" width="100" height="36"/>
                                 <color key="tintColor" red="0.39831197260000001" green="0.6231248975" blue="0.85582453010000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <imageReference key="image" image="chevron.left" catalog="system" symbolScale="large"/>
@@ -660,14 +660,14 @@
             <objects>
                 <viewController id="QHN-GT-jze" customClass="HeroCollectionViewController" customModule="Unmasked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="SjB-mh-pID">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cyberBackground" translatesAutoresizingMaskIntoConstraints="NO" id="4VC-Ra-O7d">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GLP-Ak-P5H">
-                                <rect key="frame" x="131.66666666666666" y="855" width="164.99999999999997" height="37"/>
+                                <rect key="frame" x="112.66666666666669" y="773" width="165" height="37"/>
                                 <color key="backgroundColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="165" id="GGy-Y3-aWJ"/>
@@ -681,13 +681,13 @@
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="cHm-fk-k5a">
-                                <rect key="frame" x="5" y="80.666666666666686" width="418" height="766.33333333333326"/>
+                                <rect key="frame" x="5" y="80.666666666666686" width="380" height="684.33333333333326"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.29999999999999999" translatesAutoresizingMaskIntoConstraints="NO" id="Io2-qZ-wgx">
-                                <rect key="frame" x="0.0" y="40" width="428" height="32.666666666666657"/>
+                                <rect key="frame" x="0.0" y="40" width="390" height="32.666666666666657"/>
                                 <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="32"/>
                                 <color key="textColor" red="0.65798176900000005" green="0.69732705969999997" blue="0.94011162449999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -726,7 +726,7 @@
             <objects>
                 <viewController id="HoY-YA-Eun" customClass="HeroViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cMY-GC-LhQ">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="geoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="njo-BR-hIL">
@@ -734,43 +734,43 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="futureBorder" translatesAutoresizingMaskIntoConstraints="NO" id="3le-0C-3GW">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="536.33333333333337"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="489"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jn4-rI-2lE">
-                                <rect key="frame" x="0.0" y="474" width="214" height="418"/>
+                                <rect key="frame" x="0.0" y="436" width="195" height="374"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTELLIGENCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LbZ-KG-pjI">
-                                        <rect key="frame" x="37" y="20" width="140" height="20.666666666666671"/>
+                                        <rect key="frame" x="27.666666666666671" y="20" width="140" height="18.666666666666671"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="18"/>
                                         <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STRENGTH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VXp-wf-bGQ">
-                                        <rect key="frame" x="37" y="120.66666666666664" width="140" height="20.666666666666671"/>
+                                        <rect key="frame" x="27.666666666666671" y="118.66666666666663" width="140" height="18.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="18"/>
                                         <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GZe-uv-ZLX">
-                                        <rect key="frame" x="37" y="221.33333333333337" width="140" height="21"/>
+                                        <rect key="frame" x="27.666666666666671" y="217.33333333333337" width="140" height="18.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="18"/>
                                         <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yhP-Ok-z0z">
-                                        <rect key="frame" x="86" y="48.666666666666629" width="42" height="36.333333333333343"/>
+                                        <rect key="frame" x="76.666666666666671" y="46.666666666666686" width="42" height="32.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="34"/>
                                         <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLj-tD-K0y">
-                                        <rect key="frame" x="86" y="149.33333333333337" width="42" height="36.666666666666657"/>
+                                        <rect key="frame" x="76.666666666666671" y="145.33333333333337" width="42" height="32.333333333333343"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="34"/>
                                         <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uk-HT-Kgw">
-                                        <rect key="frame" x="86" y="250.3333333333334" width="42" height="36.333333333333343"/>
+                                        <rect key="frame" x="76.666666666666671" y="243.6666666666666" width="42" height="32.666666666666657"/>
                                         <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="34"/>
                                         <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -803,23 +803,23 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="qiA-Vw-iUl">
-                                <rect key="frame" x="1" y="43.999999999999993" width="427" height="72.333333333333314"/>
+                                <rect key="frame" x="1" y="44" width="389" height="66"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="38"/>
                                 <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Powerstats" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="Kuz-Sh-R64">
-                                <rect key="frame" x="1" y="426.66666666666669" width="428" height="39.333333333333314"/>
+                                <rect key="frame" x="1" y="392.33333333333331" width="390" height="35.666666666666686"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="38"/>
                                 <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="748" image="dot.arrowtriangles.up.right.down.left.circle" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="M06-x5-POZ">
-                                <rect key="frame" x="44" y="148.66666666666669" width="340" height="239.66666666666669"/>
+                                <rect key="frame" x="40" y="135.66666666666666" width="310" height="218.33333333333326"/>
                                 <color key="tintColor" red="0.69989749280000002" green="0.74174921520000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dy8-7n-Rqb">
-                                <rect key="frame" x="1" y="43.999999999999993" width="72.333333333333329" height="72.333333333333314"/>
+                                <rect key="frame" x="1" y="44" width="66" height="66"/>
                                 <color key="tintColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -831,7 +831,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dWC-CU-q5S">
-                                <rect key="frame" x="214" y="474" width="214" height="418"/>
+                                <rect key="frame" x="195" y="436" width="195" height="374"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="DURABILITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bio-we-TB9">
                                         <rect key="frame" x="31" y="20" width="145" height="20"/>
@@ -955,15 +955,15 @@
             <objects>
                 <viewController id="yZ7-4K-1gn" customClass="LoginViewController" customModule="Unmasked" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6F2-XX-pdB">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginBack" translatesAutoresizingMaskIntoConstraints="NO" id="tsb-bf-mIp">
-                                <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                                <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeF-vY-SHm">
-                                <rect key="frame" x="123.33333333333333" y="771.66666666666663" width="181.33333333333337" height="43.666666666666629"/>
+                                <rect key="frame" x="112.66666666666669" y="700.66666666666663" width="165" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="aeF-vY-SHm" secondAttribute="height" multiplier="33:8" id="Oqs-Qh-Aot"/>
@@ -978,13 +978,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Unmasked" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="fZG-X4-Lel">
-                                <rect key="frame" x="96" y="79" width="236" height="47.666666666666657"/>
+                                <rect key="frame" x="77" y="79" width="236" height="43.333333333333343"/>
                                 <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="45"/>
                                 <color key="textColor" red="0.60943770409999998" green="0.2287603617" blue="0.57039403919999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Email" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wyY-g3-QYV">
-                                <rect key="frame" x="66" y="380.33333333333331" width="296" height="44"/>
+                                <rect key="frame" x="60" y="345.33333333333331" width="270" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="tintColor" red="0.69989749280000002" green="0.74174921520000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -995,7 +995,7 @@
                                 <textInputTraits key="textInputTraits" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter Password" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="PUB-DD-1kL">
-                                <rect key="frame" x="66" y="518" width="296" height="43.666666666666629"/>
+                                <rect key="frame" x="60" y="470.33333333333331" width="270" height="40"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <color key="tintColor" red="0.69989749280000002" green="0.74174921520000003" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
@@ -1006,7 +1006,7 @@
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QP8-b4-4bc">
-                                <rect key="frame" x="123.33333333333333" y="697.66666666666663" width="181.33333333333337" height="43.666666666666629"/>
+                                <rect key="frame" x="112.66666666666669" y="633.33333333333337" width="165" height="40"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="QP8-b4-4bc" secondAttribute="height" multiplier="33:8" id="FDM-db-P7G"/>
@@ -1057,10 +1057,11 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="etM-yW-F12"/>
         <segue reference="ymw-8J-tfm"/>
         <segue reference="8v4-qq-PhE"/>
-        <segue reference="hqv-fO-eo2"/>
-        <segue reference="tmX-X1-TPN"/>
+        <segue reference="QZG-Dw-yoW"/>
+        <segue reference="zeS-Ws-dQc"/>
         <segue reference="QWk-i1-9ge"/>
     </inferredMetricsTieBreakers>
     <resources>

@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Unmasked-Swift.h"
+#import <UnmaskedEngine/UnmaskedEngine-Swift.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
