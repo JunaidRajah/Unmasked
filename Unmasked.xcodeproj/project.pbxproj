@@ -25,13 +25,13 @@
 		A128D55B271E1CBE00C69F2B /* Powerstats.xib in Resources */ = {isa = PBXBuildFile; fileRef = A128D55A271E1CBE00C69F2B /* Powerstats.xib */; };
 		A128D56C271E426A00C69F2B /* HeroViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D56B271E426A00C69F2B /* HeroViewController.m */; };
 		A128D571271E46BC00C69F2B /* HeroViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = A128D570271E46BC00C69F2B /* HeroViewModel.m */; };
-		A155F3582745EE510059DB19 /* PowerstatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A155F3572745EE510059DB19 /* PowerstatsView.xib */; };
+		A155F3582745EE510059DB19 /* PowerStatsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A155F3572745EE510059DB19 /* PowerStatsView.xib */; };
 		A155F35A2745EE860059DB19 /* AppearanceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A155F3592745EE860059DB19 /* AppearanceView.xib */; };
 		A155F35E2745EEC20059DB19 /* HeroInfoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A155F35D2745EEC20059DB19 /* HeroInfoView.xib */; };
 		A155F36227472C240059DB19 /* InfoTitleView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A155F36127472C240059DB19 /* InfoTitleView.xib */; };
 		A155F36427472C440059DB19 /* InfoElementView.xib in Resources */ = {isa = PBXBuildFile; fileRef = A155F36327472C440059DB19 /* InfoElementView.xib */; };
 		A155F367274739490059DB19 /* UnmaskedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F366274739490059DB19 /* UnmaskedViewController.swift */; };
-		A155F36D2747431E0059DB19 /* PowerstatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F36C2747431E0059DB19 /* PowerstatsView.swift */; };
+		A155F36D2747431E0059DB19 /* PowerStatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F36C2747431E0059DB19 /* PowerStatsView.swift */; };
 		A155F36F274755C30059DB19 /* AppearanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F36E274755C30059DB19 /* AppearanceView.swift */; };
 		A155F37127475BA90059DB19 /* HeroInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F37027475BA90059DB19 /* HeroInfoView.swift */; };
 		A155F37327475C810059DB19 /* InfoTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A155F37227475C810059DB19 /* InfoTitleView.swift */; };
@@ -97,13 +97,13 @@
 		A128D56B271E426A00C69F2B /* HeroViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroViewController.m; sourceTree = "<group>"; };
 		A128D56F271E46BC00C69F2B /* HeroViewModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HeroViewModel.h; sourceTree = "<group>"; };
 		A128D570271E46BC00C69F2B /* HeroViewModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HeroViewModel.m; sourceTree = "<group>"; };
-		A155F3572745EE510059DB19 /* PowerstatsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PowerstatsView.xib; sourceTree = "<group>"; };
+		A155F3572745EE510059DB19 /* PowerStatsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PowerStatsView.xib; sourceTree = "<group>"; };
 		A155F3592745EE860059DB19 /* AppearanceView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AppearanceView.xib; sourceTree = "<group>"; };
 		A155F35D2745EEC20059DB19 /* HeroInfoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeroInfoView.xib; sourceTree = "<group>"; };
 		A155F36127472C240059DB19 /* InfoTitleView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoTitleView.xib; sourceTree = "<group>"; };
 		A155F36327472C440059DB19 /* InfoElementView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InfoElementView.xib; sourceTree = "<group>"; };
 		A155F366274739490059DB19 /* UnmaskedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnmaskedViewController.swift; sourceTree = "<group>"; };
-		A155F36C2747431E0059DB19 /* PowerstatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerstatsView.swift; sourceTree = "<group>"; };
+		A155F36C2747431E0059DB19 /* PowerStatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PowerStatsView.swift; sourceTree = "<group>"; };
 		A155F36E274755C30059DB19 /* AppearanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppearanceView.swift; sourceTree = "<group>"; };
 		A155F37027475BA90059DB19 /* HeroInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroInfoView.swift; sourceTree = "<group>"; };
 		A155F37227475C810059DB19 /* InfoTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoTitleView.swift; sourceTree = "<group>"; };
@@ -346,7 +346,7 @@
 		A155F3562745EDF50059DB19 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A155F3572745EE510059DB19 /* PowerstatsView.xib */,
+				A155F3572745EE510059DB19 /* PowerStatsView.xib */,
 				A155F3592745EE860059DB19 /* AppearanceView.xib */,
 				A155F35D2745EEC20059DB19 /* HeroInfoView.xib */,
 				A155F36127472C240059DB19 /* InfoTitleView.xib */,
@@ -359,7 +359,7 @@
 			isa = PBXGroup;
 			children = (
 				A155F366274739490059DB19 /* UnmaskedViewController.swift */,
-				A155F36C2747431E0059DB19 /* PowerstatsView.swift */,
+				A155F36C2747431E0059DB19 /* PowerStatsView.swift */,
 				A155F36E274755C30059DB19 /* AppearanceView.swift */,
 				A155F37027475BA90059DB19 /* HeroInfoView.swift */,
 				A155F37227475C810059DB19 /* InfoTitleView.swift */,
@@ -517,7 +517,7 @@
 				A128D55B271E1CBE00C69F2B /* Powerstats.xib in Resources */,
 				A177D2A3273851A800DF9749 /* GoogleService-Info.plist in Resources */,
 				A155F36427472C440059DB19 /* InfoElementView.xib in Resources */,
-				A155F3582745EE510059DB19 /* PowerstatsView.xib in Resources */,
+				A155F3582745EE510059DB19 /* PowerStatsView.xib in Resources */,
 				A155F35A2745EE860059DB19 /* AppearanceView.xib in Resources */,
 				A155F36227472C240059DB19 /* InfoTitleView.xib in Resources */,
 			);
@@ -661,7 +661,7 @@
 				A177D2A72739FD1300DF9749 /* HeroCollectionViewController.swift in Sources */,
 				A10084C6270FE31400E92006 /* HeroTableViewCell.swift in Sources */,
 				A155F367274739490059DB19 /* UnmaskedViewController.swift in Sources */,
-				A155F36D2747431E0059DB19 /* PowerstatsView.swift in Sources */,
+				A155F36D2747431E0059DB19 /* PowerStatsView.swift in Sources */,
 				A155F37327475C810059DB19 /* InfoTitleView.swift in Sources */,
 				A15B004727335ADA00FFB706 /* GameViewController.swift in Sources */,
 				A128D56C271E426A00C69F2B /* HeroViewController.m in Sources */,
@@ -858,7 +858,7 @@
 				SWIFT_OBJC_BRIDGING_HEADER = "Unmasked/Hero View/View Controllers/Unmasked-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -880,7 +880,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "Unmasked/Hero View/View Controllers/Unmasked-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

@@ -318,7 +318,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space2Logo" translatesAutoresizingMaskIntoConstraints="NO" id="qYp-60-UM9">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="space2Logo" translatesAutoresizingMaskIntoConstraints="NO" id="qYp-60-UM9">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="urM-2w-gPA">
@@ -1028,7 +1028,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="geoBackground" translatesAutoresizingMaskIntoConstraints="NO" id="njo-BR-hIL">
-                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" image="futureBorder" translatesAutoresizingMaskIntoConstraints="NO" id="3le-0C-3GW">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="519"/>
@@ -1214,7 +1214,7 @@
                             <constraint firstItem="3le-0C-3GW" firstAttribute="height" secondItem="cMY-GC-LhQ" secondAttribute="height" multiplier="0.579241" id="Oct-Mw-lg5"/>
                             <constraint firstItem="qiA-Vw-iUl" firstAttribute="top" secondItem="oEP-6e-wIg" secondAttribute="top" id="Ptp-ZX-dgq"/>
                             <constraint firstItem="dWC-CU-q5S" firstAttribute="width" secondItem="cMY-GC-LhQ" secondAttribute="width" multiplier="0.5" id="R1h-GG-hqb"/>
-                            <constraint firstItem="njo-BR-hIL" firstAttribute="top" secondItem="oEP-6e-wIg" secondAttribute="top" id="RuT-PP-AR0"/>
+                            <constraint firstItem="njo-BR-hIL" firstAttribute="top" secondItem="cMY-GC-LhQ" secondAttribute="top" id="RuT-PP-AR0"/>
                             <constraint firstItem="dWC-CU-q5S" firstAttribute="top" secondItem="Kuz-Sh-R64" secondAttribute="bottom" constant="8" symbolic="YES" id="T8I-iu-Ht5"/>
                             <constraint firstItem="dWC-CU-q5S" firstAttribute="leading" secondItem="Jn4-rI-2lE" secondAttribute="trailing" id="VRj-aI-Yon"/>
                             <constraint firstItem="Jn4-rI-2lE" firstAttribute="width" secondItem="cMY-GC-LhQ" secondAttribute="width" multiplier="0.5" id="Z4D-lt-7he"/>
@@ -1361,7 +1361,7 @@
         <segue reference="dCS-hf-AZH"/>
         <segue reference="hqv-fO-eo2"/>
         <segue reference="tmX-X1-TPN"/>
-        <segue reference="QWk-i1-9ge"/>
+        <segue reference="BvF-eq-Zb9"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="MainBack" width="768" height="995"/>

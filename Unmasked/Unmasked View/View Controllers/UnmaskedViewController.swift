@@ -10,7 +10,7 @@ import UnmaskedEngine
 
 class UnmaskedViewController: UIViewController {
     
-    private var unmaskedViewModel: UnmaskedViewModel?
+    public var unmaskedViewModel: UnmaskedViewModel?
     public var heroGroup: Int = 0
     @IBOutlet private weak var heroNameLabel: UILabel!
     @IBOutlet private weak var heroImageView: UIImageView!
@@ -32,8 +32,6 @@ class UnmaskedViewController: UIViewController {
     @IBOutlet private weak var appearanceBorder: UIImageView!
     @IBOutlet private weak var powerBorder: UIImageView!
     
-    public var hero: SuperheroResponseModel?
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialSetup()
@@ -47,15 +45,18 @@ class UnmaskedViewController: UIViewController {
         }
     }
     
+    public func setupViewModel(hero: SuperheroResponseModel) {
+        unmaskedViewModel = UnmaskedViewModel(hero: hero,
+                                              heroInfoGroup: .powerStats,
+                                              delegate: self)
+    }
+    
     private func initialSetup() {
-        guard let chosenHero = self.hero else {
+        guard let viewModel = self.unmaskedViewModel else {
             return
         }
-        unmaskedViewModel = UnmaskedViewModel(hero: chosenHero,
-                                              heroInfoGroup: .powerstats,
-                                              delegate: self)
-        heroImageView.loadImage(with: chosenHero.image.url)
-        heroNameLabel.text = chosenHero.name
+        heroImageView.loadImage(with: viewModel.chosenHero.image.url)
+        heroNameLabel.text = viewModel.chosenHero.name
         infoScreenTitleLable.text = unmaskedViewModel?.heroInfoGroup.rawValue
         setupInfoView()
         menuSetup()
@@ -100,35 +101,39 @@ class UnmaskedViewController: UIViewController {
             heroInfoView.subviews[0].removeFromSuperview()
         }
         
+        guard let viewModel = self.unmaskedViewModel else {
+            return
+        }
+
         switch unmaskedViewModel?.currentInfoGroup {
-        case .powerstats:
-            let view = PowerstatsView.instanceFromNib() as! PowerstatsView
-            view.setup(pStat: unmaskedViewModel!.chosenHero!.powerstats)
+        case .powerStats:
+            let view = PowerStatsView.instanceFromNib() as! PowerStatsView
+            view.setup(pStat: viewModel.powerstats)
             addInfoSubview(subview: view)
             
         case .biography:
             let view = HeroInfoView.instanceFromNib() as! HeroInfoView
-            view.setupBiography(biography: unmaskedViewModel!.chosenHero!.biography)
+            view.setupBiography(biography: viewModel.biography)
             addInfoSubview(subview: view)
             
         case .appearance:
             let view = AppearanceView.instanceFromNib() as! AppearanceView
-            view.setup(appear: unmaskedViewModel!.chosenHero!.appearance)
+            view.setup(appear: viewModel.appearance)
             addInfoSubview(subview: view)
             
         case .work:
             let view = HeroInfoView.instanceFromNib() as! HeroInfoView
-            view.setupWork(work: unmaskedViewModel!.chosenHero!.work)
+            view.setupWork(work: viewModel.work)
             addInfoSubview(subview: view)
             
         case .connections:
             let view = HeroInfoView.instanceFromNib() as! HeroInfoView
-            view.setupConnections(connections: unmaskedViewModel!.chosenHero!.connections)
+            view.setupConnections(connections: viewModel.connections)
             addInfoSubview(subview: view)
             
         default:
-            let view = PowerstatsView.instanceFromNib() as! PowerstatsView
-            view.setup(pStat: unmaskedViewModel!.chosenHero!.powerstats)
+            let view = PowerStatsView.instanceFromNib() as! PowerStatsView
+            view.setup(pStat: viewModel.powerstats)
             addInfoSubview(subview: view)
         }
     }
@@ -179,7 +184,6 @@ class UnmaskedViewController: UIViewController {
         })
     }
     
-    
     @IBAction func menuOptionHeldDown(_ sender: UIButton) {
         stopImageRotation()
         menuImage.rotate(duration: 2)
@@ -189,7 +193,7 @@ class UnmaskedViewController: UIViewController {
     private func SwitchInfoView(btnNo: Int) {
         switch btnNo {
         case 1:
-            self.unmaskedViewModel?.heroInfoGroup = .powerstats
+            self.unmaskedViewModel?.heroInfoGroup = .powerStats
         case 2:
             self.unmaskedViewModel?.heroInfoGroup = .biography
         case 3:
@@ -199,7 +203,7 @@ class UnmaskedViewController: UIViewController {
         case 5:
             self.unmaskedViewModel?.heroInfoGroup = .connections
         default:
-            self.unmaskedViewModel?.heroInfoGroup = .powerstats
+            self.unmaskedViewModel?.heroInfoGroup = .powerStats
         }
         self.changeGroup()
     }

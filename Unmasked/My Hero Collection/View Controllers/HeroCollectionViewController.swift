@@ -30,7 +30,7 @@ class HeroCollectionViewController: UIViewController {
             super.prepare(for: segue, sender: sender)
             let destination = segue.destination as! UnmaskedViewController
             guard let selectedHero = heroCollectionViewModel.selectedHero else { return }
-            destination.hero = selectedHero
+            destination.setupViewModel(hero: selectedHero)
             destination.heroGroup = heroGroup
         }
     }

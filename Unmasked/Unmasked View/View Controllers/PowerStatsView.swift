@@ -8,7 +8,7 @@
 import UIKit
 
 @IBDesignable
-final class PowerstatsView: UIView {
+final class PowerStatsView: UIView {
     
     @IBOutlet private weak var strengthLabel: UILabel!
     @IBOutlet private weak var combatLabel: UILabel!
@@ -18,10 +18,10 @@ final class PowerstatsView: UIView {
     @IBOutlet private weak var speedLabel: UILabel!
     
     class func instanceFromNib() -> UIView {
-        return UINib(nibName: "PowerstatsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
+        return UINib(nibName: "PowerStatsView", bundle: nil).instantiate(withOwner: nil, options: nil)[0] as! UIView
     }
     
-    func setup(pStat: Powerstats) {
+    func setup(pStat: PowerStats) {
         intelligenceLabel.text = pStat.intelligence
         durabilityLabel.text = pStat.durability
         strengthLabel.text = pStat.strength
