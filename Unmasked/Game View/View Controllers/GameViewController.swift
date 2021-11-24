@@ -44,7 +44,6 @@ extension GameViewController: GameViewModelDelegate {
         
         heroOneName.text = gameViewModel.heroOneName
         heroOneImage.loadImage(with: gameViewModel.heroOneImageURL)
-        
         heroTwoName.text = gameViewModel.heroTwoName
         heroTwoImage.loadImage(with: gameViewModel.heroTwoImageURL)
         

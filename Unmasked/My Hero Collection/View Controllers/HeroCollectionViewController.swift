@@ -26,13 +26,12 @@ class HeroCollectionViewController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "selectedHeroFromCollection" {
+        if segue.identifier == "collectionToUnmasked" {
             super.prepare(for: segue, sender: sender)
-            let destination = segue.destination as! HeroViewController
+            let destination = segue.destination as! UnmaskedViewController
             guard let selectedHero = heroCollectionViewModel.selectedHero else { return }
-            destination.set(selectedHero)
-            destination.setReturn(false)
-            destination.setGroup(heroGroup)
+            destination.setupViewModel(hero: selectedHero)
+            destination.heroGroup = heroGroup
         }
     }
 }
@@ -80,7 +79,7 @@ extension HeroCollectionViewController: UITableViewDelegate {
 
 extension HeroCollectionViewController: CollectionViewModelDelegate {
     func loadHeroFromCollection() {
-        performSegue(withIdentifier: "selectedHeroFromCollection", sender: self)
+        performSegue(withIdentifier: "collectionToUnmasked", sender: self)
     }
     
     func refreshViewContents() {

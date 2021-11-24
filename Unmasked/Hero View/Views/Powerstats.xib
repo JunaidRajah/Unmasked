@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -9,12 +8,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PowerstatsView">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="PowerStatsView">
             <rect key="frame" x="0.0" y="0.0" width="145" height="415"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INTELLIGENCE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56m-db-h39">
-                    <rect key="frame" x="0.0" y="10" width="145" height="20"/>
+                    <rect key="frame" x="0.0" y="-34" width="145" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="145" id="UAg-OJ-k4N"/>
                         <constraint firstAttribute="height" constant="20" id="fKu-q6-sdC"/>
@@ -24,7 +23,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DURABILITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dci-gm-Abn">
-                    <rect key="frame" x="0.0" y="80" width="145" height="20"/>
+                    <rect key="frame" x="0.0" y="36" width="145" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="7Kd-Pb-8yO"/>
                         <constraint firstAttribute="width" constant="145" id="OD0-ON-7nV"/>
@@ -34,7 +33,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="STRENGTH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wH5-Ha-P9u">
-                    <rect key="frame" x="0.0" y="150" width="145" height="20"/>
+                    <rect key="frame" x="0.0" y="106" width="145" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="m1h-GT-scz"/>
                         <constraint firstAttribute="width" constant="145" id="rfd-BJ-BBV"/>
@@ -44,7 +43,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="POWER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5qw-6I-lnb">
-                    <rect key="frame" x="0.0" y="290" width="145" height="20"/>
+                    <rect key="frame" x="0.0" y="246" width="145" height="20"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="20" id="eQh-Yd-n0F"/>
                         <constraint firstAttribute="width" constant="145" id="uAa-rm-imF"/>
@@ -54,7 +53,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMBAT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jn1-gj-gAs">
-                    <rect key="frame" x="0.0" y="220" width="145" height="20"/>
+                    <rect key="frame" x="0.0" y="176" width="145" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="145" id="d9R-5h-7q0"/>
                         <constraint firstAttribute="height" constant="20" id="vFb-Zc-AlF"/>
@@ -64,7 +63,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SPEED" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRn-av-aN8">
-                    <rect key="frame" x="0.0" y="360" width="145" height="20"/>
+                    <rect key="frame" x="0.0" y="316" width="145" height="20"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="145" id="tWg-0D-Cv1"/>
                         <constraint firstAttribute="height" constant="20" id="wGf-ck-py0"/>
@@ -74,37 +73,37 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wI5-mN-bdT">
-                    <rect key="frame" x="0.0" y="34" width="145" height="35"/>
+                    <rect key="frame" x="0.0" y="-10" width="145" height="35"/>
                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="34"/>
                     <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOA-Zo-hfO">
-                    <rect key="frame" x="0.0" y="100" width="145" height="35"/>
+                    <rect key="frame" x="0.0" y="56" width="145" height="35"/>
                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="34"/>
                     <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wgk-WZ-suG">
-                    <rect key="frame" x="0.0" y="170" width="145" height="35"/>
+                    <rect key="frame" x="0.0" y="126" width="145" height="35"/>
                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="34"/>
                     <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXe-gU-S6O">
-                    <rect key="frame" x="0.0" y="240" width="145" height="35"/>
+                    <rect key="frame" x="0.0" y="196" width="145" height="35"/>
                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="34"/>
                     <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ipf-v1-Df1">
-                    <rect key="frame" x="0.0" y="310" width="145" height="35"/>
+                    <rect key="frame" x="0.0" y="266" width="145" height="35"/>
                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="34"/>
                     <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="30" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3c9-Qx-ysq">
-                    <rect key="frame" x="0.0" y="380" width="145" height="35"/>
+                    <rect key="frame" x="0.0" y="336" width="145" height="35"/>
                     <fontDescription key="fontDescription" name="Copperplate-Bold" family="Copperplate" pointSize="34"/>
                     <color key="textColor" red="0.40649354459999998" green="0.62736672159999995" blue="0.84765464069999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <nil key="highlightedColor"/>
