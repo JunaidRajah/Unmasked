@@ -6,12 +6,14 @@
 //
 
 import UIKit
+import WatchConnectivity
 import UnmaskedEngine
 
 class GameViewController: UIViewController {
     
-    private lazy var gameViewModel =  GameViewModel(repository: SuperheroRepository(), delegate: self)
-
+    private lazy var gameViewModel = GameViewModel(repository: SuperheroRepository(),
+                                                    delegate: self)
+    
     @IBOutlet private weak var heroOneImage: UIImageView!
     @IBOutlet private weak var heroOneName: UILabel!
     @IBOutlet private weak var heroTwoImage: UIImageView!
@@ -21,7 +23,12 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        gameViewModel.activateWatchSession()
         gameViewModel.startGame()
+    }
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        gameViewModel.closeWatch()
     }
     
     @IBAction func heroButtonPressed(_ sender: UIButton) {
@@ -49,8 +56,9 @@ extension GameViewController: GameViewModelDelegate {
         
         statLabel.text = gameViewModel.statName
         scoreLabel.text = gameViewModel.currentScore
+        gameViewModel.sendDataToWatch()
     }
-
+    
     func showErrorMessage(error: Error) {
         Alert.showGameFailAlert(on: self)
     }
