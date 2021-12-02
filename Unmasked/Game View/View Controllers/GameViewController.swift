@@ -33,9 +33,9 @@ class GameViewController: UIViewController {
     
     @IBAction func heroButtonPressed(_ sender: UIButton) {
         if sender.tag == 1 {
-            gameViewModel.heroButtonPressed(isHeroOne: true)
+            gameViewModel.heroSelected(isHeroOne: true)
         } else {
-            gameViewModel.heroButtonPressed(isHeroOne: false)
+            gameViewModel.heroSelected(isHeroOne: false)
         }
     }
 }

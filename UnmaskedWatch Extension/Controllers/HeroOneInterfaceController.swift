@@ -28,7 +28,6 @@ class HeroOneInterfaceController: WKInterfaceController {
     }
 
     @IBAction func pressedOption1Button() {
-        print("sending message")
         let data: [String: Any] = ["isHeroOne": true as Bool]
         WCSession.default.sendMessage(data, replyHandler: nil, errorHandler: nil)
     }

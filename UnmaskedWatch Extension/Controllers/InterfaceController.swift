@@ -65,11 +65,11 @@ extension InterfaceController: WCSessionDelegate {
                        didReceiveMessage message: [String : Any],
                        replyHandler: (([String : Any]) -> Void)? = nil) {
         connectGroup.setHidden(true)
-        if let stat = message["Stat"] as? String {//**7.1
+        if let stat = message["Stat"] as? String {
             self.statLabel.setText(stat)
         }
 
-        if let currentScore = message["currentScore"] as? String {//**7.1
+        if let currentScore = message["currentScore"] as? String {
             self.scoreLabel.setText("\(currentScore)")
         }
         
